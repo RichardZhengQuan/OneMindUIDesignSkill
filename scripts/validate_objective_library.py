@@ -84,7 +84,7 @@ def main() -> int:
     script = target / "library.js"
     if script.is_file():
         script_content = script.read_text(encoding="utf-8")
-        for contract in ("enhanceEntries", "specimenFor", "structureComponentEntry", "component-content-parts", "structureSettingsGroup", "element-content-parts", "page-preview", "renderDotSea", "prefers-reduced-motion", "aria-expanded"):
+        for contract in ("enhanceEntries", "specimenFor", "structureComponentEntry", "component-content-parts", "structureSettingsGroup", "element-content-parts", "ensureWorkshopActionBar", "settings-undo", "page-preview", "renderDotSea", "prefers-reduced-motion", "aria-expanded"):
             if contract not in script_content:
                 errors.append(f"library.js: missing visual interaction contract {contract}")
     license_path = target / "LICENSE"

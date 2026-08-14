@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
   <title>{{OBJECTIVE_NAME}} — Design settings</title>
-  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-full-bleed-15">
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-shared-actions-16">
 </head>
 <body class="library-home library-settings-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="elements">
   <header class="library-home-bar">
@@ -45,6 +45,7 @@
         <h1 class="visually-hidden" id="settings-title" data-settings-copy="title">Design settings</h1>
         <div class="library-settings-actions">
           <button class="library-settings-reset" id="settings-reset" type="button" data-settings-copy="reset">Reset</button>
+          <button class="library-settings-undo" disabled id="settings-undo" type="button" data-settings-copy="undo">Undo</button>
           <button class="library-settings-save" disabled id="settings-save" type="button" data-settings-copy="save">Save</button>
         </div>
         <p aria-live="polite" class="visually-hidden" id="settings-save-status"></p>
@@ -122,6 +123,6 @@
       </div>
     </section>
   </main>
-  <script src="library.js?v={{SKILL_VERSION}}-full-bleed-15"></script>
+  <script src="library.js?v={{SKILL_VERSION}}-shared-actions-16"></script>
 </body>
 </html>

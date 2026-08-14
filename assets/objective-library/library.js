@@ -84,7 +84,7 @@
 
   const settingsCopy = {
     en: {
-      foundations: "Foundations", workspace: "Foundation workspace", title: "Design settings", description: "Tune the shared visual foundation.", reset: "Reset", save: "Save", saved: "Settings saved.", saveFailed: "Settings could not be saved.", sectionDescription: "Description", sectionAdjustments: "Adjustments", sectionPreview: "Preview area",
+      foundations: "Foundations", workspace: "Foundation workspace", title: "Design settings", description: "Tune the shared visual foundation.", reset: "Reset", undo: "Undo", save: "Save", saved: "Settings saved.", saveFailed: "Settings could not be saved.", sectionDescription: "Description", sectionAdjustments: "Adjustments", sectionPreview: "Preview area",
       color: "Color", colorDescription: "Choose a preset, then tune semantic roles shared by every page.", colorPreset: "Color preset", neutral: "Neutral", ocean: "Ocean", forest: "Forest", violet: "Violet", semanticRoles: "Semantic roles", colorFormatHelp: "Use Hex or rgb(). Leave a field blank to inherit the active theme.", mainColor: "Main", textColor: "Text", secondaryTextColor: "Secondary text", mutedTextColor: "Muted text", lineColor: "Line", borderColor: "Border", backgroundColor: "Background", surfaceColor: "Surface", selectedColor: "Selected", colorInvalid: "Enter a valid Hex or rgb() color.",
       grid: "Grid", gridDescription: "Set the column structure used by shared page layouts.", columns: "Columns", size: "Size", sizeDescription: "Control the base size that scales type and controls together.", baseSize: "Base size",
       font: "Font", fontDescription: "Select the type character for every shared role.", fontFamily: "Font family", systemSans: "System Sans", humanistSans: "Humanist Sans", editorialSerif: "Editorial Serif", mono: "Monospace",
@@ -93,7 +93,7 @@
       livePreview: "Live preview", previewTitle: "Shared interface", ready: "Ready", previewCardTitle: "One calm foundation", previewCardDescription: "Color, type, geometry, and motion stay coherent across every shared surface.", primaryAction: "Primary action", secondaryAction: "Secondary", columnsUnit: "columns",
     },
     "zh-SG": {
-      foundations: "基础", workspace: "基础设置工作区", title: "设计设置", description: "调整共享视觉基础。", reset: "重置", save: "保存", saved: "设置已保存。", saveFailed: "无法保存设置。", sectionDescription: "说明", sectionAdjustments: "调整项", sectionPreview: "预览区域",
+      foundations: "基础", workspace: "基础设置工作区", title: "设计设置", description: "调整共享视觉基础。", reset: "重置", undo: "撤销", save: "保存", saved: "设置已保存。", saveFailed: "无法保存设置。", sectionDescription: "说明", sectionAdjustments: "调整项", sectionPreview: "预览区域",
       color: "颜色", colorDescription: "先选择预设，再调整所有页面共享的语义颜色。", colorPreset: "颜色预设", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫罗兰", semanticRoles: "语义角色", colorFormatHelp: "支持 Hex 或 rgb()。留空则继承当前主题。", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔线", borderColor: "边框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "选中状态", colorInvalid: "请输入有效的 Hex 或 rgb() 颜色。",
       grid: "网格", gridDescription: "设置共享页面布局使用的列结构。", columns: "列数", size: "尺寸", sizeDescription: "控制同时缩放文字和控件的基础尺寸。", baseSize: "基础尺寸",
       font: "字体", fontDescription: "选择所有共享角色的字体风格。", fontFamily: "字体系列", systemSans: "系统无衬线体", humanistSans: "人文无衬线体", editorialSerif: "编辑衬线体", mono: "等宽字体",
@@ -102,7 +102,7 @@
       livePreview: "实时预览", previewTitle: "共享界面", ready: "就绪", previewCardTitle: "一个平静的基础", previewCardDescription: "颜色、字体、几何和动效在每个共享表面上保持一致。", primaryAction: "主要操作", secondaryAction: "次要操作", columnsUnit: "列",
     },
     "zh-HK": {
-      foundations: "基礎", workspace: "基礎設定工作區", title: "設計設定", description: "調整共享視覺基礎。", reset: "重設", save: "儲存", saved: "設定已儲存。", saveFailed: "無法儲存設定。", sectionDescription: "說明", sectionAdjustments: "調整項", sectionPreview: "預覽區域",
+      foundations: "基礎", workspace: "基礎設定工作區", title: "設計設定", description: "調整共享視覺基礎。", reset: "重設", undo: "復原", save: "儲存", saved: "設定已儲存。", saveFailed: "無法儲存設定。", sectionDescription: "說明", sectionAdjustments: "調整項", sectionPreview: "預覽區域",
       color: "顏色", colorDescription: "先選擇預設，再調整所有頁面共享的語義顏色。", colorPreset: "顏色預設", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫羅蘭", semanticRoles: "語義角色", colorFormatHelp: "支援 Hex 或 rgb()。留空則繼承目前主題。", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔線", borderColor: "邊框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "選取狀態", colorInvalid: "請輸入有效的 Hex 或 rgb() 顏色。",
       grid: "網格", gridDescription: "設定共享頁面佈局使用的欄結構。", columns: "欄數", size: "尺寸", sizeDescription: "控制同時縮放文字和控制項的基礎尺寸。", baseSize: "基礎尺寸",
       font: "字體", fontDescription: "選擇所有共享角色的字體風格。", fontFamily: "字體系列", systemSans: "系統無襯線體", humanistSans: "人文無襯線體", editorialSerif: "編輯襯線體", mono: "等寬字體",
@@ -111,7 +111,7 @@
       livePreview: "即時預覽", previewTitle: "共享介面", ready: "就緒", previewCardTitle: "一個平靜的基礎", previewCardDescription: "顏色、字體、幾何及動效在每個共享表面上保持一致。", primaryAction: "主要操作", secondaryAction: "次要操作", columnsUnit: "欄",
     },
     ja: {
-      foundations: "基盤", workspace: "基盤ワークスペース", title: "デザイン設定", description: "共有ビジュアル基盤を調整します。", reset: "リセット", save: "保存", saved: "設定を保存しました。", saveFailed: "設定を保存できませんでした。", sectionDescription: "説明", sectionAdjustments: "調整項目", sectionPreview: "プレビュー領域",
+      foundations: "基盤", workspace: "基盤ワークスペース", title: "デザイン設定", description: "共有ビジュアル基盤を調整します。", reset: "リセット", undo: "元に戻す", save: "保存", saved: "設定を保存しました。", saveFailed: "設定を保存できませんでした。", sectionDescription: "説明", sectionAdjustments: "調整項目", sectionPreview: "プレビュー領域",
       color: "カラー", colorDescription: "プリセットを選び、全ページで共有するセマンティックカラーを調整します。", colorPreset: "カラープリセット", neutral: "ニュートラル", ocean: "オーシャン", forest: "フォレスト", violet: "バイオレット", semanticRoles: "セマンティックロール", colorFormatHelp: "Hex または rgb() に対応。空欄は現在のテーマを継承します。", mainColor: "メイン", textColor: "テキスト", secondaryTextColor: "セカンダリテキスト", mutedTextColor: "弱いテキスト", lineColor: "区切り線", borderColor: "ボーダー", backgroundColor: "背景", surfaceColor: "サーフェス", selectedColor: "選択状態", colorInvalid: "有効な Hex または rgb() カラーを入力してください。",
       grid: "グリッド", gridDescription: "共有ページレイアウトの列構造を設定します。", columns: "列数", size: "サイズ", sizeDescription: "文字とコントロールを一緒に拡大縮小する基準サイズです。", baseSize: "基準サイズ",
       font: "フォント", fontDescription: "すべての共有ロールの文字特性を選びます。", fontFamily: "フォントファミリー", systemSans: "システムサンセリフ", humanistSans: "ヒューマニストサンセリフ", editorialSerif: "エディトリアルセリフ", mono: "等幅フォント",
@@ -120,7 +120,7 @@
       livePreview: "ライブプレビュー", previewTitle: "共有インターフェース", ready: "準備完了", previewCardTitle: "ひとつの穏やかな基盤", previewCardDescription: "カラー、文字、形状、動きがすべての共有サーフェスで一貫します。", primaryAction: "主要アクション", secondaryAction: "セカンダリ", columnsUnit: "列",
     },
     ko: {
-      foundations: "기초", workspace: "기초 설정 작업 공간", title: "디자인 설정", description: "공유 시각 기반을 조정하세요.", reset: "재설정", save: "저장", saved: "설정을 저장했습니다.", saveFailed: "설정을 저장하지 못했습니다.", sectionDescription: "설명", sectionAdjustments: "조정 항목", sectionPreview: "미리보기 영역",
+      foundations: "기초", workspace: "기초 설정 작업 공간", title: "디자인 설정", description: "공유 시각 기반을 조정하세요.", reset: "재설정", undo: "실행 취소", save: "저장", saved: "설정을 저장했습니다.", saveFailed: "설정을 저장하지 못했습니다.", sectionDescription: "설명", sectionAdjustments: "조정 항목", sectionPreview: "미리보기 영역",
       color: "색상", colorDescription: "프리셋을 선택한 뒤 모든 페이지가 공유할 의미 기반 색상을 조정하세요.", colorPreset: "색상 프리셋", neutral: "중립", ocean: "오션", forest: "포레스트", violet: "바이올렛", semanticRoles: "의미 역할", colorFormatHelp: "Hex 또는 rgb()를 지원합니다. 비워 두면 현재 테마를 따릅니다.", mainColor: "메인", textColor: "텍스트", secondaryTextColor: "보조 텍스트", mutedTextColor: "약한 텍스트", lineColor: "구분선", borderColor: "테두리", backgroundColor: "배경", surfaceColor: "표면", selectedColor: "선택 상태", colorInvalid: "유효한 Hex 또는 rgb() 색상을 입력하세요.",
       grid: "그리드", gridDescription: "공유 페이지 레이아웃의 열 구조를 설정하세요.", columns: "열 수", size: "크기", sizeDescription: "글꼴과 컨트롤을 함께 조절하는 기본 크기를 설정하세요.", baseSize: "기본 크기",
       font: "글꼴", fontDescription: "모든 공유 역할에 적용할 글꼴 특성을 선택하세요.", fontFamily: "글꼴 모음", systemSans: "시스템 산세리프", humanistSans: "휴머니스트 산세리프", editorialSerif: "에디토리얼 세리프", mono: "고정폭 글꼴",
@@ -783,6 +783,91 @@
     group.replaceChildren(title, parts);
   }
 
+  function ensureWorkshopActionBar() {
+    const root = document.querySelector("body:is(.library-standards-page,.library-settings-page)");
+    if (!root) return null;
+    const content = root.querySelector(".library-settings-content,.library-standards-content");
+    if (!content) return null;
+    let bar = content.querySelector(":scope > .library-settings-action-bar");
+    if (!bar) {
+      bar = document.createElement("header");
+      bar.className = "library-settings-action-bar";
+      bar.innerHTML = '<div class="library-settings-actions"><button class="library-settings-reset" id="settings-reset" type="button" data-settings-copy="reset">Reset</button><button class="library-settings-undo" disabled id="settings-undo" type="button" data-settings-copy="undo">Undo</button><button class="library-settings-save" disabled id="settings-save" type="button" data-settings-copy="save">Save</button></div><p aria-live="polite" class="visually-hidden" id="settings-save-status"></p>';
+      content.prepend(bar);
+    } else if (!bar.querySelector("#settings-undo")) {
+      const undo = document.createElement("button");
+      undo.className = "library-settings-undo";
+      undo.disabled = true;
+      undo.id = "settings-undo";
+      undo.type = "button";
+      undo.dataset.settingsCopy = "undo";
+      undo.textContent = "Undo";
+      bar.querySelector("#settings-save")?.before(undo);
+    }
+    const locale = readPreference("one-mind-beta.locale") || "en";
+    const copy = settingsCopy[locale] || settingsCopy.en;
+    bar.setAttribute("aria-label", copy.title);
+    applySettingsCopy(locale);
+    return bar;
+  }
+
+  function initSharedWorkshopActions() {
+    const root = document.querySelector("body:is(.library-standards-page,.library-settings-page)");
+    if (!root || root.classList.contains("library-settings-page")) return;
+    const bar = ensureWorkshopActionBar();
+    if (!bar) return;
+    let state = loadSettings();
+    const history = [];
+    let savedSnapshot = JSON.stringify(normalizeSettings(state));
+    const controls = {
+      reset: bar.querySelector("#settings-reset"),
+      undo: bar.querySelector("#settings-undo"),
+      save: bar.querySelector("#settings-save"),
+      status: bar.querySelector("#settings-save-status"),
+    };
+
+    function render() {
+      state = applySettings(state);
+      controls.undo.disabled = history.length === 0;
+      controls.save.disabled = JSON.stringify(state) === savedSnapshot;
+    }
+
+    function update(next) {
+      const normalized = normalizeSettings(next);
+      if (JSON.stringify(normalized) === JSON.stringify(state)) return;
+      history.push(normalizeSettings(state));
+      state = normalized;
+      controls.status.textContent = "";
+      render();
+    }
+
+    controls.reset.addEventListener("click", () => update(settingsDefaults));
+    controls.undo.addEventListener("click", () => {
+      const previous = history.pop();
+      if (!previous) return;
+      state = previous;
+      controls.status.textContent = "";
+      render();
+    });
+    controls.save.addEventListener("click", () => {
+      const locale = readPreference("one-mind-beta.locale") || "en";
+      const copy = settingsCopy[locale] || settingsCopy.en;
+      if (writePreference(settingsStorageKey, JSON.stringify(state))) {
+        savedSnapshot = JSON.stringify(state);
+        controls.status.textContent = copy.saved;
+      } else {
+        controls.status.textContent = copy.saveFailed;
+      }
+      render();
+    });
+    document.addEventListener("library-settings-locale", (event) => {
+      bar.setAttribute("aria-label", event.detail.copy.title);
+      controls.status.textContent = "";
+    });
+    document.addEventListener("library-settings-theme", render);
+    render();
+  }
+
   function initSettingsWorkspace() {
     const root = document.querySelector(".library-settings-page");
     if (!root) return;
@@ -818,9 +903,11 @@
       elevation: document.querySelector("#settings-elevation"),
       motion: document.querySelector("#settings-motion"),
       reset: document.querySelector("#settings-reset"),
+      undo: document.querySelector("#settings-undo"),
       save: document.querySelector("#settings-save"),
       status: document.querySelector("#settings-save-status"),
     };
+    const history = [];
     let savedSnapshot = JSON.stringify(normalizeSettings(state));
 
     function currentCopy() {
@@ -846,6 +933,7 @@
       document.querySelector("#settings-spacing-output").value = `${state.spacing} px`;
       document.querySelector("#settings-radius-output").value = `${state.radius} px`;
       document.querySelector("#settings-elevation-output").value = String(state.elevation);
+      controls.undo.disabled = history.length === 0;
       controls.save.disabled = JSON.stringify(state) === savedSnapshot;
     }
 
@@ -854,7 +942,17 @@
       render();
     }
 
-    controls.color.forEach((control) => control.addEventListener("change", () => { state.color = control.value; renderDraft(); }));
+    function update(mutator) {
+      const next = normalizeSettings(state);
+      mutator(next);
+      const normalized = normalizeSettings(next);
+      if (JSON.stringify(normalized) === JSON.stringify(state)) return;
+      history.push(normalizeSettings(state));
+      state = normalized;
+      renderDraft();
+    }
+
+    controls.color.forEach((control) => control.addEventListener("change", () => update((next) => { next.color = control.value; })));
     controls.colorRoles.forEach((input) => {
       const error = document.querySelector("#settings-color-error");
       input.setAttribute("aria-describedby", "settings-color-help settings-color-error");
@@ -864,8 +962,7 @@
         input.setAttribute("aria-invalid", String(!valid));
         if (error) error.hidden = valid;
         if (valid) {
-          state.colors[input.dataset.colorRole] = value;
-          renderDraft();
+          update((next) => { next.colors[input.dataset.colorRole] = value; });
         }
         return valid;
       };
@@ -883,10 +980,16 @@
         }
       });
     });
-    ["grid", "size", "spacing", "radius", "elevation"].forEach((key) => controls[key].addEventListener("input", () => { state[key] = Number(controls[key].value); renderDraft(); }));
-    controls.font.addEventListener("change", () => { state.font = controls.font.value; renderDraft(); });
-    controls.motion.addEventListener("change", () => { state.motion = controls.motion.value; renderDraft(); });
-    controls.reset.addEventListener("click", () => { state = normalizeSettings(settingsDefaults); renderDraft(); });
+    ["grid", "size", "spacing", "radius", "elevation"].forEach((key) => controls[key].addEventListener("input", () => update((next) => { next[key] = Number(controls[key].value); })));
+    controls.font.addEventListener("change", () => update((next) => { next.font = controls.font.value; }));
+    controls.motion.addEventListener("change", () => update((next) => { next.motion = controls.motion.value; }));
+    controls.reset.addEventListener("click", () => update((next) => Object.assign(next, normalizeSettings(settingsDefaults))));
+    controls.undo.addEventListener("click", () => {
+      const previous = history.pop();
+      if (!previous) return;
+      state = previous;
+      renderDraft();
+    });
     controls.save.addEventListener("click", () => {
       const copy = currentCopy();
       if (writePreference(settingsStorageKey, JSON.stringify(state))) {
@@ -1186,7 +1289,9 @@
   applySettings(loadSettings());
   renderDotSea();
   makeShell();
+  ensureWorkshopActionBar();
   initSettingsWorkspace();
+  initSharedWorkshopActions();
   enhanceEntries();
   initStandardsDrawer();
   initCatalogDrawer();

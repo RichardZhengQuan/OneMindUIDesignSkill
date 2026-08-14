@@ -1142,6 +1142,7 @@ code { overflow-wrap: anywhere; }
 }
 .library-settings-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
 .library-settings-reset,
+.library-settings-undo,
 .library-settings-save {
   flex: 0 0 auto;
   min-height: 42px;
@@ -1155,10 +1156,14 @@ code { overflow-wrap: anywhere; }
   font-weight: 650;
   cursor: pointer;
 }
-.library-settings-reset:hover { background: var(--one-mind-surface-subtle); }
+.library-settings-reset:hover:not(:disabled),
+.library-settings-undo:hover:not(:disabled) { background: var(--one-mind-surface-subtle); }
 .library-settings-save { border-color: var(--one-mind-text-primary); background: var(--one-mind-text-primary); color: var(--one-mind-page-background); }
 .library-settings-save:hover:not(:disabled) { opacity: .86; }
+.library-settings-reset:disabled,
+.library-settings-undo:disabled,
 .library-settings-save:disabled { cursor: not-allowed; opacity: .42; }
+.library-standards-content > .library-settings-action-bar { padding-inline: 0; }
 
 .library-settings-workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; width: 100%; margin: 0; }
 .library-settings-groups { display: grid; gap: 12px; min-width: 0; }
