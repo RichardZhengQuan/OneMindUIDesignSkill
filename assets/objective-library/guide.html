@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
+  <title>{{OBJECTIVE_NAME}} — Design standards</title>
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-workshop-drawer-11">
+</head>
+<body class="library-home library-standards-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="guide">
+  <header class="library-home-bar">
+    <a class="library-brand" href="index.html" aria-label="OneMind UI Design home">
+      <span class="library-brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="library-brand-name">OneMind UI Design</span>
+    </a>
+  </header>
+
+  <main class="library-standards-main" id="standards-library" data-library-level="guide">
+    <aside class="library-primary-drawer" aria-label="Library navigation" data-standards-aria="library">
+      <p class="library-primary-drawer-title" data-standards-copy="libraryTitle">Library</p>
+      <nav>
+        <a href="guide.html" aria-current="page"><span data-copy="navGuide">Standards</span></a>
+        <a href="elements.html"><span data-copy="navElements">Elements</span></a>
+        <a href="components.html"><span data-copy="navComponents">Components</span></a>
+        <a href="pages.html"><span data-copy="navPages">Pages</span></a>
+      </nav>
+    </aside>
+    <aside class="library-standards-drawer" aria-label="Standards sections" data-standards-aria="sections">
+      <div class="library-standards-drawer-heading">
+        <p data-standards-copy="drawerKicker">System foundation</p>
+        <h2 data-standards-copy="drawerTitle">Standards</h2>
+      </div>
+      <nav>
+        <a href="#design-brief" aria-current="true" data-standards-copy="briefTitle">Design brief</a>
+        <a href="#visual-direction" data-standards-copy="visualTitle">Visual direction</a>
+        <a href="#layout-hierarchy" data-standards-copy="layoutTitle">Layout &amp; hierarchy</a>
+        <a href="#state-contract" data-standards-copy="stateTitle">State contract</a>
+        <a href="#authority-contract" data-standards-copy="authorityTitle">Authority &amp; host</a>
+        <a href="#validation-plan" data-standards-copy="validationTitle">Validation plan</a>
+      </nav>
+      <div class="library-standards-drawer-note">
+        <strong data-standards-copy="drawerNoteTitle">Working agreement</strong>
+        <p data-standards-copy="drawerNote">Set the intent here before building reusable elements and modules.</p>
+      </div>
+    </aside>
+
+    <section class="library-standards-content" aria-labelledby="standards-title">
+      <header class="library-standards-heading">
+        <p data-standards-copy="kicker">One system, shared rules</p>
+        <h1 id="standards-title" data-standards-copy="title">Design standards</h1>
+        <p data-standards-copy="description">Define the intent, visual direction, state behavior, and authority boundaries that every reusable layer must follow.</p>
+      </header>
+
+      <div class="library-standards-list">
+        <section id="design-brief" class="library-entry" data-status="candidate" data-scope="objective">
+          <h2 data-standards-copy="briefTitle">Design brief</h2>
+          <p data-standards-copy="briefDescription">Record the objective, audience, structural content slots, constraints, and assumptions without storing business records.</p>
+          <dl><dt data-standards-copy="required">Required</dt><dd data-standards-copy="briefDetail">Primary task, entry condition, completion evidence, and non-goals.</dd></dl>
+        </section>
+        <section id="visual-direction" class="library-entry" data-status="ready" data-scope="shared">
+          <h2 data-standards-copy="visualTitle">Visual direction</h2>
+          <p data-standards-copy="visualDescription">Start from OneMind's calm neutral system and record only objective-specific differences.</p>
+          <dl><dt data-standards-copy="baseline">Baseline</dt><dd data-standards-copy="visualDetail">System sans, semantic surfaces, restrained depth, precise corners, and blue reserved for focus or links.</dd></dl>
+        </section>
+        <section id="layout-hierarchy" class="library-entry" data-status="candidate" data-scope="objective">
+          <h2 data-standards-copy="layoutTitle">Layout &amp; hierarchy</h2>
+          <p data-standards-copy="layoutDescription">Record the shell, navigation, reading order, action slots, neutral page modules, and desktop host constraints.</p>
+          <dl><dt data-standards-copy="baseline">Baseline</dt><dd data-standards-copy="layoutDetail">Clear title grammar, stable rails, measured content insets, and accessible interactive targets.</dd></dl>
+        </section>
+        <section id="state-contract" class="library-entry" data-status="candidate" data-scope="objective">
+          <h2 data-standards-copy="stateTitle">State contract</h2>
+          <p data-standards-copy="stateDescription">Define loading, empty, offline, stale, error, blocked, permission, success, recovery, and interaction states.</p>
+          <dl><dt data-standards-copy="truthRule">Truth rule</dt><dd data-standards-copy="stateDetail">Never show success until the authoritative adapter confirms it.</dd></dl>
+        </section>
+        <section id="authority-contract" class="library-entry" data-status="ready" data-scope="shared">
+          <h2 data-standards-copy="authorityTitle">Authority &amp; host</h2>
+          <p data-standards-copy="authorityDescription">Keep the product UI shared while preserving server and native authority boundaries.</p>
+          <dl><dt data-standards-copy="renderer">Renderer</dt><dd data-standards-copy="authorityDetail">One shared HTML, CSS, and JavaScript artifact for browser and desktop host.</dd></dl>
+        </section>
+        <section id="validation-plan" class="library-entry" data-status="candidate" data-scope="objective">
+          <h2 data-standards-copy="validationTitle">Validation plan</h2>
+          <p data-standards-copy="validationDescription">Record routes, themes, host sizes, locales, accessibility checks, tests, builds, and same-artifact evidence.</p>
+          <dl><dt data-standards-copy="locales">Locales</dt><dd data-standards-copy="validationDetail">English, Singapore Simplified Chinese, Hong Kong Traditional Chinese, Korean, and Japanese.</dd></dl>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="library.js?v={{SKILL_VERSION}}-workshop-drawer-11"></script>
+</body>
+</html>

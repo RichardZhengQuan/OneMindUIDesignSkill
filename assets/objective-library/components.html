@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
+  <title>{{OBJECTIVE_NAME}} — Components</title>
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-workshop-drawer-11">
+</head>
+<body class="library-home library-standards-page library-catalog-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="components">
+  <header class="library-home-bar">
+    <a class="library-brand" href="index.html" aria-label="OneMind UI Design home">
+      <span class="library-brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="library-brand-name">OneMind UI Design</span>
+    </a>
+  </header>
+  <main class="library-standards-main library-catalog-main" id="component-library" data-library-level="component">
+    <aside class="library-primary-drawer" aria-label="Library navigation" data-standards-aria="library">
+      <p class="library-primary-drawer-title" data-standards-copy="libraryTitle">Library</p>
+      <nav>
+        <a href="guide.html"><span data-copy="navGuide">Standards</span></a>
+        <a href="elements.html"><span data-copy="navElements">Elements</span></a>
+        <a href="components.html" aria-current="page"><span data-copy="navComponents">Components</span></a>
+        <a href="pages.html"><span data-copy="navPages">Pages</span></a>
+      </nav>
+    </aside>
+    <aside class="library-standards-drawer library-catalog-drawer" aria-label="Component categories" data-catalog-aria="componentSections">
+      <div class="library-standards-drawer-heading"><p data-catalog-copy="componentDrawerKicker">Reusable system</p><h2 data-catalog-copy="componentDrawerTitle">Components</h2></div>
+      <nav>
+        <a data-catalog-group="navigation" href="#navigation-components" aria-current="true" data-catalog-copy="navigationGroup">Navigation &amp; shell</a>
+        <a data-catalog-group="data" href="#data-components" data-catalog-copy="dataGroup">Data &amp; status</a>
+        <a data-catalog-group="forms" href="#form-components" data-catalog-copy="formsGroup">Forms &amp; workflows</a>
+        <a data-catalog-group="public" href="#public-components" data-catalog-copy="publicGroup">Public &amp; host</a>
+      </nav>
+      <div class="library-standards-drawer-note"><strong data-catalog-copy="componentNoteTitle">Reuse contract</strong><p data-catalog-copy="componentNote">Business records belong only to the consuming feature.</p></div>
+    </aside>
+    <section class="library-standards-content library-catalog-content" aria-labelledby="component-catalog-title">
+      <header class="library-standards-heading"><p data-catalog-copy="componentKicker">Interaction building blocks</p><h1 id="component-catalog-title" data-catalog-copy="componentTitle">Components</h1><p data-catalog-copy="componentDescription">Reusable behavior and structure for shared product surfaces, grouped by responsibility.</p></header>
+      <div class="library-catalog-list">
+        <div class="library-grid">
+      <article class="library-entry" id="title-action-list" data-status="ready" data-scope="shared"><h2>Title action list</h2><p>Title slot, optional action, repeatable neutral rows, selected/loading/empty states, and load-more control.</p><dl><dt>Content slots</dt><dd>List title, action label, list item, metadata, status, load more.</dd><dt>Contract</dt><dd>Bind business records only in the consuming page.</dd></dl></article>
+      <article class="library-entry" id="public-menu-bar" data-status="ready" data-scope="shared"><h2>Public menu bar</h2><p>Brand, primary destinations, preferences, optional host action, and primary action.</p><dl><dt>Dependencies</dt><dd>button, icon action, preference radio menu.</dd><dt>Evidence</dt><dd><code>BetaMenuBar</code></dd></dl></article>
+      <article class="library-entry" id="side-drawer" data-status="ready" data-scope="shared"><h2>Side drawer</h2><p>Global navigation, identity summary, preferences, settings, and expanded/folded modes.</p><dl><dt>Dependencies</dt><dd>selection row, icon action, preference radio menu.</dd><dt>Evidence</dt><dd><code>OneMindSideDrawer</code></dd></dl></article>
+      <article class="library-entry" id="side-drawer-toggle" data-status="ready" data-scope="shared"><h2>Side drawer toggle</h2><p>External fold control with current state, labels, focus, and theme artwork.</p><dl><dt>Evidence</dt><dd><code>OneMindSideDrawerToggle</code></dd></dl></article>
+      <article class="library-entry" id="contextual-side-navigation" data-status="ready" data-scope="shared"><h2>Contextual side navigation</h2><p>Page-owned hierarchy and actions, separate from global product navigation.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaSideNavigation</code></dd></dl></article>
+      <article class="library-entry" id="main-view-boundary" data-status="ready" data-scope="shared"><h2>Main-view boundary</h2><p>Flexible product surface beside global or contextual rails.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaMainView</code></dd></dl></article>
+      <article class="library-entry" id="side-floating-panel" data-status="ready" data-scope="shared"><h2>Side floating panel</h2><p>Focused modal overlay with title, close, scrim, scroll, and focus restoration.</p><dl><dt>Widths</dt><dd>512px or 768px.</dd><dt>Evidence</dt><dd><code>OneMindSidePanel</code></dd></dl></article>
+      <article class="library-entry" id="mode-title-bar" data-status="ready" data-scope="shared"><h2>Mode title bar</h2><p>Window-level mode label above the normal shell.</p><dl><dt>Evidence</dt><dd><code>OneMindQuickStartTitleBar</code></dd></dl></article>
+      <article class="library-entry" id="preference-radio-menu" data-status="ready" data-scope="shared"><h2>Preference radio menu</h2><p>Named trigger and keyboard-operable mutually exclusive choices.</p><dl><dt>States</dt><dd>Open, selected, focus, dismissed.</dd></dl></article>
+      <article class="library-entry" id="settings-row" data-status="ready" data-scope="shared"><h2>Settings row</h2><p>Optional icon, label, supporting copy, current value, and optional trailing action.</p><dl><dt>Dependencies</dt><dd>form/status elements, icon action.</dd><dt>Evidence</dt><dd><code>BetaSettingsPage</code></dd></dl></article>
+      <article class="library-entry" id="identity-navigation-list" data-status="ready" data-scope="shared"><h2>Identity navigation list</h2><p>Repeatable identity rows with selection, metadata, status, and action slots.</p><dl><dt>Evidence</dt><dd><code>BetaTeamSideNavigationList</code></dd></dl></article>
+      <article class="library-entry" id="filter-radio-menu" data-status="ready" data-scope="shared"><h2>Filter radio menu</h2><p>Menu-button filter with radio choices, keyboard traversal, dismissal, and focus return.</p><dl><dt>Evidence</dt><dd><code>BetaTeamFilterMenu</code></dd></dl></article>
+      <article class="library-entry" id="profile-edit-panel" data-status="ready" data-scope="shared"><h2>Profile edit panel</h2><p>Validated form that preserves input on recoverable failure and closes after authoritative confirmation.</p><dl><dt>Evidence</dt><dd><code>BetaTeamProfilePanel</code></dd></dl></article>
+      <article class="library-entry" id="notification-inbox" data-status="ready" data-scope="shared"><h2>Notification inbox</h2><p>Family filters, scoped rows, read hierarchy, loading/empty/error states, and detail handoff.</p><dl><dt>Evidence</dt><dd><code>OneMindNotificationInbox</code></dd></dl></article>
+      <article class="library-entry" id="notification-detail-drawer" data-status="ready" data-scope="shared"><h2>Notification detail drawer</h2><p>Evidence summary, process details, optional governed action, and source-row focus return.</p><dl><dt>Dependencies</dt><dd>scrim/dialog, status, receipt detail.</dd></dl></article>
+      <article class="library-entry" id="notification-family-icon" data-status="ready" data-scope="shared"><h2>Notification family icon</h2><p>Theme and read-state artwork with decorative semantics.</p><dl><dt>Evidence</dt><dd><code>OneMindNotificationFamilyIcon</code></dd></dl></article>
+      <article class="library-entry" id="file-inventory" data-status="ready" data-scope="shared"><h2>File inventory</h2><p>Required base row, added-file rows, upload, edit/remove, path, type, size, and atomic failure.</p><dl><dt>Evidence</dt><dd><code>OneMindMindPullRequestFileList</code></dd></dl></article>
+      <article class="library-entry" id="markdown-file-editor" data-status="ready" data-scope="shared"><h2>Markdown file editor</h2><p>Visual canvas, toolbar, Markdown round-trip, unsaved state, and file context.</p><dl><dt>Evidence</dt><dd><code>OneMindMindFileEditor</code>, <code>OneMindMindEditor</code></dd></dl></article>
+      <article class="library-entry" id="confirmation-dialog" data-status="ready" data-scope="shared"><h2>Confirmation dialog</h2><p>Consequence, confirm/cancel, danger or neutral mode, busy guard, dismissal, and focus restoration.</p><dl><dt>Evidence</dt><dd><code>OneMindConfirmDialog</code></dd></dl></article>
+      <article class="library-entry" id="conflict-report" data-status="ready" data-scope="shared"><h2>Conflict report</h2><p>Blocking/advisory findings, immutable evidence identity, acknowledgement, and decision boundary.</p><dl><dt>Truth</dt><dd>Never auto-resolve authority.</dd><dt>Evidence</dt><dd><code>OneMindConflictCheck</code></dd></dl></article>
+      <article class="library-entry" id="pricing-card-grid" data-status="ready" data-scope="shared"><h2>Pricing card grid</h2><p>Audience tabs, plan cards, capability rows, selection, truthful action state, and disclosure.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaPricingCards</code></dd></dl></article>
+      <article class="library-entry" id="landing-scene" data-status="ready" data-scope="shared"><h2>Landing scene</h2><p>Viewport-sized public section with background, content, action, and active-state slots.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaLandingScene</code></dd></dl></article>
+      <article class="library-entry" id="horizontal-story" data-status="candidate" data-scope="shared"><h2>Horizontal story</h2><p>Sticky multi-panel journey with scrubber, direction, keyboard stops, and reduced motion.</p><dl><dt>Open gate</dt><dd>Keep strict rendered and lifecycle evidence separate.</dd><dt>Evidence</dt><dd><code>OneMindBetaHorizontalStory</code></dd></dl></article>
+      <article class="library-entry" id="tool-logo-cloud" data-status="candidate" data-scope="shared"><h2>Tool logo cloud</h2><p>Identity-tile cloud with pointer/keyboard repositioning and active-item reporting.</p><dl><dt>Open gate</dt><dd>Final fall/settle lifecycle verification.</dd><dt>Evidence</dt><dd><code>OneMindBetaAIToolLogoCloud</code></dd></dl></article>
+      <article class="library-entry" id="site-footer" data-status="ready" data-scope="shared"><h2>Site footer</h2><p>Narrative slot, grouped navigation, legal destinations, locale fit, and legal row.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaSiteFooter</code></dd></dl></article>
+      <article class="library-entry" id="host-utility-action" data-status="ready" data-scope="shared"><h2>Host utility action</h2><p>One icon action supplied through a typed browser/macOS adapter.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaHostUtilityAction</code></dd></dl></article>
+      <article class="library-entry" id="software-update-availability-action" data-status="ready" data-scope="shared"><h2>Software update availability</h2><p>Conditional shared-HTML action shown only after native-host confirmation.</p><dl><dt>Evidence</dt><dd><code>OneMindBetaSoftwareUpdateButton</code></dd></dl></article>
+      <article class="library-entry" id="sign-in-process-banner" data-status="candidate" data-scope="shared"><h2>Sign-in process banner</h2><p>Opening, waiting, error, retry, cancel, and live status around a host handoff.</p><dl><dt>Open gate</dt><dd>Authoritative BETA session ownership.</dd></dl></article>
+      <article class="library-entry" id="authoritative-receipt-detail" data-status="candidate" data-scope="shared"><h2>Authoritative receipt detail</h2><p>Decision, outcome, digests, fingerprint, agent/version identity, and receipt ID.</p><dl><dt>Open gate</dt><dd>Integrated lifecycle proof.</dd></dl></article>
+      <article class="library-entry" id="async-state-boundary" data-status="needed" data-scope="shared"><h2>Async state boundary</h2><p>Stable loading, empty, offline, stale, permission, failure, retry, and recovery composition.</p><dl><dt>Need</dt><dd>States exist per page but lack one canonical BETA-wide contract.</dd></dl></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="library.js?v={{SKILL_VERSION}}-workshop-drawer-11"></script>
+</body>
+</html>
