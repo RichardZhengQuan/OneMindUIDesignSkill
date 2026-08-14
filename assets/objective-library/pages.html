@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
+  <title>{{OBJECTIVE_NAME}} — Pages</title>
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-workshop-drawer-11">
+</head>
+<body class="library-home library-standards-page library-catalog-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="pages">
+  <header class="library-home-bar">
+    <a class="library-brand" href="index.html" aria-label="OneMind UI Design home">
+      <span class="library-brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="library-brand-name">OneMind UI Design</span>
+    </a>
+  </header>
+  <main class="library-standards-main library-catalog-main" id="page-library">
+    <aside class="library-primary-drawer" aria-label="Library navigation" data-standards-aria="library">
+      <p class="library-primary-drawer-title" data-standards-copy="libraryTitle">Library</p>
+      <nav>
+        <a href="guide.html"><span data-copy="navGuide">Standards</span></a>
+        <a href="elements.html"><span data-copy="navElements">Elements</span></a>
+        <a href="components.html"><span data-copy="navComponents">Components</span></a>
+        <a href="pages.html" aria-current="page"><span data-copy="navPages">Pages</span></a>
+      </nav>
+    </aside>
+    <aside class="library-standards-drawer library-catalog-drawer" aria-label="Page categories" data-catalog-aria="pageSections">
+      <div class="library-standards-drawer-heading"><p data-catalog-copy="pageDrawerKicker">Compositions</p><h2 data-catalog-copy="pageDrawerTitle">Pages</h2></div>
+      <nav>
+        <a data-catalog-group="modules" href="#page-module-library" aria-current="true" data-catalog-copy="pageModules">Page modules</a>
+        <a data-catalog-group="patterns" href="#page-pattern-library" data-catalog-copy="pagePatterns">Page patterns</a>
+      </nav>
+      <div class="library-standards-drawer-note"><strong data-catalog-copy="pageNoteTitle">Composition rule</strong><p data-catalog-copy="pageNote">Compose complete journeys from proven elements and components.</p></div>
+    </aside>
+    <section class="library-standards-content library-catalog-content" aria-labelledby="page-catalog-title">
+      <header class="library-standards-heading"><p data-catalog-copy="pageKicker">From modules to journeys</p><h1 id="page-catalog-title" data-catalog-copy="pageTitle">Pages &amp; patterns</h1><p data-catalog-copy="pageDescription">Compositions for complete, state-aware product journeys and host boundaries.</p></header>
+      <div class="library-catalog-list">
+    <section id="page-module-library" class="library-section" data-catalog-group="modules" data-library-level="page-module">
+      <h2 data-catalog-copy="pageModules">Page modules</h2>
+      <div class="library-grid">
+        <article class="library-entry" id="public-landing-frame" data-status="ready" data-scope="shared"><h3>Public landing frame</h3><p>Public menu, one active full-screen scene, and sign-in process feedback.</p><dl><dt>Dependencies</dt><dd>public menu bar, landing scene, sign-in process banner.</dd></dl></article>
+        <article class="library-entry" id="public-pricing-scene" data-status="ready" data-scope="shared"><h3>Public pricing scene</h3><p>Scene frame, pricing cards, disclosure, and sign-in/checkout prerequisite action.</p><dl><dt>Dependencies</dt><dd>landing scene, pricing card grid.</dd></dl></article>
+        <article class="library-entry" id="public-about-footer-scene" data-status="ready" data-scope="shared"><h3>Public About/footer scene</h3><p>Narrative visual, grouped navigation, and full-width legal row.</p><dl><dt>Dependencies</dt><dd>landing scene, site footer.</dd></dl></article>
+        <article class="library-entry" id="signed-in-app-shell" data-status="candidate" data-scope="shared"><h3>Signed-in app shell</h3><p>Global drawer, route main view, preferences, update accessory, and unsaved-transition guard.</p><dl><dt>Open gate</dt><dd>Matrix destination is disabled; authoritative BETA session is incomplete.</dd></dl></article>
+        <article class="library-entry" id="settings-rail-detail-workspace" data-status="ready" data-scope="shared"><h3>Settings rail/detail workspace</h3><p>Fixed section rail, compact title row, settings rows, and side-panel edit flows.</p><dl><dt>Dependencies</dt><dd>contextual rail, settings row, side floating panel.</dd></dl></article>
+        <article class="library-entry" id="three-pane-identity-workspace" data-status="ready" data-scope="shared"><h3>Three-pane identity workspace</h3><p>Primary identity rail, selected identity/tool rail, and flexible detail pane.</p><dl><dt>Dependencies</dt><dd>identity list, filter menu, profile panel.</dd></dl></article>
+        <article class="library-entry" id="document-inspector-workspace" data-status="ready" data-scope="shared"><h3>Document/inspector workspace</h3><p>Context rail, immutable readable document, inspector, history, and change-request entry actions.</p><dl><dt>Dependencies</dt><dd>contextual navigation, main view, disclosure, icon actions.</dd></dl></article>
+        <article class="library-entry" id="change-request-composer" data-status="ready" data-scope="shared"><h3>Change-request composer</h3><p>Action row, authority context, metadata, file inventory, draft recovery, Save, and Send.</p><dl><dt>Dependencies</dt><dd>form controls, file inventory, editor, confirm dialog.</dd></dl></article>
+        <article class="library-entry" id="notification-inbox-detail-workspace" data-status="ready" data-scope="shared"><h3>Inbox/detail workspace</h3><p>Title/toggle, authoritative inbox, filters, detail drawer, and governed detail actions.</p><dl><dt>Dependencies</dt><dd>notification inbox, detail drawer, receipt detail.</dd></dl></article>
+        <article class="library-entry" id="checkout-summary-payment-workspace" data-status="candidate" data-scope="shared"><h3>Checkout summary/payment workspace</h3><p>Selected option, quantity, price summary, transaction, payment overlay, and recovery.</p><dl><dt>Open gate</dt><dd>Integrated production billing coverage.</dd></dl></article>
+        <article class="library-entry" id="sign-in-entry-surface" data-status="candidate" data-scope="shared"><h3>Sign-in entry surface</h3><p>Public menu, preferences, sign-in action, and host process feedback.</p><dl><dt>Open gate</dt><dd>Current authorization still depends on the Alpha endpoint.</dd></dl></article>
+        <article class="library-entry" id="governance-canvas-workspace" data-status="needed" data-scope="shared"><h3>Governance canvas workspace</h3><p>Authority navigation, accepted document/context state, governance activity, loading, error, and recovery.</p><dl><dt>Need</dt><dd>Current product canvas is empty and its signed-in destination is disabled.</dd></dl></article>
+        <article class="library-entry" id="guided-start-workflow" data-status="needed" data-scope="shared"><h3>Guided-start workflow</h3><p>Mode boundary, objective, draft, safety check, submission, and approval handoff.</p><dl><dt>Need</dt><dd>Only the mode title and host link boundary are ready.</dd></dl></article>
+        <article class="library-entry" id="approval-decision-workspace" data-status="candidate" data-scope="shared"><h3>Approval decision workspace</h3><p>Evidence detail, blockers/advisories, acknowledgement, decision, and authoritative result.</p><dl><dt>Open gate</dt><dd>Complete Mind lifecycle integration.</dd></dl></article>
+        <article class="library-entry" id="sync-receipt-recovery-workspace" data-status="needed" data-scope="shared"><h3>Sync receipt/recovery workspace</h3><p>Scope, backup, apply progress, verification receipt, failure recovery, and rollback.</p><dl><dt>Need</dt><dd>Required by the intended lifecycle; no shared-HTML module exists.</dd></dl></article>
+        <article class="library-entry" id="native-update-panel" data-status="ready" data-scope="macos"><h3>Native update panel</h3><p>Current, checking, available, downloading, restarting, and failure states.</p><dl><dt>Boundary</dt><dd>macOS-only; shared HTML exposes availability, not bundle mutation.</dd></dl></article>
+      </div>
+    </section>
+    <section id="page-pattern-library" class="library-section" data-catalog-group="patterns" data-library-level="page-pattern">
+      <h2 data-catalog-copy="pagePatterns">Page patterns</h2>
+      <div class="library-grid">
+        <article class="library-entry" id="shared-public-four-scene" data-status="ready" data-scope="shared"><h3>Shared public four-scene</h3><p>One menu and Home, Practice, Pricing, and About scenes in the browser and macOS host.</p></article>
+        <article class="library-entry" id="shared-signed-in-shell" data-status="candidate" data-scope="shared"><h3>Shared signed-in shell</h3><p>One global rail and route registry; complete only after Matrix and authoritative session ownership are live.</p></article>
+        <article class="library-entry" id="rail-detail-settings" data-status="ready" data-scope="shared"><h3>Rail/detail settings</h3><p>Fixed section rail plus flexible detail and side-panel mutations.</p></article>
+        <article class="library-entry" id="three-pane-identity" data-status="ready" data-scope="shared"><h3>Three-pane identity</h3><p>Two fixed hierarchy rails plus flexible detail and internal compact-host scrolling.</p></article>
+        <article class="library-entry" id="document-read-inspect" data-status="ready" data-scope="shared"><h3>Document read/inspect</h3><p>Immutable readable document plus inspector; mutation starts in a separate proposal flow.</p></article>
+        <article class="library-entry" id="draft-review-submit" data-status="candidate" data-scope="shared"><h3>Draft/review/submit</h3><p>Recoverable draft, validation, authoritative submission receipt, and review transition without publication claims.</p></article>
+        <article class="library-entry" id="inbox-detail-action" data-status="ready" data-scope="shared"><h3>Inbox/detail/action</h3><p>One authoritative inbox, family filters, durable evidence drawer, and optional governed decision.</p></article>
+        <article class="library-entry" id="prerequisite-checkout" data-status="candidate" data-scope="shared"><h3>Prerequisite checkout</h3><p>Preserve selection through sign-in, then create the authoritative transaction and payment overlay.</p></article>
+        <article class="library-entry" id="native-capability-handoff" data-status="ready" data-scope="shared"><h3>Native capability handoff</h3><p>Shared HTML presents intent; a versioned allowlisted host adapter performs the native capability.</p></article>
+        <article class="library-entry" id="authoritative-product-lifecycle" data-status="needed" data-scope="shared"><h3>Authoritative product lifecycle</h3><p>Sign in → load → draft → safety check → submit → approval → immutable version → assignment → backup/apply → receipt → rollback.</p></article>
+      </div>
+    </section>
+      </div>
+    </section>
+  </main>
+  <script src="library.js?v={{SKILL_VERSION}}-workshop-drawer-11"></script>
+</body>
+</html>
