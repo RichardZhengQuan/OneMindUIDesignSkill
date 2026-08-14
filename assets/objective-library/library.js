@@ -735,7 +735,6 @@
     preview.innerHTML = `
       <div class="library-settings-preview-heading">
         <div><p data-settings-copy="livePreview">Live preview</p><h4 data-settings-copy="previewTitle">Shared interface</h4></div>
-        <span class="library-settings-preview-status" data-settings-copy="ready">Ready</span>
       </div>
       <div class="library-settings-grid-preview">${"<span></span>".repeat(12)}</div>
       <div class="library-settings-preview-card">

@@ -95,7 +95,7 @@ Use links to repository-relative implementation, test, and documentation paths. 
 
 ## Visual specimen and cascade contract
 
-Every entry must open a rendered neutral specimen through the shared `library.js` controller. A status badge, title, and prose contract without a specimen is incomplete.
+Every entry must open a rendered neutral specimen through the shared `library.js` controller. Keep maturity in `data-status` and source documentation without rendering maturity pills in the visual library. A title, status metadata, and prose contract without a specimen is incomplete.
 
 - On the Components page, present every selected component through exactly three labelled content sections in order: Description, Adjustments, and Preview area. Description explains purpose and behavior; Adjustments records variants, states, dependencies, constraints, or evidence; Preview area contains the neutral rendered specimen.
 - On the Pages page, render every selected page module and page pattern as a borderless, full-size workspace that fills the catalog content pane at desktop and mobile widths. Keep the title, status, description, and contract inside that workspace without wrapping the page in a card or shrinking its specimen back to thumbnail scale.
