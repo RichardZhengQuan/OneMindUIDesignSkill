@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resolve and optionally open a OneMind UI Design objective library."""
+"""Resolve and optionally open a static, offline OneMind UI Design library."""
 
 from __future__ import annotations
 
@@ -14,11 +14,15 @@ import webbrowser
 from pathlib import Path
 
 
-LIBRARY_FILES = ("guide.html", "elements.html", "components.html", "pages.html")
+LIBRARY_FILES = ("guide.html", "style.html", "elements.html", "components.html", "pages.html")
 TEMPLATE_FILES = ("index.html", *LIBRARY_FILES, "license.html", "library.css", "library.js")
 LEGAL_FILES = ("LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/IconPark-Apache-2.0.txt")
 ASSET_FILES = ("assets/onemind-beta-mark-light.svg", "assets/onemind-beta-mark-dark.svg")
-SKILL_VERSION = "0.3"
+STANDARD_FILES = (
+    "standards/design-brief.md", "standards/visual-direction.md", "standards/layout-hierarchy.md",
+    "standards/state-contract.md", "standards/authority-host.md", "standards/validation-plan.md",
+)
+SKILL_VERSION = "0.4"
 
 
 def slugify(value: str) -> str:
@@ -68,6 +72,13 @@ def build_baseline(project_root: Path) -> Path:
         destination = target / name
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text((templates / name).read_text(encoding="utf-8"), encoding="utf-8")
+    for name in STANDARD_FILES:
+        destination = target / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        content = (templates / name).read_text(encoding="utf-8")
+        for token, value in replacements.items():
+            content = content.replace(token, value)
+        destination.write_text(content, encoding="utf-8")
     source_root = Path(__file__).resolve().parent.parent
     for name in LEGAL_FILES:
         destination = target / name
@@ -125,6 +136,8 @@ def main() -> int:
             "project_root": str(project_root),
             "objective": objective_slug,
             "objectives": [],
+            "offline": True,
+            "network_required": False,
         }))
         return 3
     if not objectives:
@@ -140,6 +153,8 @@ def main() -> int:
                 "project_root": str(project_root),
                 "objective": objective_slug,
                 "objectives": [path.name for path in objectives],
+                "offline": True,
+                "network_required": False,
             }))
             return 3
         selected = entry_path(matches[0])
@@ -152,12 +167,18 @@ def main() -> int:
         selected = build_hub(project_root, objectives)
         selection = "hub"
 
-    url = selected.resolve().as_uri()
+    file_uri = selected.resolve().as_uri()
     opened = False
     if args.open_default:
-        opened = bool(webbrowser.open_new_tab(url))
+        opened = bool(webbrowser.open_new_tab(file_uri))
         if not opened:
-            print(json.dumps({"status": "open_failed", "path": str(selected), "url": url}))
+            print(json.dumps({
+                "status": "open_failed",
+                "path": str(selected),
+                "file_uri": file_uri,
+                "offline": True,
+                "network_required": False,
+            }))
             return 4
 
     print(json.dumps({
@@ -166,9 +187,11 @@ def main() -> int:
         "objective": objective_slug,
         "objectives": [path.name for path in objectives],
         "path": str(selected),
-        "url": url,
+        "file_uri": file_uri,
         "temporary": selection in {"baseline", "hub"},
         "opened_default_browser": opened,
+        "offline": True,
+        "network_required": False,
     }))
     return 0
 

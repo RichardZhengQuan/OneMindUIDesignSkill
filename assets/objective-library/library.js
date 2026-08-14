@@ -5,6 +5,7 @@
   const links = [
     ["index.html", "Overview", "overview"],
     ["guide.html", "Standards", "guide"],
+    ["style.html", "Style", "style"],
     ["elements.html", "Elements", "elements"],
     ["components.html", "Components", "components"],
     ["pages.html", "Pages & patterns", "pages"],
@@ -22,68 +23,68 @@
     en: {
       lang: "en",
       controls: { language: "Language", displayMode: "Display mode", automatic: "Automatic", light: "Light", dark: "Dark" },
-      navGuide: "Standards", navElements: "Elements", navComponents: "Components", navPages: "Pages",
+      navGuide: "Standards", navStyle: "Style", navElements: "Elements", navComponents: "Components", navPages: "Pages",
       titleLead: "Design your system", titleTail: "as one system.",
       description: "A governed visual library for calm, precise interfaces across the shared web product. Start with intent, reuse proven modules, and keep every state truthful.",
-      start: "Start", tryOneMind: "Try OneMind",
-      footerIcons: "Icons by IconPark",
+      start: "Start",
+      footerIcons: "Icons by IconPark", licenseOverview: "License overview", localLicense: "Local license",
       librarySections: "Library sections", startExploring: "Start exploring the UI library",
       footerNavigation: "Footer navigation",
-      legalTitle: "Open-source licenses", legalIntro: "OneMind UI Design is released under the MIT License and includes third-party open-source work.", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "Third-party software", viewSource: "View source", viewIconParkLicense: "View IconPark license", iconParkNotice: "Icon artwork is derived from IconPark by ByteDance under the Apache License 2.0.", iconParkAdapted: "Icons may be resized, recolored, or adapted to match semantic themes and interaction states.",
+      legalTitle: "Open-source licenses", legalIntro: "OneMind UI Design is released under the MIT License and includes third-party open-source work.", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "Third-party software", viewSource: "View local license", viewIconParkLicense: "View local IconPark license", iconParkNotice: "Icon artwork is derived from IconPark by ByteDance under the Apache License 2.0.", iconParkAdapted: "Icons may be resized, recolored, or adapted to match semantic themes and interaction states.",
     },
     "zh-SG": {
       lang: "zh-SG",
       controls: { language: "语言", displayMode: "显示模式", automatic: "自动", light: "浅色", dark: "深色" },
-      navGuide: "标准", navElements: "元素", navComponents: "组件", navPages: "页面",
+      navGuide: "标准", navStyle: "风格", navElements: "元素", navComponents: "组件", navPages: "页面",
       titleLead: "把你的系统设计成", titleTail: "一个完整系统。",
       description: "一套受治理的视觉库，为共享 Web 产品打造平静、精准的界面。从意图出发，复用经过验证的模块，并让每种状态保持真实。",
-      start: "开始", tryOneMind: "试用 OneMind",
-      footerIcons: "图标来自 IconPark",
+      start: "开始",
+      footerIcons: "图标来自 IconPark", licenseOverview: "许可证概览", localLicense: "本地许可证",
       librarySections: "视觉库栏目", startExploring: "开始浏览 UI 视觉库",
       footerNavigation: "页脚导航",
-      legalTitle: "开源许可证", legalIntro: "OneMind UI Design 采用 MIT 许可证发布，并包含第三方开源作品。", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "第三方软件", viewSource: "查看源代码", viewIconParkLicense: "查看 IconPark 许可证", iconParkNotice: "图标作品衍生自 ByteDance 的 IconPark，并依据 Apache License 2.0 使用。", iconParkAdapted: "图标可能会调整尺寸、重新着色或改编，以匹配语义主题和交互状态。",
+      legalTitle: "开源许可证", legalIntro: "OneMind UI Design 采用 MIT 许可证发布，并包含第三方开源作品。", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "第三方软件", viewSource: "查看本地许可证", viewIconParkLicense: "查看本地 IconPark 许可证", iconParkNotice: "图标作品衍生自 ByteDance 的 IconPark，并依据 Apache License 2.0 使用。", iconParkAdapted: "图标可能会调整尺寸、重新着色或改编，以匹配语义主题和交互状态。",
     },
     "zh-HK": {
       lang: "zh-HK",
       controls: { language: "語言", displayMode: "顯示模式", automatic: "自動", light: "淺色", dark: "深色" },
-      navGuide: "標準", navElements: "元素", navComponents: "元件", navPages: "頁面",
+      navGuide: "標準", navStyle: "風格", navElements: "元素", navComponents: "元件", navPages: "頁面",
       titleLead: "將你的系統設計成", titleTail: "一個完整系統。",
       description: "一套受治理的視覺庫，為共享 Web 產品打造平靜、精準的介面。從意圖出發，重用已驗證的模組，並讓每種狀態保持真實。",
-      start: "開始", tryOneMind: "試用 OneMind",
-      footerIcons: "圖標來自 IconPark",
+      start: "開始",
+      footerIcons: "圖標來自 IconPark", licenseOverview: "授權條款概覽", localLicense: "本地授權條款",
       librarySections: "視覺庫欄目", startExploring: "開始瀏覽 UI 視覺庫",
       footerNavigation: "頁尾導覽",
-      legalTitle: "開源授權條款", legalIntro: "OneMind UI Design 依 MIT 授權條款發布，並包含第三方開源作品。", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "第三方軟件", viewSource: "檢視原始碼", viewIconParkLicense: "檢視 IconPark 授權條款", iconParkNotice: "圖標作品衍生自 ByteDance 的 IconPark，並依 Apache License 2.0 使用。", iconParkAdapted: "圖標可能會調整尺寸、重新著色或改編，以配合語義主題及互動狀態。",
+      legalTitle: "開源授權條款", legalIntro: "OneMind UI Design 依 MIT 授權條款發布，並包含第三方開源作品。", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "第三方軟件", viewSource: "檢視本地授權條款", viewIconParkLicense: "檢視本地 IconPark 授權條款", iconParkNotice: "圖標作品衍生自 ByteDance 的 IconPark，並依 Apache License 2.0 使用。", iconParkAdapted: "圖標可能會調整尺寸、重新著色或改編，以配合語義主題及互動狀態。",
     },
     ja: {
       lang: "ja",
       controls: { language: "言語", displayMode: "表示モード", automatic: "自動", light: "ライト", dark: "ダーク" },
-      navGuide: "標準", navElements: "要素", navComponents: "コンポーネント", navPages: "ページ",
+      navGuide: "標準", navStyle: "スタイル", navElements: "要素", navComponents: "コンポーネント", navPages: "ページ",
       titleLead: "あなたのシステムを", titleTail: "ひとつのシステムとして設計。",
       description: "共有Webプロダクトのための、穏やかで正確なインターフェースを支える管理されたビジュアルライブラリ。意図から始め、実証済みのモジュールを再利用し、すべての状態を正確に保ちます。",
-      start: "始める", tryOneMind: "OneMindを試す",
-      footerIcons: "アイコン：IconPark",
+      start: "始める",
+      footerIcons: "アイコン：IconPark", licenseOverview: "ライセンス概要", localLicense: "ローカルライセンス",
       librarySections: "ライブラリセクション", startExploring: "UIライブラリを見る",
       footerNavigation: "フッターナビゲーション",
-      legalTitle: "オープンソースライセンス", legalIntro: "OneMind UI Design は MIT License で公開され、第三者のオープンソース作品を含みます。", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "サードパーティソフトウェア", viewSource: "ソースを見る", viewIconParkLicense: "IconPark ライセンスを見る", iconParkNotice: "アイコンは ByteDance の IconPark をもとに、Apache License 2.0 に基づいて使用しています。", iconParkAdapted: "アイコンはセマンティックテーマや操作状態に合わせて、サイズ、色、形状を調整する場合があります。",
+      legalTitle: "オープンソースライセンス", legalIntro: "OneMind UI Design は MIT License で公開され、第三者のオープンソース作品を含みます。", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "サードパーティソフトウェア", viewSource: "ローカルライセンスを見る", viewIconParkLicense: "ローカルの IconPark ライセンスを見る", iconParkNotice: "アイコンは ByteDance の IconPark をもとに、Apache License 2.0 に基づいて使用しています。", iconParkAdapted: "アイコンはセマンティックテーマや操作状態に合わせて、サイズ、色、形状を調整する場合があります。",
     },
     ko: {
       lang: "ko",
       controls: { language: "언어", displayMode: "화면 모드", automatic: "자동", light: "라이트", dark: "다크" },
-      navGuide: "표준", navElements: "요소", navComponents: "컴포넌트", navPages: "페이지",
+      navGuide: "표준", navStyle: "스타일", navElements: "요소", navComponents: "컴포넌트", navPages: "페이지",
       titleLead: "당신의 시스템을", titleTail: "하나의 시스템으로 설계하세요.",
       description: "공유 웹 제품을 위한 차분하고 정밀한 인터페이스를 만드는 관리형 비주얼 라이브러리입니다. 의도에서 시작하고, 검증된 모듈을 재사용하며, 모든 상태를 정확하게 유지합니다.",
-      start: "시작", tryOneMind: "OneMind 사용해 보기",
-      footerIcons: "아이콘: IconPark",
+      start: "시작",
+      footerIcons: "아이콘: IconPark", licenseOverview: "라이선스 개요", localLicense: "로컬 라이선스",
       librarySections: "라이브러리 섹션", startExploring: "UI 라이브러리 둘러보기",
       footerNavigation: "푸터 탐색",
-      legalTitle: "오픈 소스 라이선스", legalIntro: "OneMind UI Design은 MIT License로 공개되며 타사 오픈 소스 저작물을 포함합니다.", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "타사 소프트웨어", viewSource: "소스 보기", viewIconParkLicense: "IconPark 라이선스 보기", iconParkNotice: "아이콘은 ByteDance의 IconPark를 기반으로 하며 Apache License 2.0에 따라 사용됩니다.", iconParkAdapted: "아이콘은 의미 기반 테마와 상호작용 상태에 맞게 크기, 색상 또는 형태가 조정될 수 있습니다.",
+      legalTitle: "오픈 소스 라이선스", legalIntro: "OneMind UI Design은 MIT License로 공개되며 타사 오픈 소스 저작물을 포함합니다.", projectLicenseTitle: "OneMind UI Design · MIT", thirdPartyTitle: "타사 소프트웨어", viewSource: "로컬 라이선스 보기", viewIconParkLicense: "로컬 IconPark 라이선스 보기", iconParkNotice: "아이콘은 ByteDance의 IconPark를 기반으로 하며 Apache License 2.0에 따라 사용됩니다.", iconParkAdapted: "아이콘은 의미 기반 테마와 상호작용 상태에 맞게 크기, 색상 또는 형태가 조정될 수 있습니다.",
     },
   };
 
   const settingsCopy = {
     en: {
-      foundations: "Foundations", workspace: "Foundation workspace", title: "Design settings", description: "Tune the shared visual foundation.", reset: "Reset", save: "Save", saved: "Settings saved.", saveFailed: "Settings could not be saved.",
+      foundations: "Foundations", workspace: "Foundation workspace", title: "Design settings", description: "Tune the shared visual foundation.", reset: "Reset", save: "Save", saved: "Settings saved.", saveFailed: "Settings could not be saved.", sectionDescription: "Description", sectionAdjustments: "Adjustments", sectionPreview: "Preview area",
       color: "Color", colorDescription: "Choose a preset, then tune semantic roles shared by every page.", colorPreset: "Color preset", neutral: "Neutral", ocean: "Ocean", forest: "Forest", violet: "Violet", semanticRoles: "Semantic roles", colorFormatHelp: "Use Hex or rgb(). Leave a field blank to inherit the active theme.", mainColor: "Main", textColor: "Text", secondaryTextColor: "Secondary text", mutedTextColor: "Muted text", lineColor: "Line", borderColor: "Border", backgroundColor: "Background", surfaceColor: "Surface", selectedColor: "Selected", colorInvalid: "Enter a valid Hex or rgb() color.",
       grid: "Grid", gridDescription: "Set the column structure used by shared page layouts.", columns: "Columns", size: "Size", sizeDescription: "Control the base size that scales type and controls together.", baseSize: "Base size",
       font: "Font", fontDescription: "Select the type character for every shared role.", fontFamily: "Font family", systemSans: "System Sans", humanistSans: "Humanist Sans", editorialSerif: "Editorial Serif", mono: "Monospace",
@@ -92,7 +93,7 @@
       livePreview: "Live preview", previewTitle: "Shared interface", ready: "Ready", previewCardTitle: "One calm foundation", previewCardDescription: "Color, type, geometry, and motion stay coherent across every shared surface.", primaryAction: "Primary action", secondaryAction: "Secondary", columnsUnit: "columns",
     },
     "zh-SG": {
-      foundations: "基础", workspace: "基础设置工作区", title: "设计设置", description: "调整共享视觉基础。", reset: "重置", save: "保存", saved: "设置已保存。", saveFailed: "无法保存设置。",
+      foundations: "基础", workspace: "基础设置工作区", title: "设计设置", description: "调整共享视觉基础。", reset: "重置", save: "保存", saved: "设置已保存。", saveFailed: "无法保存设置。", sectionDescription: "说明", sectionAdjustments: "调整项", sectionPreview: "预览区域",
       color: "颜色", colorDescription: "先选择预设，再调整所有页面共享的语义颜色。", colorPreset: "颜色预设", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫罗兰", semanticRoles: "语义角色", colorFormatHelp: "支持 Hex 或 rgb()。留空则继承当前主题。", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔线", borderColor: "边框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "选中状态", colorInvalid: "请输入有效的 Hex 或 rgb() 颜色。",
       grid: "网格", gridDescription: "设置共享页面布局使用的列结构。", columns: "列数", size: "尺寸", sizeDescription: "控制同时缩放文字和控件的基础尺寸。", baseSize: "基础尺寸",
       font: "字体", fontDescription: "选择所有共享角色的字体风格。", fontFamily: "字体系列", systemSans: "系统无衬线体", humanistSans: "人文无衬线体", editorialSerif: "编辑衬线体", mono: "等宽字体",
@@ -101,7 +102,7 @@
       livePreview: "实时预览", previewTitle: "共享界面", ready: "就绪", previewCardTitle: "一个平静的基础", previewCardDescription: "颜色、字体、几何和动效在每个共享表面上保持一致。", primaryAction: "主要操作", secondaryAction: "次要操作", columnsUnit: "列",
     },
     "zh-HK": {
-      foundations: "基礎", workspace: "基礎設定工作區", title: "設計設定", description: "調整共享視覺基礎。", reset: "重設", save: "儲存", saved: "設定已儲存。", saveFailed: "無法儲存設定。",
+      foundations: "基礎", workspace: "基礎設定工作區", title: "設計設定", description: "調整共享視覺基礎。", reset: "重設", save: "儲存", saved: "設定已儲存。", saveFailed: "無法儲存設定。", sectionDescription: "說明", sectionAdjustments: "調整項", sectionPreview: "預覽區域",
       color: "顏色", colorDescription: "先選擇預設，再調整所有頁面共享的語義顏色。", colorPreset: "顏色預設", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫羅蘭", semanticRoles: "語義角色", colorFormatHelp: "支援 Hex 或 rgb()。留空則繼承目前主題。", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔線", borderColor: "邊框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "選取狀態", colorInvalid: "請輸入有效的 Hex 或 rgb() 顏色。",
       grid: "網格", gridDescription: "設定共享頁面佈局使用的欄結構。", columns: "欄數", size: "尺寸", sizeDescription: "控制同時縮放文字和控制項的基礎尺寸。", baseSize: "基礎尺寸",
       font: "字體", fontDescription: "選擇所有共享角色的字體風格。", fontFamily: "字體系列", systemSans: "系統無襯線體", humanistSans: "人文無襯線體", editorialSerif: "編輯襯線體", mono: "等寬字體",
@@ -110,7 +111,7 @@
       livePreview: "即時預覽", previewTitle: "共享介面", ready: "就緒", previewCardTitle: "一個平靜的基礎", previewCardDescription: "顏色、字體、幾何及動效在每個共享表面上保持一致。", primaryAction: "主要操作", secondaryAction: "次要操作", columnsUnit: "欄",
     },
     ja: {
-      foundations: "基盤", workspace: "基盤ワークスペース", title: "デザイン設定", description: "共有ビジュアル基盤を調整します。", reset: "リセット", save: "保存", saved: "設定を保存しました。", saveFailed: "設定を保存できませんでした。",
+      foundations: "基盤", workspace: "基盤ワークスペース", title: "デザイン設定", description: "共有ビジュアル基盤を調整します。", reset: "リセット", save: "保存", saved: "設定を保存しました。", saveFailed: "設定を保存できませんでした。", sectionDescription: "説明", sectionAdjustments: "調整項目", sectionPreview: "プレビュー領域",
       color: "カラー", colorDescription: "プリセットを選び、全ページで共有するセマンティックカラーを調整します。", colorPreset: "カラープリセット", neutral: "ニュートラル", ocean: "オーシャン", forest: "フォレスト", violet: "バイオレット", semanticRoles: "セマンティックロール", colorFormatHelp: "Hex または rgb() に対応。空欄は現在のテーマを継承します。", mainColor: "メイン", textColor: "テキスト", secondaryTextColor: "セカンダリテキスト", mutedTextColor: "弱いテキスト", lineColor: "区切り線", borderColor: "ボーダー", backgroundColor: "背景", surfaceColor: "サーフェス", selectedColor: "選択状態", colorInvalid: "有効な Hex または rgb() カラーを入力してください。",
       grid: "グリッド", gridDescription: "共有ページレイアウトの列構造を設定します。", columns: "列数", size: "サイズ", sizeDescription: "文字とコントロールを一緒に拡大縮小する基準サイズです。", baseSize: "基準サイズ",
       font: "フォント", fontDescription: "すべての共有ロールの文字特性を選びます。", fontFamily: "フォントファミリー", systemSans: "システムサンセリフ", humanistSans: "ヒューマニストサンセリフ", editorialSerif: "エディトリアルセリフ", mono: "等幅フォント",
@@ -119,7 +120,7 @@
       livePreview: "ライブプレビュー", previewTitle: "共有インターフェース", ready: "準備完了", previewCardTitle: "ひとつの穏やかな基盤", previewCardDescription: "カラー、文字、形状、動きがすべての共有サーフェスで一貫します。", primaryAction: "主要アクション", secondaryAction: "セカンダリ", columnsUnit: "列",
     },
     ko: {
-      foundations: "기초", workspace: "기초 설정 작업 공간", title: "디자인 설정", description: "공유 시각 기반을 조정하세요.", reset: "재설정", save: "저장", saved: "설정을 저장했습니다.", saveFailed: "설정을 저장하지 못했습니다.",
+      foundations: "기초", workspace: "기초 설정 작업 공간", title: "디자인 설정", description: "공유 시각 기반을 조정하세요.", reset: "재설정", save: "저장", saved: "설정을 저장했습니다.", saveFailed: "설정을 저장하지 못했습니다.", sectionDescription: "설명", sectionAdjustments: "조정 항목", sectionPreview: "미리보기 영역",
       color: "색상", colorDescription: "프리셋을 선택한 뒤 모든 페이지가 공유할 의미 기반 색상을 조정하세요.", colorPreset: "색상 프리셋", neutral: "중립", ocean: "오션", forest: "포레스트", violet: "바이올렛", semanticRoles: "의미 역할", colorFormatHelp: "Hex 또는 rgb()를 지원합니다. 비워 두면 현재 테마를 따릅니다.", mainColor: "메인", textColor: "텍스트", secondaryTextColor: "보조 텍스트", mutedTextColor: "약한 텍스트", lineColor: "구분선", borderColor: "테두리", backgroundColor: "배경", surfaceColor: "표면", selectedColor: "선택 상태", colorInvalid: "유효한 Hex 또는 rgb() 색상을 입력하세요.",
       grid: "그리드", gridDescription: "공유 페이지 레이아웃의 열 구조를 설정하세요.", columns: "열 수", size: "크기", sizeDescription: "글꼴과 컨트롤을 함께 조절하는 기본 크기를 설정하세요.", baseSize: "기본 크기",
       font: "글꼴", fontDescription: "모든 공유 역할에 적용할 글꼴 특성을 선택하세요.", fontFamily: "글꼴 모음", systemSans: "시스템 산세리프", humanistSans: "휴머니스트 산세리프", editorialSerif: "에디토리얼 세리프", mono: "고정폭 글꼴",
@@ -259,81 +260,134 @@
 
   const standardsCopy = {
     en: {
-      library: "Library navigation", libraryTitle: "Library", sections: "Standards sections", drawerKicker: "System foundation", drawerTitle: "Standards", drawerNoteTitle: "Working agreement", drawerNote: "Set the intent here before building reusable elements and modules.",
+      library: "Library navigation", libraryTitle: "Library", sections: "Standards sections", drawerKicker: "System foundation", drawerTitle: "Standards", drawerNoteTitle: "Working agreement", drawerNote: "Set the intent here before building reusable elements and modules.", markdownPreview: "Markdown preview",
       kicker: "One system, shared rules", title: "Design standards", description: "Define the intent, visual direction, state behavior, and authority boundaries that every reusable layer must follow.",
       briefTitle: "Design brief", briefDescription: "Record the objective, audience, structural content slots, constraints, and assumptions without storing business records.", required: "Required", briefDetail: "Primary task, entry condition, completion evidence, and non-goals.",
       visualTitle: "Visual direction", visualDescription: "Start from OneMind's calm neutral system and record only objective-specific differences.", baseline: "Baseline", visualDetail: "System sans, semantic surfaces, restrained depth, precise corners, and blue reserved for focus or links.",
       layoutTitle: "Layout & hierarchy", layoutDescription: "Record the shell, navigation, reading order, action slots, neutral page modules, and desktop host constraints.", layoutDetail: "Clear title grammar, stable rails, measured content insets, and accessible interactive targets.",
       stateTitle: "State contract", stateDescription: "Define loading, empty, offline, stale, error, blocked, permission, success, recovery, and interaction states.", truthRule: "Truth rule", stateDetail: "Never show success until the authoritative adapter confirms it.",
-      authorityTitle: "Authority & host", authorityDescription: "Keep the product UI shared while preserving server and native authority boundaries.", renderer: "Renderer", authorityDetail: "One shared HTML, CSS, and JavaScript artifact for browser and desktop host.",
+      authorityTitle: "Authority & host", authorityDescription: "Keep the design library local and static while documenting external and native authority as interface boundaries.", renderer: "Renderer", authorityDetail: "One offline HTML, CSS, and JavaScript artifact opened directly from local files.",
       validationTitle: "Validation plan", validationDescription: "Record routes, themes, host sizes, locales, accessibility checks, tests, builds, and same-artifact evidence.", locales: "Locales", validationDetail: "English, Singapore Simplified Chinese, Hong Kong Traditional Chinese, Korean, and Japanese.",
     },
     "zh-SG": {
-      library: "视觉库导航", libraryTitle: "视觉库", sections: "标准章节", drawerKicker: "系统基础", drawerTitle: "标准", drawerNoteTitle: "工作约定", drawerNote: "先在这里明确意图，再构建可复用元素和模块。",
+      library: "视觉库导航", libraryTitle: "视觉库", sections: "标准章节", drawerKicker: "系统基础", drawerTitle: "标准", drawerNoteTitle: "工作约定", drawerNote: "先在这里明确意图，再构建可复用元素和模块。", markdownPreview: "Markdown 预览",
       kicker: "一个系统，共享规则", title: "设计标准", description: "定义每个可复用层都必须遵循的意图、视觉方向、状态行为和权限边界。",
       briefTitle: "设计简介", briefDescription: "记录目标、受众、内容结构、限制和假设，不存储业务记录。", required: "必填", briefDetail: "主要任务、进入条件、完成证据和非目标。",
       visualTitle: "视觉方向", visualDescription: "从 OneMind 平静的中性系统出发，只记录目标特有的差异。", baseline: "基线", visualDetail: "系统无衬线字体、语义表面、克制层次、精确圆角；蓝色仅用于焦点或链接。",
       layoutTitle: "布局与层级", layoutDescription: "记录外壳、导航、阅读顺序、操作位置、中性页面模块和桌面端限制。", layoutDetail: "清晰的标题规则、稳定侧栏、适度内容边距和可访问操作目标。",
       stateTitle: "状态契约", stateDescription: "定义加载、空白、离线、过期、错误、受阻、权限、成功、恢复和交互状态。", truthRule: "真实性规则", stateDetail: "在权威适配器确认之前绝不显示成功。",
-      authorityTitle: "权限与宿主", authorityDescription: "共享产品界面，同时保留服务器和原生宿主的权限边界。", renderer: "渲染器", authorityDetail: "浏览器和桌面宿主共用同一份 HTML、CSS 和 JavaScript。",
+      authorityTitle: "权限与宿主", authorityDescription: "设计库保持本地静态，同时仅以接口边界记录外部与原生权限。", renderer: "渲染器", authorityDetail: "直接从本地文件打开同一份离线 HTML、CSS 和 JavaScript。",
       validationTitle: "验证计划", validationDescription: "记录路由、主题、宿主尺寸、语言、无障碍检查、测试、构建和同一产物证据。", locales: "语言", validationDetail: "英语、新加坡简体中文、香港繁体中文、韩语和日语。",
     },
     "zh-HK": {
-      library: "視覺庫導覽", libraryTitle: "視覺庫", sections: "標準章節", drawerKicker: "系統基礎", drawerTitle: "標準", drawerNoteTitle: "工作約定", drawerNote: "先在此明確意圖，再建立可重用元素及模組。",
+      library: "視覺庫導覽", libraryTitle: "視覺庫", sections: "標準章節", drawerKicker: "系統基礎", drawerTitle: "標準", drawerNoteTitle: "工作約定", drawerNote: "先在此明確意圖，再建立可重用元素及模組。", markdownPreview: "Markdown 預覽",
       kicker: "一個系統，共享規則", title: "設計標準", description: "定義每個可重用層都必須遵循的意圖、視覺方向、狀態行為及權限邊界。",
       briefTitle: "設計簡介", briefDescription: "記錄目標、受眾、內容結構、限制及假設，而不儲存業務記錄。", required: "必填", briefDetail: "主要任務、進入條件、完成證據及非目標。",
       visualTitle: "視覺方向", visualDescription: "由 OneMind 平靜的中性系統開始，只記錄目標特有的差異。", baseline: "基線", visualDetail: "系統無襯線字體、語義表面、克制層次、精確圓角；藍色只用於焦點或連結。",
       layoutTitle: "佈局與層級", layoutDescription: "記錄外殼、導覽、閱讀順序、操作位置、中性頁面模組及桌面宿主限制。", layoutDetail: "清晰標題規則、穩定側欄、適度內容邊距及可存取操作目標。",
       stateTitle: "狀態契約", stateDescription: "定義載入、空白、離線、過期、錯誤、受阻、權限、成功、復原及互動狀態。", truthRule: "真實性規則", stateDetail: "在權威適配器確認前絕不顯示成功。",
-      authorityTitle: "權限與宿主", authorityDescription: "共享產品介面，同時保留伺服器與原生宿主的權限邊界。", renderer: "渲染器", authorityDetail: "瀏覽器和桌面宿主共用同一份 HTML、CSS 及 JavaScript。",
+      authorityTitle: "權限與宿主", authorityDescription: "設計庫保持本地靜態，同時只以介面邊界記錄外部與原生權限。", renderer: "渲染器", authorityDetail: "直接從本地檔案開啟同一份離線 HTML、CSS 及 JavaScript。",
       validationTitle: "驗證計劃", validationDescription: "記錄路由、主題、宿主尺寸、語言、無障礙檢查、測試、構建及同一產物證據。", locales: "語言", validationDetail: "英語、新加坡簡體中文、香港繁體中文、韓語及日語。",
     },
     ja: {
-      library: "ライブラリナビゲーション", libraryTitle: "ライブラリ", sections: "標準セクション", drawerKicker: "システム基盤", drawerTitle: "標準", drawerNoteTitle: "作業の合意", drawerNote: "再利用可能な要素やモジュールを作る前に、ここで意図を定めます。",
+      library: "ライブラリナビゲーション", libraryTitle: "ライブラリ", sections: "標準セクション", drawerKicker: "システム基盤", drawerTitle: "標準", drawerNoteTitle: "作業の合意", drawerNote: "再利用可能な要素やモジュールを作る前に、ここで意図を定めます。", markdownPreview: "Markdown プレビュー",
       kicker: "ひとつのシステム、共有ルール", title: "デザイン標準", description: "すべての再利用レイヤーが従う意図、視覚方針、状態の振る舞い、権限境界を定義します。",
       briefTitle: "デザイン概要", briefDescription: "業務記録を保存せず、目的、対象、構造、制約、前提を記録します。", required: "必須", briefDetail: "主要タスク、開始条件、完了の証拠、対象外。",
       visualTitle: "視覚方針", visualDescription: "OneMind の穏やかなニュートラル基盤から始め、目的固有の差分だけを記録します。", baseline: "基準", visualDetail: "システムサンセリフ、セマンティックな面、控えめな奥行き、正確な角。青はフォーカスやリンクに限定。",
       layoutTitle: "レイアウトと階層", layoutDescription: "シェル、ナビゲーション、読み順、操作位置、中立モジュール、デスクトップ制約を記録します。", layoutDetail: "明確なタイトル、安定したレール、適切な余白、操作しやすいターゲット。",
       stateTitle: "状態契約", stateDescription: "読み込み、空、オフライン、古い状態、エラー、権限、成功、回復、操作状態を定義します。", truthRule: "真実性ルール", stateDetail: "権威あるアダプターの確認前に成功を表示しません。",
-      authorityTitle: "権限とホスト", authorityDescription: "製品 UI を共有しながら、サーバーとネイティブホストの権限境界を保ちます。", renderer: "レンダラー", authorityDetail: "ブラウザーとデスクトップホストで同じ HTML、CSS、JavaScript を共有します。",
+      authorityTitle: "権限とホスト", authorityDescription: "デザインライブラリをローカルかつ静的に保ち、外部とネイティブの権限はインターフェース境界として記録します。", renderer: "レンダラー", authorityDetail: "同じオフライン HTML、CSS、JavaScript をローカルファイルから直接開きます。",
       validationTitle: "検証計画", validationDescription: "ルート、テーマ、サイズ、言語、アクセシビリティ、テスト、ビルド、同一成果物の証拠を記録します。", locales: "言語", validationDetail: "英語、簡体字中国語、繁体字中国語、韓国語、日本語。",
     },
     ko: {
-      library: "라이브러리 탐색", libraryTitle: "라이브러리", sections: "표준 섹션", drawerKicker: "시스템 기반", drawerTitle: "표준", drawerNoteTitle: "작업 원칙", drawerNote: "재사용 요소와 모듈을 만들기 전에 여기에서 의도를 정하세요.",
+      library: "라이브러리 탐색", libraryTitle: "라이브러리", sections: "표준 섹션", drawerKicker: "시스템 기반", drawerTitle: "표준", drawerNoteTitle: "작업 원칙", drawerNote: "재사용 요소와 모듈을 만들기 전에 여기에서 의도를 정하세요.", markdownPreview: "Markdown 미리보기",
       kicker: "하나의 시스템, 공유 규칙", title: "디자인 표준", description: "모든 재사용 계층이 따라야 할 의도, 시각 방향, 상태 동작, 권한 경계를 정의합니다.",
       briefTitle: "디자인 개요", briefDescription: "비즈니스 기록을 저장하지 않고 목표, 대상, 구조, 제약, 가정을 기록합니다.", required: "필수", briefDetail: "주요 작업, 진입 조건, 완료 근거 및 비목표.",
       visualTitle: "시각 방향", visualDescription: "OneMind의 차분한 중립 시스템에서 시작하고 목표별 차이만 기록합니다.", baseline: "기준", visualDetail: "시스템 산세리프, 의미 기반 표면, 절제된 깊이, 정밀한 모서리. 파란색은 포커스와 링크에만 사용.",
       layoutTitle: "레이아웃과 계층", layoutDescription: "셸, 탐색, 읽기 순서, 작업 위치, 중립 페이지 모듈 및 데스크톱 제약을 기록합니다.", layoutDetail: "명확한 제목 규칙, 안정적인 레일, 적절한 여백, 접근 가능한 조작 대상.",
       stateTitle: "상태 계약", stateDescription: "로딩, 빈 상태, 오프라인, 오래된 상태, 오류, 권한, 성공, 복구 및 상호작용 상태를 정의합니다.", truthRule: "진실성 규칙", stateDetail: "권한 있는 어댑터가 확인하기 전에는 성공을 표시하지 않습니다.",
-      authorityTitle: "권한과 호스트", authorityDescription: "제품 UI를 공유하면서 서버와 네이티브 호스트의 권한 경계를 유지합니다.", renderer: "렌더러", authorityDetail: "브라우저와 데스크톱 호스트가 동일한 HTML, CSS, JavaScript를 공유합니다.",
+      authorityTitle: "권한과 호스트", authorityDescription: "디자인 라이브러리는 로컬 정적 상태로 유지하고 외부 및 네이티브 권한은 인터페이스 경계로만 기록합니다.", renderer: "렌더러", authorityDetail: "동일한 오프라인 HTML, CSS, JavaScript를 로컬 파일에서 직접 엽니다.",
       validationTitle: "검증 계획", validationDescription: "경로, 테마, 크기, 언어, 접근성, 테스트, 빌드 및 동일 산출물 근거를 기록합니다.", locales: "언어", validationDetail: "영어, 싱가포르 중국어 간체, 홍콩 중국어 번체, 한국어, 일본어.",
+    },
+  };
+
+  const styleCopy = {
+    en: {
+      sections: "Style sections", drawerKicker: "Visual language", drawerTitle: "Style", drawerNoteTitle: "Style contract", drawerNote: "Set shared visual rules here before adjusting elements and components.",
+      kicker: "One language, every surface", title: "Style system", description: "Define the shared visual language that turns standards into consistent elements, components, and pages.",
+      principlesTitle: "Style principles", principlesDescription: "Keep every surface calm, precise, trustworthy, and fast to scan.", baseline: "Baseline", principlesDetail: "Restrained neutrals, clear hierarchy, generous breathing room, subtle depth, and purposeful accent color.",
+      colorTitle: "Color", colorDescription: "Use semantic roles so light and dark surfaces preserve the same meaning.", usage: "Usage", colorDetail: "Neutrals carry identity; blue supports links, focus, selection, and information without becoming every primary action.",
+      typographyTitle: "Typography", typographyDescription: "Use the system sans stack with a compact, readable hierarchy.", typographyDetail: "One clear page title, logical headings, readable line lengths, and tabular numerals for changing values.",
+      spacingTitle: "Spacing & layout", spacingDescription: "Build rhythm from shared spacing and grid tokens rather than page-specific offsets.", spacingDetail: "Align rails, titles, content, and actions to a stable grid while allowing localized text to wrap without clipping.",
+      shapeTitle: "Shape & depth", shapeDescription: "Use precise corners and restrained elevation to explain containment and overlap.", shapeDetail: "Reserve stronger shadows and higher layers for temporary surfaces such as dialogs, menus, and feedback.",
+      motionTitle: "Motion", motionDescription: "Use short, quiet transitions to clarify state changes without delaying work.", accessibility: "Accessibility", motionDetail: "Respect reduced motion and never rely on movement alone to communicate meaning.",
+    },
+    "zh-SG": {
+      sections: "风格章节", drawerKicker: "视觉语言", drawerTitle: "风格", drawerNoteTitle: "风格契约", drawerNote: "先在这里设定共享视觉规则，再调整元素和组件。",
+      kicker: "一种语言，贯穿所有界面", title: "风格系统", description: "定义共享视觉语言，让标准转化为一致的元素、组件和页面。",
+      principlesTitle: "风格原则", principlesDescription: "让每个界面保持平静、精准、可信且便于快速浏览。", baseline: "基线", principlesDetail: "克制的中性色、清晰层级、充足留白、微妙深度和有目的的强调色。",
+      colorTitle: "颜色", colorDescription: "使用语义角色，让浅色与深色界面表达相同含义。", usage: "用法", colorDetail: "中性色承载识别；蓝色用于链接、焦点、选择和信息，而不是所有主要操作。",
+      typographyTitle: "字体排版", typographyDescription: "使用系统无衬线字体和紧凑、易读的层级。", typographyDetail: "一个清晰的页面标题、合理的标题层级、可读行宽，以及用于变化数值的等宽数字。",
+      spacingTitle: "间距与布局", spacingDescription: "从共享间距和网格令牌建立节奏，避免页面专属偏移。", spacingDetail: "将侧栏、标题、内容和操作对齐到稳定网格，并允许本地化文本换行而不被裁切。",
+      shapeTitle: "形状与深度", shapeDescription: "用精确圆角和克制层次说明包含与重叠关系。", shapeDetail: "较强阴影和较高层级仅用于对话框、菜单和反馈等临时界面。",
+      motionTitle: "动效", motionDescription: "用短暂、安静的过渡说明状态变化，不延迟工作。", accessibility: "无障碍", motionDetail: "尊重减少动态效果设置，绝不只靠移动表达含义。",
+    },
+    "zh-HK": {
+      sections: "風格章節", drawerKicker: "視覺語言", drawerTitle: "風格", drawerNoteTitle: "風格契約", drawerNote: "先在此設定共享視覺規則，再調整元素及元件。",
+      kicker: "一種語言，貫穿所有介面", title: "風格系統", description: "定義共享視覺語言，讓標準轉化為一致的元素、元件及頁面。",
+      principlesTitle: "風格原則", principlesDescription: "讓每個介面保持平靜、精準、可信並便於快速瀏覽。", baseline: "基線", principlesDetail: "克制的中性色、清晰層級、充足留白、細緻深度及有目的的強調色。",
+      colorTitle: "顏色", colorDescription: "使用語意角色，讓淺色及深色介面保留相同含義。", usage: "用法", colorDetail: "中性色承載識別；藍色用於連結、焦點、選取及資訊，而不是所有主要操作。",
+      typographyTitle: "字體排版", typographyDescription: "使用系統無襯線字體和緊湊、易讀的層級。", typographyDetail: "一個清晰的頁面標題、合理的標題層級、可讀行寬，以及用於變動數值的等寬數字。",
+      spacingTitle: "間距與佈局", spacingDescription: "從共享間距及網格權杖建立節奏，避免頁面專屬偏移。", spacingDetail: "將側欄、標題、內容及操作對齊穩定網格，並讓本地化文字換行而不被裁切。",
+      shapeTitle: "形狀與深度", shapeDescription: "用精確圓角及克制層次說明包含與重疊關係。", shapeDetail: "較強陰影及較高層級只用於對話框、選單及回饋等臨時介面。",
+      motionTitle: "動效", motionDescription: "用短暫、安靜的過渡說明狀態變化，不延誤工作。", accessibility: "無障礙", motionDetail: "尊重減少動態效果設定，絕不只靠移動表達含義。",
+    },
+    ja: {
+      sections: "スタイルセクション", drawerKicker: "視覚言語", drawerTitle: "スタイル", drawerNoteTitle: "スタイル契約", drawerNote: "要素やコンポーネントを調整する前に、共有する視覚ルールを定めます。",
+      kicker: "ひとつの言語を、すべての画面へ", title: "スタイルシステム", description: "標準を一貫した要素、コンポーネント、ページへ変換する共有視覚言語を定義します。",
+      principlesTitle: "スタイル原則", principlesDescription: "すべての画面を穏やかで正確、信頼でき、素早く読み取れる状態に保ちます。", baseline: "基準", principlesDetail: "控えめなニュートラル、明確な階層、十分な余白、繊細な奥行き、目的のあるアクセント色。",
+      colorTitle: "カラー", colorDescription: "セマンティックな役割により、ライトとダークで同じ意味を保ちます。", usage: "用途", colorDetail: "ニュートラルを基調とし、青はリンク、フォーカス、選択、情報に使い、すべての主要操作には使いません。",
+      typographyTitle: "タイポグラフィ", typographyDescription: "システムサンセリフと、簡潔で読みやすい階層を使います。", typographyDetail: "明確なページタイトル、論理的な見出し、読みやすい行長、変化する数値には等幅数字を使います。",
+      spacingTitle: "余白とレイアウト", spacingDescription: "ページ固有の位置調整ではなく、共有する余白とグリッドのトークンでリズムを作ります。", spacingDetail: "レール、タイトル、内容、操作を安定したグリッドに揃え、翻訳文は切れずに折り返せるようにします。",
+      shapeTitle: "形状と奥行き", shapeDescription: "正確な角と控えめなエレベーションで包含と重なりを説明します。", shapeDetail: "強い影と高いレイヤーは、ダイアログ、メニュー、フィードバックなど一時的な面に限定します。",
+      motionTitle: "モーション", motionDescription: "短く静かなトランジションで、作業を遅らせずに状態変化を示します。", accessibility: "アクセシビリティ", motionDetail: "視差効果を減らす設定を尊重し、動きだけで意味を伝えません。",
+    },
+    ko: {
+      sections: "스타일 섹션", drawerKicker: "시각 언어", drawerTitle: "스타일", drawerNoteTitle: "스타일 계약", drawerNote: "요소와 컴포넌트를 조정하기 전에 공유 시각 규칙을 설정하세요.",
+      kicker: "하나의 언어, 모든 화면", title: "스타일 시스템", description: "표준을 일관된 요소, 컴포넌트, 페이지로 바꾸는 공유 시각 언어를 정의합니다.",
+      principlesTitle: "스타일 원칙", principlesDescription: "모든 화면을 차분하고 정밀하며 신뢰할 수 있고 빠르게 읽을 수 있게 유지합니다.", baseline: "기준", principlesDetail: "절제된 중립색, 명확한 계층, 넉넉한 여백, 은은한 깊이, 목적 있는 강조색.",
+      colorTitle: "색상", colorDescription: "의미 기반 역할을 사용해 라이트와 다크 화면에서 같은 의미를 유지합니다.", usage: "사용", colorDetail: "중립색을 기본으로 하고 파란색은 링크, 포커스, 선택, 정보에 사용하되 모든 주요 작업에 쓰지 않습니다.",
+      typographyTitle: "타이포그래피", typographyDescription: "시스템 산세리프와 간결하고 읽기 쉬운 계층을 사용합니다.", typographyDetail: "명확한 페이지 제목 하나, 논리적인 제목 구조, 읽기 쉬운 줄 길이, 변하는 값에는 고정폭 숫자를 사용합니다.",
+      spacingTitle: "간격 및 레이아웃", spacingDescription: "페이지별 오프셋 대신 공유 간격과 그리드 토큰으로 리듬을 만듭니다.", spacingDetail: "레일, 제목, 콘텐츠, 작업을 안정된 그리드에 맞추고 번역문이 잘리지 않고 줄바꿈되게 합니다.",
+      shapeTitle: "형태 및 깊이", shapeDescription: "정밀한 모서리와 절제된 높이로 포함과 겹침을 설명합니다.", shapeDetail: "강한 그림자와 높은 레이어는 대화상자, 메뉴, 피드백 같은 임시 화면에만 사용합니다.",
+      motionTitle: "모션", motionDescription: "짧고 조용한 전환으로 작업을 늦추지 않으면서 상태 변화를 설명합니다.", accessibility: "접근성", motionDetail: "모션 감소 설정을 존중하고 움직임만으로 의미를 전달하지 않습니다.",
     },
   };
 
   const catalogCopy = {
     en: {
       componentSections: "Component categories", pageSections: "Page categories",
-      componentDrawerKicker: "Reusable system", componentDrawerTitle: "Components", navigationGroup: "Navigation & shell", dataGroup: "Data & status", formsGroup: "Forms & workflows", publicGroup: "Public & host", componentNoteTitle: "Reuse contract", componentNote: "Business records belong only to the consuming feature.", componentKicker: "Interaction building blocks", componentTitle: "Components", componentDescription: "Reusable behavior and structure for shared product surfaces, grouped by responsibility.",
+      componentDrawerKicker: "Reusable system", componentDrawerTitle: "Components", navigationGroup: "Navigation & shell", dataGroup: "Data & status", formsGroup: "Forms & workflows", publicGroup: "Public & host", componentNoteTitle: "Reuse contract", componentNote: "Business records belong only to the consuming feature.", componentKicker: "Interaction building blocks", componentTitle: "Components", componentDescription: "Reusable behavior and structure for shared product surfaces, grouped by responsibility.", componentSectionDescription: "Description", componentSectionAdjustments: "Adjustments", componentSectionPreview: "Preview area", componentNoAdjustments: "No component-specific adjustments are documented.",
       pageDrawerKicker: "Compositions", pageDrawerTitle: "Pages", pageModules: "Page modules", pagePatterns: "Page patterns", pageNoteTitle: "Composition rule", pageNote: "Compose complete journeys from proven elements and components.", pageKicker: "From modules to journeys", pageTitle: "Pages & patterns", pageDescription: "Compositions for complete, state-aware product journeys and host boundaries.",
     },
     "zh-SG": {
       componentSections: "组件分类", pageSections: "页面分类",
-      componentDrawerKicker: "可复用系统", componentDrawerTitle: "组件", navigationGroup: "导航与外壳", dataGroup: "数据与状态", formsGroup: "表单与流程", publicGroup: "公共界面与宿主", componentNoteTitle: "复用契约", componentNote: "业务记录只属于使用该组件的功能。", componentKicker: "交互构件", componentTitle: "组件", componentDescription: "按职责组织，为共享产品界面提供可复用的行为与结构。",
+      componentDrawerKicker: "可复用系统", componentDrawerTitle: "组件", navigationGroup: "导航与外壳", dataGroup: "数据与状态", formsGroup: "表单与流程", publicGroup: "公共界面与宿主", componentNoteTitle: "复用契约", componentNote: "业务记录只属于使用该组件的功能。", componentKicker: "交互构件", componentTitle: "组件", componentDescription: "按职责组织，为共享产品界面提供可复用的行为与结构。", componentSectionDescription: "说明", componentSectionAdjustments: "调整项", componentSectionPreview: "预览区域", componentNoAdjustments: "暂无组件专属调整项。",
       pageDrawerKicker: "组合", pageDrawerTitle: "页面", pageModules: "页面模块", pagePatterns: "页面模式", pageNoteTitle: "组合规则", pageNote: "使用经过验证的元素和组件组合完整旅程。", pageKicker: "从模块到旅程", pageTitle: "页面与模式", pageDescription: "用于完整、有状态产品旅程和宿主边界的组合。",
     },
     "zh-HK": {
       componentSections: "元件分類", pageSections: "頁面分類",
-      componentDrawerKicker: "可重用系統", componentDrawerTitle: "元件", navigationGroup: "導覽與外殼", dataGroup: "資料與狀態", formsGroup: "表單與流程", publicGroup: "公共介面與宿主", componentNoteTitle: "重用契約", componentNote: "業務記錄只屬於使用該元件的功能。", componentKicker: "互動構件", componentTitle: "元件", componentDescription: "按職責組織，為共享產品介面提供可重用的行為及結構。",
+      componentDrawerKicker: "可重用系統", componentDrawerTitle: "元件", navigationGroup: "導覽與外殼", dataGroup: "資料與狀態", formsGroup: "表單與流程", publicGroup: "公共介面與宿主", componentNoteTitle: "重用契約", componentNote: "業務記錄只屬於使用該元件的功能。", componentKicker: "互動構件", componentTitle: "元件", componentDescription: "按職責組織，為共享產品介面提供可重用的行為及結構。", componentSectionDescription: "說明", componentSectionAdjustments: "調整項", componentSectionPreview: "預覽區域", componentNoAdjustments: "暫無元件專屬調整項。",
       pageDrawerKicker: "組合", pageDrawerTitle: "頁面", pageModules: "頁面模組", pagePatterns: "頁面模式", pageNoteTitle: "組合規則", pageNote: "使用已驗證的元素及元件組合完整旅程。", pageKicker: "從模組到旅程", pageTitle: "頁面與模式", pageDescription: "用於完整、具狀態產品旅程及宿主邊界的組合。",
     },
     ja: {
       componentSections: "コンポーネント分類", pageSections: "ページ分類",
-      componentDrawerKicker: "再利用システム", componentDrawerTitle: "コンポーネント", navigationGroup: "ナビゲーションとシェル", dataGroup: "データと状態", formsGroup: "フォームとワークフロー", publicGroup: "公開画面とホスト", componentNoteTitle: "再利用契約", componentNote: "業務レコードは利用する機能だけが保持します。", componentKicker: "インタラクション構成要素", componentTitle: "コンポーネント", componentDescription: "共有プロダクト画面の再利用可能な振る舞いと構造を、責任ごとに整理します。",
+      componentDrawerKicker: "再利用システム", componentDrawerTitle: "コンポーネント", navigationGroup: "ナビゲーションとシェル", dataGroup: "データと状態", formsGroup: "フォームとワークフロー", publicGroup: "公開画面とホスト", componentNoteTitle: "再利用契約", componentNote: "業務レコードは利用する機能だけが保持します。", componentKicker: "インタラクション構成要素", componentTitle: "コンポーネント", componentDescription: "共有プロダクト画面の再利用可能な振る舞いと構造を、責任ごとに整理します。", componentSectionDescription: "説明", componentSectionAdjustments: "調整項目", componentSectionPreview: "プレビュー領域", componentNoAdjustments: "コンポーネント固有の調整項目はありません。",
       pageDrawerKicker: "構成", pageDrawerTitle: "ページ", pageModules: "ページモジュール", pagePatterns: "ページパターン", pageNoteTitle: "構成ルール", pageNote: "実証済みの要素とコンポーネントから完全なジャーニーを構成します。", pageKicker: "モジュールからジャーニーへ", pageTitle: "ページとパターン", pageDescription: "完全で状態を持つプロダクトジャーニーとホスト境界のための構成です。",
     },
     ko: {
       componentSections: "컴포넌트 분류", pageSections: "페이지 분류",
-      componentDrawerKicker: "재사용 시스템", componentDrawerTitle: "컴포넌트", navigationGroup: "탐색 및 셸", dataGroup: "데이터 및 상태", formsGroup: "양식 및 워크플로", publicGroup: "공개 화면 및 호스트", componentNoteTitle: "재사용 계약", componentNote: "비즈니스 레코드는 사용하는 기능에서만 보관합니다.", componentKicker: "상호작용 구성 요소", componentTitle: "컴포넌트", componentDescription: "공유 제품 화면을 위한 재사용 가능한 동작과 구조를 책임별로 구성합니다.",
+      componentDrawerKicker: "재사용 시스템", componentDrawerTitle: "컴포넌트", navigationGroup: "탐색 및 셸", dataGroup: "데이터 및 상태", formsGroup: "양식 및 워크플로", publicGroup: "공개 화면 및 호스트", componentNoteTitle: "재사용 계약", componentNote: "비즈니스 레코드는 사용하는 기능에서만 보관합니다.", componentKicker: "상호작용 구성 요소", componentTitle: "컴포넌트", componentDescription: "공유 제품 화면을 위한 재사용 가능한 동작과 구조를 책임별로 구성합니다.", componentSectionDescription: "설명", componentSectionAdjustments: "조정 항목", componentSectionPreview: "미리보기 영역", componentNoAdjustments: "컴포넌트별 조정 항목이 문서화되지 않았습니다.",
       pageDrawerKicker: "구성", pageDrawerTitle: "페이지", pageModules: "페이지 모듈", pagePatterns: "페이지 패턴", pageNoteTitle: "구성 규칙", pageNote: "검증된 요소와 컴포넌트로 완전한 여정을 구성합니다.", pageKicker: "모듈에서 여정으로", pageTitle: "페이지 및 패턴", pageDescription: "완전하고 상태를 인식하는 제품 여정과 호스트 경계를 위한 구성입니다.",
     },
   };
@@ -392,6 +446,7 @@
     });
     applySettingsCopy(locale);
     applyStandardsCopy(locale);
+    applyStyleCopy(locale);
     applyCatalogCopy(locale);
   }
 
@@ -416,6 +471,18 @@
     });
     document.querySelectorAll("[data-standards-aria]").forEach((element) => {
       const value = copy[element.dataset.standardsAria];
+      if (value) element.setAttribute("aria-label", value);
+    });
+  }
+
+  function applyStyleCopy(locale) {
+    const copy = styleCopy[locale] || styleCopy.en;
+    document.querySelectorAll("[data-style-copy]").forEach((element) => {
+      const value = copy[element.dataset.styleCopy];
+      if (value) element.textContent = value;
+    });
+    document.querySelectorAll("[data-style-aria]").forEach((element) => {
+      const value = copy[element.dataset.styleAria];
       if (value) element.setAttribute("aria-label", value);
     });
   }
@@ -660,12 +727,71 @@
     }, { once: true });
   }
 
+  function createSettingsPreview() {
+    const preview = document.createElement("div");
+    preview.className = "library-settings-preview element-settings-preview";
+    preview.setAttribute("aria-hidden", "true");
+    preview.inert = true;
+    preview.innerHTML = `
+      <div class="library-settings-preview-heading">
+        <div><p data-settings-copy="livePreview">Live preview</p><h4 data-settings-copy="previewTitle">Shared interface</h4></div>
+        <span class="library-settings-preview-status" data-settings-copy="ready">Ready</span>
+      </div>
+      <div class="library-settings-grid-preview">${"<span></span>".repeat(12)}</div>
+      <div class="library-settings-preview-card">
+        <span class="library-settings-preview-icon">Aa</span>
+        <h4 data-settings-copy="previewCardTitle">One calm foundation</h4>
+        <p data-settings-copy="previewCardDescription">Color, type, geometry, and motion stay coherent across every shared surface.</p>
+        <div class="library-settings-preview-actions">
+          <span data-settings-copy="primaryAction">Primary action</span>
+          <span class="secondary" data-settings-copy="secondaryAction">Secondary</span>
+        </div>
+      </div>`;
+    return preview;
+  }
+
+  function structureSettingsGroup(group) {
+    if (group.querySelector(":scope > .element-content-parts")) return;
+    const introduction = group.querySelector(":scope > div");
+    const title = introduction?.querySelector(":scope > h2");
+    const description = introduction?.querySelector(":scope > p");
+    if (!title || !description) return;
+
+    const adjustments = document.createElement("div");
+    adjustments.className = "element-adjustments-content";
+    Array.from(group.children).filter((child) => child !== introduction).forEach((child) => adjustments.append(child));
+
+    const parts = document.createElement("div");
+    parts.className = "element-content-parts";
+    const section = (name, copyKey, content) => {
+      const region = document.createElement("section");
+      region.className = `element-content-section element-${name}`;
+      const heading = document.createElement("h3");
+      heading.className = "element-content-heading";
+      heading.id = `${group.id}-${name}-heading`;
+      heading.dataset.settingsCopy = copyKey;
+      heading.textContent = settingsCopy.en[copyKey];
+      region.setAttribute("aria-labelledby", heading.id);
+      region.append(heading, content);
+      return region;
+    };
+
+    parts.append(
+      section("description", "sectionDescription", description),
+      section("adjustments", "sectionAdjustments", adjustments),
+      section("preview", "sectionPreview", createSettingsPreview()),
+    );
+    group.replaceChildren(title, parts);
+  }
+
   function initSettingsWorkspace() {
     const root = document.querySelector(".library-settings-page");
     if (!root) return;
     let state = loadSettings();
     const railLinks = Array.from(root.querySelectorAll(".library-settings-rail nav a"));
     const settingsGroups = Array.from(root.querySelectorAll(".library-settings-group"));
+    settingsGroups.forEach(structureSettingsGroup);
+    applySettingsCopy(readPreference("one-mind-beta.locale") || "en");
 
     function showSettingsGroup(hash) {
       const currentHash = settingsGroups.some((group) => `#${group.id}` === hash) ? hash : railLinks[0]?.hash;
@@ -784,8 +910,12 @@
     preview.className = "module-preview";
     preview.setAttribute("aria-hidden", "true");
     preview.inert = true;
+    const isPageEntry = Boolean(entry.closest("[data-library-level='page-module'],[data-library-level='page-pattern']"));
 
-    if (id === "side-drawer") {
+    if (isPageEntry) {
+      preview.classList.add("page-preview");
+      preview.innerHTML = '<div class="page-specimen"><aside><span></span><span></span><span></span></aside><section><header></header><div class="page-specimen-content"><span></span><span></span><span></span></div></section></div>';
+    } else if (id === "side-drawer") {
       preview.classList.add("side-drawer-preview");
       preview.innerHTML = '<div class="side-drawer-specimen"><aside><div class="side-drawer-specimen-brand"><span></span><strong>OneMind</strong></div><nav><span aria-current="page"><i></i>Home</span><span><i></i>Mind</span><span><i></i>Team</span><span><i></i>Settings</span></nav><div class="side-drawer-specimen-profile"><i></i><span><strong>Account</strong><small>Workspace</small></span></div></aside><section><header><span></span><span></span></header><div><strong>Main view</strong><span></span><span></span><span></span></div></section></div>';
     } else if (id === "side-drawer-toggle") {
@@ -808,12 +938,47 @@
       preview.innerHTML = '<div class="panel-specimen"><div><strong>Panel title</strong><button type="button" aria-label="Close preview">×</button></div><p>Supporting content and state details.</p><div class="preview-actions"><button type="button">Confirm</button><button type="button" class="secondary">Cancel</button></div></div>';
     } else if (/menu|navigation|footer|title-bar/.test(id)) {
       preview.innerHTML = '<div class="navigation-specimen"><strong>Brand</strong><a href="#">Destination</a><a href="#">Destination</a><button type="button">Action</button></div>';
-    } else if (entry.closest("[data-library-level='page-module'],[data-library-level='page-pattern']")) {
-      preview.innerHTML = '<div class="page-specimen"><aside><span></span><span></span><span></span></aside><section><header></header><div class="page-specimen-content"><span></span><span></span><span></span></div></section></div>';
     } else {
       preview.innerHTML = '<div class="generic-specimen"><span></span><span></span><span></span></div>';
     }
     entry.insertBefore(preview, entry.querySelector("dl"));
+  }
+
+  function structureComponentEntry(entry) {
+    if (!entry.closest("[data-library-level='component']") || entry.querySelector(":scope > .component-content-parts")) return;
+    const description = entry.querySelector(":scope > p");
+    const adjustments = entry.querySelector(":scope > dl");
+    const preview = entry.querySelector(":scope > .module-preview");
+    if (!description || !preview) return;
+
+    const parts = document.createElement("div");
+    parts.className = "component-content-parts";
+    const section = (name, copyKey, content) => {
+      const region = document.createElement("section");
+      region.className = `component-content-section component-${name}`;
+      const heading = document.createElement("h3");
+      heading.className = "component-content-heading";
+      heading.id = `${entry.id}-${name}-heading`;
+      heading.dataset.catalogCopy = copyKey;
+      heading.textContent = catalogCopy.en[copyKey];
+      region.setAttribute("aria-labelledby", heading.id);
+      region.append(heading, content);
+      return region;
+    };
+
+    let adjustmentContent = adjustments;
+    if (!adjustmentContent) {
+      adjustmentContent = document.createElement("p");
+      adjustmentContent.className = "component-no-adjustments";
+      adjustmentContent.dataset.catalogCopy = "componentNoAdjustments";
+      adjustmentContent.textContent = catalogCopy.en.componentNoAdjustments;
+    }
+    parts.append(
+      section("description", "componentSectionDescription", description),
+      section("adjustments", "componentSectionAdjustments", adjustmentContent),
+      section("preview", "componentSectionPreview", preview),
+    );
+    entry.append(parts);
   }
 
   function enhanceEntries() {
@@ -851,7 +1016,7 @@
   }
 
   function initStandardsDrawer() {
-    const root = document.querySelector('body[data-library-page="guide"].library-standards-page');
+    const root = document.querySelector('body:is([data-library-page="guide"],[data-library-page="style"]).library-standards-page');
     if (!root) return;
     const links = Array.from(root.querySelectorAll(".library-standards-drawer nav a"));
     const sections = links.map((link) => document.querySelector(link.hash)).filter(Boolean);
@@ -909,8 +1074,12 @@
       ? Array.from(root.querySelectorAll(".library-catalog-list .library-entry[data-catalog-group]"))
       : Array.from(root.querySelectorAll(".library-catalog-list > [data-catalog-group]"));
 
-    if (catalogPage === "components") items.forEach(specimenFor);
+    if (catalogPage === "components") items.forEach((entry) => {
+      specimenFor(entry);
+      structureComponentEntry(entry);
+    });
     else items.forEach((section) => section.querySelectorAll(".library-entry").forEach(specimenFor));
+    applyCatalogCopy(readPreference("one-mind-beta.locale") || "en");
 
     const entriesByGroup = Object.fromEntries(groupLinks.map((link) => {
       const group = link.dataset.catalogGroup;

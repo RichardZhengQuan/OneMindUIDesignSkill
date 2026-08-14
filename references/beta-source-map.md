@@ -1,6 +1,8 @@
-# OneMind BETA source map v0.3
+# OneMind BETA source map v0.4
 
-Treat this file as discovery guidance, not repository authority. Re-read the current checkout and `origin/BETA` before work.
+Treat this file as discovery guidance, not repository authority. Re-read the current local checkout before work.
+
+Operate locally and offline. Do not fetch remote refs, start a development or preview server, download dependencies, or connect to a backend as part of this skill. If the required source or installed dependency is absent, report that local evidence as unavailable.
 
 Catalog snapshot: `origin/BETA` `e3cd17a2bbc83d88d8a57a4104ec39c371d9f67d`, audited 2026-08-13.
 
@@ -42,13 +44,12 @@ Do not add BETA UI to legacy `src/App.tsx` when a dedicated BETA entry exists.
 
 ```bash
 git status --short --branch
-git fetch origin BETA
-git rev-parse origin/BETA
+git rev-parse HEAD
 rg --files src/beta src/components apps/beta-* docs/components
 rg -n "<feature|component|route>" src/beta src/components apps/beta-* docs/components
 ```
 
-When inventorying the complete BETA surface, also inspect disabled destinations and empty canvases. At the v0.3 catalog snapshot, the signed-in Matrix destination is disabled and `BetaMatrixPage` contains an empty canvas; classify the populated Matrix workspace as Needed until live source proves otherwise.
+When inventorying the complete BETA surface, also inspect disabled destinations and empty canvases. At the recorded catalog snapshot, the signed-in Matrix destination is disabled and `BetaMatrixPage` contains an empty canvas; classify the populated Matrix workspace as Needed until current local source proves otherwise.
 
 Do not fetch, switch, merge, or rebase when the user's state boundary forbids it.
 
@@ -78,7 +79,7 @@ pnpm package:beta-macos
 
 Also run repository-mandated component, localization, internal-documentation, image-format, browser, or host-lifecycle checks that apply to the actual diff.
 
-## v0.3 platform boundary
+## v0.4 platform boundary
 
 - Design and implement desktop shared HTML UI.
 - Preserve browser and macOS-host compatibility.
