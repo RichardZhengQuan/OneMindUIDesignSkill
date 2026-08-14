@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Obsolete local template backup; the governed entry point is index.html.
+assets/objective-library/index 2.html
