@@ -9,8 +9,16 @@ import re
 from pathlib import Path
 
 
-SKILL_VERSION = "0.3"
-TEMPLATE_NAMES = ("index.html", "guide.html", "elements.html", "components.html", "pages.html", "license.html", "library.css", "library.js")
+SKILL_VERSION = "0.4"
+TEMPLATE_NAMES = ("index.html", "guide.html", "style.html", "elements.html", "components.html", "pages.html", "license.html", "library.css", "library.js")
+STANDARD_NAMES = (
+    "standards/design-brief.md",
+    "standards/visual-direction.md",
+    "standards/layout-hierarchy.md",
+    "standards/state-contract.md",
+    "standards/authority-host.md",
+    "standards/validation-plan.md",
+)
 LEGAL_NAMES = ("LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/IconPark-Apache-2.0.txt")
 ASSET_NAMES = ("assets/onemind-beta-mark-light.svg", "assets/onemind-beta-mark-dark.svg")
 
@@ -47,12 +55,13 @@ def main() -> int:
 
     created: list[Path] = []
     preserved: list[Path] = []
-    for name in TEMPLATE_NAMES:
+    for name in (*TEMPLATE_NAMES, *STANDARD_NAMES):
         source = templates / name
         destination = target / name
         if destination.exists():
             preserved.append(destination)
             continue
+        destination.parent.mkdir(parents=True, exist_ok=True)
         content = source.read_text(encoding="utf-8")
         for token, value in replacements.items():
             content = content.replace(token, value)

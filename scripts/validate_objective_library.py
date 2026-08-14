@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate required OneMind UI Design v0.3 visual objective catalogs."""
+"""Validate required OneMind UI Design v0.4 offline visual catalogs."""
 
 from __future__ import annotations
 
@@ -8,10 +8,11 @@ import re
 from pathlib import Path
 
 
-SKILL_VERSION = "0.3"
+SKILL_VERSION = "0.4"
 REQUIRED = {
         "index.html": ("library-home-hero", "library-navigation", "library-home-footer"),
     "guide.html": ("design-brief", "visual-direction", "layout-hierarchy", "state-contract", "authority-contract", "validation-plan"),
+    "style.html": ("style-library", "style-principles", "color-language", "typography-language", "spacing-layout", "shape-depth", "motion-language"),
     "elements.html": ("element-library", "semantic-color-system", "layout-grid-system", "size-system", "type-role-system", "spacing-density-system", "radius-system", "elevation-shadow-system", "motion-state-treatment"),
     "components.html": ("component-library", "title-action-list", "side-drawer", "side-floating-panel", "notification-inbox", "file-inventory"),
     "pages.html": ("page-module-library", "page-pattern-library", "signed-in-app-shell", "authoritative-product-lifecycle"),
@@ -23,6 +24,12 @@ REQUIRED = {
     "licenses/IconPark-Apache-2.0.txt": (),
     "assets/onemind-beta-mark-light.svg": (),
     "assets/onemind-beta-mark-dark.svg": (),
+    "standards/design-brief.md": (),
+    "standards/visual-direction.md": (),
+    "standards/layout-hierarchy.md": (),
+    "standards/state-contract.md": (),
+    "standards/authority-host.md": (),
+    "standards/validation-plan.md": (),
 }
 
 
@@ -70,13 +77,14 @@ def main() -> int:
             ".library-home",
             ".library-dot-sea",
             ".module-preview",
+            ".page-preview",
         ):
             if token not in css_content:
                 errors.append(f"library.css: missing visual token or preview contract {token}")
     script = target / "library.js"
     if script.is_file():
         script_content = script.read_text(encoding="utf-8")
-        for contract in ("enhanceEntries", "specimenFor", "renderDotSea", "prefers-reduced-motion", "aria-expanded"):
+        for contract in ("enhanceEntries", "specimenFor", "structureComponentEntry", "component-content-parts", "structureSettingsGroup", "element-content-parts", "page-preview", "renderDotSea", "prefers-reduced-motion", "aria-expanded"):
             if contract not in script_content:
                 errors.append(f"library.js: missing visual interaction contract {contract}")
     license_path = target / "LICENSE"
@@ -88,7 +96,7 @@ def main() -> int:
     apache_path = target / "licenses" / "IconPark-Apache-2.0.txt"
     if apache_path.is_file() and "Apache License" not in apache_path.read_text(encoding="utf-8"):
         errors.append("licenses/IconPark-Apache-2.0.txt: missing Apache-2.0 text")
-    for html_name in ("index.html", "guide.html", "elements.html", "components.html", "pages.html", "license.html"):
+    for html_name in ("index.html", "guide.html", "style.html", "elements.html", "components.html", "pages.html", "license.html"):
         path = target / html_name
         if path.is_file() and not re.search(
             r'<script\s+src="library\.js(?:\?[^"<]*)?"></script>',
@@ -96,8 +104,54 @@ def main() -> int:
         ):
             errors.append(f"{html_name}: missing shared visual renderer")
 
+    guide_path = target / "guide.html"
+    if guide_path.is_file():
+        guide_content = guide_path.read_text(encoding="utf-8")
+        for markdown_name in (
+            "design-brief.md", "visual-direction.md", "layout-hierarchy.md",
+            "state-contract.md", "authority-host.md", "validation-plan.md",
+        ):
+            reference = f"standards/{markdown_name}"
+            if f'data-markdown-file="{reference}"' not in guide_content:
+                errors.append(f"guide.html: missing preview contract for {reference}")
+
+    offline_files = (
+        "index.html",
+        "guide.html",
+        "style.html",
+        "elements.html",
+        "components.html",
+        "pages.html",
+        "license.html",
+        "library.css",
+        "library.js",
+    )
+    forbidden_network_patterns = (
+        (r"https?://", "remote URL"),
+        (r"(?i)\bfetch\s*\(", "fetch call"),
+        (r"(?i)\bXMLHttpRequest\b", "XMLHttpRequest"),
+        (r"(?i)\bWebSocket\s*\(", "WebSocket"),
+        (r"(?i)\bEventSource\s*\(", "EventSource"),
+        (r"(?i)@import\s+url", "remote-capable CSS import"),
+    )
+    for name in offline_files:
+        path = target / name
+        if not path.is_file():
+            continue
+        content = path.read_text(encoding="utf-8")
+        for pattern, label in forbidden_network_patterns:
+            if re.search(pattern, content):
+                errors.append(f"{name}: offline contract forbids {label}")
+        if path.suffix == ".html":
+            for reference in re.findall(r'\b(?:href|src)="([^"]+)"', content):
+                local_reference = reference.split("#", 1)[0].split("?", 1)[0]
+                if not local_reference:
+                    continue
+                if not (path.parent / local_reference).is_file():
+                    errors.append(f"{name}: missing local reference {reference}")
+
     entry_ids: list[str] = []
-    for html_name in ("guide.html", "elements.html", "components.html", "pages.html"):
+    for html_name in ("guide.html", "style.html", "elements.html", "components.html", "pages.html"):
         path = target / html_name
         if not path.is_file():
             continue

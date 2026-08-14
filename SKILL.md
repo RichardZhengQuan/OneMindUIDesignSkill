@@ -1,15 +1,25 @@
 ---
 name: onemind-ui-design
-description: Design, build, change, review, show, or open neutral OneMind BETA UI modules and guidelines through a governed visual reuse-first process and a source-backed BETA module catalog. Use for clickable visual specimens, page patterns, page modules, reusable components, UI elements, color systems, shadows and elevation, layout grids and layers, tokens, interaction states, component-library work, shared HTML UI intended for both the website and macOS host, BETA module inventory work, or requests such as "show the library" and "open the UI library." Resolve the guide and visual catalog first, reuse ready page modules before components and components before elements, propagate lower-level token and module changes through dependent previews and consuming pages, keep candidate and needed status truthful, and never store business-specific UI in the library.
+description: Design, build, change, review, show, or open neutral OneMind BETA UI modules and guidelines as fully local, offline, serverless HTML/CSS/JavaScript, SVG, Markdown, and deterministic file artifacts. Use for clickable visual specimens, page patterns, page modules, reusable components, UI elements, color systems, shadows and elevation, layout grids and layers, tokens, interaction states, component-library work, shared HTML UI intended for both the website and macOS host, BETA module inventory work, or requests such as "show the library" and "open the UI library." Resolve the guide and visual catalog first, reuse ready page modules before components and components before elements, propagate lower-level token and module changes through dependent previews and consuming pages, keep candidate and needed status truthful, never store business-specific UI in the library, and never start or depend on a local or remote server.
 ---
 
-# OneMind UI Design v0.3
+# OneMind UI Design v0.4
 
 Build OneMind BETA UI through a traceable hierarchy:
 
-`design guide -> elements -> components -> page modules -> feature page`
+`design guide -> style -> elements -> components -> page modules -> feature page`
 
 Preserve one shared HTML/CSS/JavaScript product implementation for browser and macOS hosts. Do not create a parallel SwiftUI product surface.
+
+## Keep the skill local and serverless
+
+Use only checked-out project files, files bundled with this skill, and temporary local files created deterministically from them.
+
+- Build the library from static HTML, CSS, JavaScript, SVG, Markdown, and local legal files. Local scripts may copy, resolve, or validate those files.
+- Never start or require a localhost server, preview server, development server, API server, proxy, or container.
+- Never contact a remote service from the skill workflow. Do not use remote APIs, CDNs, analytics, hosted fonts, external scripts, remote images, or network-fetched content.
+- Resolve every library entry to a normal filesystem path and optional `file://` URI. If a browser cannot open local files, return the clickable local path; do not start a server as a fallback.
+- Represent authority-dependent product behavior as static interface contracts and truthful UI states only. Do not sign in, submit mutations, or connect to Matrix or another backend while operating this design skill.
 
 ## Keep the library neutral
 
@@ -39,11 +49,11 @@ Bind business nouns, records, permissions, and copy only in the consuming featur
 ## Start safely
 
 1. Read the target repository's `AGENTS.md` and current UI instructions.
-2. Confirm the target is BETA work. Inspect the current branch, dirty state, and live BETA source before editing. Preserve unrelated work.
+2. Confirm the target is BETA work. Inspect the current branch, dirty state, and current local BETA source before editing. Preserve unrelated work.
 3. Inspect `#docs/components`, `docs/components/README.md`, `src/components`, `src/components/beta-*`, and relevant `src/beta` code before designing.
 4. Read [references/beta-source-map.md](references/beta-source-map.md) for BETA-specific discovery and verification commands.
 5. Read [references/beta-module-catalog.md](references/beta-module-catalog.md) for the neutral baseline inventory and status rules.
-6. Treat the repository as authority. Never assume this skill's source map or module catalog is newer than the checkout.
+6. Treat the local checkout as implementation authority. Never assume this skill's source map or module catalog is newer than the checkout, and do not fetch remote state as part of this skill.
 
 ## Use the BETA baseline catalog
 
@@ -63,6 +73,8 @@ Make every entry inspectable as a neutral rendered specimen. A title and status 
 - Build element specimens from those tokens; build component specimens from elements; build page-module and page-pattern specimens from components.
 - When a lower-level token or module changes, update its dependent previews and consuming feature styles in the same objective. Never leave page specimens showing the retired contract.
 - Let `library.js` give every registered entry a clickable, keyboard-operable fallback preview. Add explicit neutral markup when a generic fallback cannot communicate the contract.
+- Structure every component detail as three labelled sections in this order: `Description`, `Adjustments`, and `Preview area`. Put purpose copy in Description, documented variants/states/dependencies/evidence in Adjustments, and the rendered neutral specimen in Preview area.
+- Give every selected page module and page pattern a borderless, full-size workspace that fills the catalog content pane at desktop and mobile widths; never wrap the page in a card or reduce its composition to a fixed-height thumbnail.
 - Keep previews structural: use labels such as `List title`, `List item`, `Action`, `Field label`, and `Main content`, never real product records.
 - Preserve light/dark parity and named layers: content, navigation, overlay, dialog, and transient feedback.
 
@@ -76,15 +88,15 @@ python3 <skill-dir>/scripts/init_objective_library.py \
   --objective "Feature name"
 ```
 
-This creates `docs/design/<objective-slug>/index.html`, `guide.html`, `elements.html`, `components.html`, `pages.html`, `library.css`, and `library.js` without overwriting existing files. A first-time install receives the full visual OneMind BETA baseline, not an empty catalog. The files remain editable for objective-specific additions.
+This creates `docs/design/<objective-slug>/index.html`, `guide.html`, `style.html`, `elements.html`, `components.html`, `pages.html`, `library.css`, and `library.js` without overwriting existing files. A first-time install receives the full visual OneMind BETA baseline, not an empty catalog. The files remain editable for objective-specific additions.
 
-If the repository already defines an equivalent governed design-library location, use it instead and preserve the four artifact roles.
+If the repository already defines an equivalent governed design-library location, use it instead and preserve the five artifact roles.
 
 ## Show the library
 
 Treat “show the library,” “open the library,” and equivalent requests as an instruction to open the neutral design library, not to render business records.
 
-Resolve the library URL:
+Resolve the local library entry:
 
 ```bash
 python3 <skill-dir>/scripts/show_library.py \
@@ -92,12 +104,13 @@ python3 <skill-dir>/scripts/show_library.py \
   [--objective <objective-slug>]
 ```
 
-The command prints JSON containing the selected local path and URL. If one objective exists, select it. If several exist and no objective is specified, create a temporary read-only hub linking all objective libraries. If no objective library exists, render the populated OneMind BETA baseline into a temporary read-only directory. Do not modify project files merely to show them, and never open files directly from `assets/objective-library` because those are unresolved source templates.
+The command prints JSON containing the selected local path and `file://` URI, plus explicit offline and network-free status. If one objective exists, select it. If several exist and no objective is specified, create a temporary local hub linking all objective libraries. If no objective library exists, render the populated OneMind BETA baseline into a temporary local directory. Do not modify project files merely to show them, and never open files directly from `assets/objective-library` because those are unresolved source templates.
 
-Open it using this order:
+Return or open it using this order:
 
-1. If the in-app Browser capability is available, follow its control instructions and open the returned URL in a new in-app tab. Keep that tab as the deliverable.
-2. If the in-app Browser is unavailable or rejects the local URL, open the user's default browser:
+1. Return the local entry path as the durable deliverable.
+2. If the user asked to open it and the in-app Browser supports local files, open the returned `file://` URI in a new in-app tab.
+3. Otherwise, if the user asked to open it, use the local operating-system browser without a server:
 
 ```bash
 python3 <skill-dir>/scripts/show_library.py \
@@ -106,11 +119,13 @@ python3 <skill-dir>/scripts/show_library.py \
   --open-default
 ```
 
-3. Keep the generated baseline or hub tab as the deliverable. Its links must open populated guide, element, component, and page catalogs with no unresolved template tokens. Clicking an entry must expose its rendered specimen and contract.
+4. If local-file opening is blocked, report the clickable local path and stop. Never replace the failed local-file open with an HTTP server or remote upload.
+
+The generated baseline or hub must work offline. Its relative links must open populated guide, style, element, component, page, and license artifacts with no unresolved template tokens. Clicking an entry must expose its rendered specimen and contract without a network request.
 
 ## Resolve the design guide
 
-Open `guide.html` before designing.
+Open `guide.html`, then `style.html`, before designing.
 
 - If the direction is set, verify it covers product intent, audience, content hierarchy, layout, color, typography, density, interaction behavior, required states, accessibility, localization, and validation.
 - If it is not set, ask one compact question covering the missing style, color, layout, and product details. Record the answer and any explicit assumptions in `guide.html` before implementation.
@@ -148,7 +163,7 @@ Give every reusable entry a stable kebab-case ID. Record:
 - dependencies by stable library ID;
 - light and dark behavior;
 - desktop web and macOS-host behavior;
-- mobile status as supported or explicitly deferred for v0.3;
+- mobile status as supported or explicitly deferred for v0.4;
 - hover, focus, pressed, disabled, loading, empty, error, and recovery behavior as applicable;
 - accessibility, localization, and content-slot requirements;
 - evidence and maturity: `draft`, `ready`, or `deprecated`.
@@ -163,7 +178,7 @@ When a reusable component becomes ready, also update the canonical OneMind compo
 2. Bind feature copy, records, permissions, and product actions only at the consuming page or adapter layer.
 3. Keep one clear primary task and truthful product state.
 4. Use the BETA shell, navigation, tokens, copy system, and host adapters already present.
-5. Keep server or Matrix authority explicit. Never let placeholder fixtures, local storage, or no-op controls imply a completed mutation.
+5. Keep Matrix and application authority boundaries explicit as static state contracts. Never let placeholder fixtures, local storage, or no-op controls imply a completed mutation, and never call an authority service from this skill.
 6. Keep browser and macOS-host UI code shared. Put Keychain, filesystem, notifications, updater, window, or runtime behavior behind a narrow host adapter.
 7. Update every supported language when changing user-facing text.
 8. Re-render affected component, page-module, and page-pattern specimens after changing a foundation token or lower-level module. Treat stale dependent previews as a failed change.
@@ -186,6 +201,7 @@ Verify all of the following:
 - localization fit and content truth;
 - actual route integration, not a standalone preview only;
 - the same built artifact in browser and macOS host when host work is in scope.
+- zero local-server, remote-server, CDN, API, analytics, hosted-font, or other network dependency in the design-library artifact and workflow.
 
 Validate the objective library:
 
@@ -195,7 +211,7 @@ python3 <skill-dir>/scripts/validate_objective_library.py \
   --objective <objective-slug>
 ```
 
-Treat blocked rendered or host verification as unresolved. Report focused evidence separately from integrated BETA readiness.
+Treat blocked local rendered or host verification as unresolved. Report focused evidence separately from integrated BETA readiness. Do not use a server or remote deployment to bypass a local verification block.
 
 ## Return the feature output
 

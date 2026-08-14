@@ -1,4 +1,4 @@
-# OneMind UI visual library contract v0.3
+# OneMind UI visual library contract v0.4
 
 Use these definitions to decide where a UI unit belongs.
 
@@ -97,6 +97,8 @@ Use links to repository-relative implementation, test, and documentation paths. 
 
 Every entry must open a rendered neutral specimen through the shared `library.js` controller. A status badge, title, and prose contract without a specimen is incomplete.
 
+- On the Components page, present every selected component through exactly three labelled content sections in order: Description, Adjustments, and Preview area. Description explains purpose and behavior; Adjustments records variants, states, dependencies, constraints, or evidence; Preview area contains the neutral rendered specimen.
+- On the Pages page, render every selected page module and page pattern as a borderless, full-size workspace that fills the catalog content pane at desktop and mobile widths. Keep the title, status, description, and contract inside that workspace without wrapping the page in a card or shrinking its specimen back to thumbnail scale.
 - Use the generic renderer when it communicates the structure faithfully; add explicit neutral specimen markup for distinctive contracts.
 - Use shared `library.css` semantic tokens for color, type, spacing, radius, elevation/shadow, layout grid, layer/z-index, focus, and motion.
 - Never freeze shared token values inside a component or page preview.

@@ -1,4 +1,4 @@
-# OneMind BETA neutral visual module catalog v0.3
+# OneMind BETA neutral visual module catalog v0.4
 
 This catalog was audited against `origin/BETA` at `e3cd17a2bbc83d88d8a57a4104ec39c371d9f67d` on 2026-08-13. Treat it as a baseline, not live repository authority.
 
@@ -79,7 +79,7 @@ Before changing a status, inspect the current implementation, canonical componen
 | `document-inspector-workspace` | Ready | Context rail, immutable document canvas, inspector, history, and change-request entry actions. | `BetaMindPage` |
 | `change-request-composer` | Ready | Action title row, authority context, metadata fields, file inventory, local draft recovery, Save, and Send. | `BetaMindPullRequestPage` |
 | `notification-inbox-detail-workspace` | Ready | Title/toggle, authoritative inbox, filters, detail drawer, and governed detail actions. | `BetaNotificationPage`, `OneMindNotificationInbox` |
-| `checkout-summary-payment-workspace` | Candidate | Selected plan, quantity, price summary, server transaction state, payment overlay, success/failure recovery. | `BetaCheckoutPage`; integrated production billing coverage remains separate |
+| `checkout-summary-payment-workspace` | Candidate | Selected plan, quantity, price summary, authoritative transaction state, payment overlay, success/failure recovery. | `BetaCheckoutPage`; integrated production billing coverage remains separate |
 | `sign-in-entry-surface` | Candidate | Public menu, sign-in action, preference menus, and host process feedback. | `BetaSignInEntry`; current authorization still depends on the Alpha endpoint |
 | `governance-canvas-workspace` | Needed | Authority navigation, accepted document/context state, governance activity, and truthful loading/recovery states. | current `BetaMatrixPage` renders an empty canvas; signed-in Matrix destination is disabled |
 | `guided-start-workflow` | Needed | Host-aware mode title, objective selection, draft, safety check, submission, and handoff to approval. | only the title bar and host link boundary are ready |
@@ -98,7 +98,7 @@ Before changing a status, inspect the current implementation, canonical componen
 | `document-read-inspect` | Ready | Context navigation plus immutable readable document and inspector; mutation begins in a separate proposal flow. |
 | `draft-review-submit` | Candidate | Recoverable local draft, validation, authoritative submission receipt, and transition to review without claiming publication. |
 | `inbox-detail-action` | Ready | One authoritative inbox, family filters, durable evidence drawer, and optional governed decision. |
-| `prerequisite-checkout` | Candidate | Preserve selected plan through sign-in, then create the authoritative server transaction and payment overlay. |
+| `prerequisite-checkout` | Candidate | Preserve selected plan through sign-in, then create the authoritative transaction and payment overlay. |
 | `native-capability-handoff` | Ready | Shared HTML presents availability and intent; a versioned allowlisted host adapter performs the native capability. |
 | `authoritative-product-lifecycle` | Needed | Sign in -> load Matrix/Mind -> draft -> safety check -> submit -> second-admin approval -> immutable version -> assignment -> backup/apply -> receipt -> rollback. |
 
@@ -106,6 +106,6 @@ Before changing a status, inspect the current implementation, canonical componen
 
 - Render one shared HTML/CSS/JavaScript product in the browser and macOS WKWebView.
 - Keep Keychain, filesystem, AI-tool discovery, notifications, application update, windowing, and background runtime behind narrow versioned host adapters.
-- Keep identity, permission, accepted Mind state, approval, provenance, audit, recovery, and publication under Matrix/server authority.
+- Keep identity, permission, accepted Mind state, approval, provenance, audit, recovery, and publication under Matrix and application authority.
 - Do not treat fixtures, local storage, disabled destinations, blank canvases, host-unverified previews, or passing focused tests as integrated product completion.
-- Keep mobile web outside v0.3 unless current project instructions explicitly add it.
+- Keep mobile web outside v0.4 unless current project instructions explicitly add it.

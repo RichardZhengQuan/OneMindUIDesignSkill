@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
   <title>{{OBJECTIVE_NAME}} — Design standards</title>
-  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-workshop-drawer-11">
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-standards-no-status-15">
 </head>
 <body class="library-home library-standards-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="guide">
   <header class="library-home-bar">
@@ -20,6 +20,7 @@
       <p class="library-primary-drawer-title" data-standards-copy="libraryTitle">Library</p>
       <nav>
         <a href="guide.html" aria-current="page"><span data-copy="navGuide">Standards</span></a>
+        <a href="style.html"><span data-copy="navStyle">Style</span></a>
         <a href="elements.html"><span data-copy="navElements">Elements</span></a>
         <a href="components.html"><span data-copy="navComponents">Components</span></a>
         <a href="pages.html"><span data-copy="navPages">Pages</span></a>
@@ -52,39 +53,33 @@
       </header>
 
       <div class="library-standards-list">
-        <section id="design-brief" class="library-entry" data-status="candidate" data-scope="objective">
-          <h2 data-standards-copy="briefTitle">Design brief</h2>
-          <p data-standards-copy="briefDescription">Record the objective, audience, structural content slots, constraints, and assumptions without storing business records.</p>
-          <dl><dt data-standards-copy="required">Required</dt><dd data-standards-copy="briefDetail">Primary task, entry condition, completion evidence, and non-goals.</dd></dl>
+        <section id="design-brief" class="library-entry markdown-document-preview" data-markdown-file="standards/design-brief.md" data-scope="objective">
+          <header class="markdown-document-bar"><span data-standards-copy="markdownPreview">Markdown preview</span><code>design-brief.md</code></header>
+          <div class="markdown-document-body"><h2 data-standards-copy="briefTitle">Design brief</h2><p data-standards-copy="briefDescription">Record the objective, audience, structural content slots, constraints, and assumptions without storing business records.</p><dl><dt data-standards-copy="required">Required</dt><dd data-standards-copy="briefDetail">Primary task, entry condition, completion evidence, and non-goals.</dd></dl></div>
         </section>
-        <section id="visual-direction" class="library-entry" data-status="ready" data-scope="shared">
-          <h2 data-standards-copy="visualTitle">Visual direction</h2>
-          <p data-standards-copy="visualDescription">Start from OneMind's calm neutral system and record only objective-specific differences.</p>
-          <dl><dt data-standards-copy="baseline">Baseline</dt><dd data-standards-copy="visualDetail">System sans, semantic surfaces, restrained depth, precise corners, and blue reserved for focus or links.</dd></dl>
+        <section id="visual-direction" class="library-entry markdown-document-preview" data-markdown-file="standards/visual-direction.md" data-scope="shared">
+          <header class="markdown-document-bar"><span data-standards-copy="markdownPreview">Markdown preview</span><code>visual-direction.md</code></header>
+          <div class="markdown-document-body"><h2 data-standards-copy="visualTitle">Visual direction</h2><p data-standards-copy="visualDescription">Start from OneMind's calm neutral system and record only objective-specific differences.</p><dl><dt data-standards-copy="baseline">Baseline</dt><dd data-standards-copy="visualDetail">System sans, semantic surfaces, restrained depth, precise corners, and blue reserved for focus or links.</dd></dl></div>
         </section>
-        <section id="layout-hierarchy" class="library-entry" data-status="candidate" data-scope="objective">
-          <h2 data-standards-copy="layoutTitle">Layout &amp; hierarchy</h2>
-          <p data-standards-copy="layoutDescription">Record the shell, navigation, reading order, action slots, neutral page modules, and desktop host constraints.</p>
-          <dl><dt data-standards-copy="baseline">Baseline</dt><dd data-standards-copy="layoutDetail">Clear title grammar, stable rails, measured content insets, and accessible interactive targets.</dd></dl>
+        <section id="layout-hierarchy" class="library-entry markdown-document-preview" data-markdown-file="standards/layout-hierarchy.md" data-scope="objective">
+          <header class="markdown-document-bar"><span data-standards-copy="markdownPreview">Markdown preview</span><code>layout-hierarchy.md</code></header>
+          <div class="markdown-document-body"><h2 data-standards-copy="layoutTitle">Layout &amp; hierarchy</h2><p data-standards-copy="layoutDescription">Record the shell, navigation, reading order, action slots, neutral page modules, and desktop host constraints.</p><dl><dt data-standards-copy="baseline">Baseline</dt><dd data-standards-copy="layoutDetail">Clear title grammar, stable rails, measured content insets, and accessible interactive targets.</dd></dl></div>
         </section>
-        <section id="state-contract" class="library-entry" data-status="candidate" data-scope="objective">
-          <h2 data-standards-copy="stateTitle">State contract</h2>
-          <p data-standards-copy="stateDescription">Define loading, empty, offline, stale, error, blocked, permission, success, recovery, and interaction states.</p>
-          <dl><dt data-standards-copy="truthRule">Truth rule</dt><dd data-standards-copy="stateDetail">Never show success until the authoritative adapter confirms it.</dd></dl>
+        <section id="state-contract" class="library-entry markdown-document-preview" data-markdown-file="standards/state-contract.md" data-scope="objective">
+          <header class="markdown-document-bar"><span data-standards-copy="markdownPreview">Markdown preview</span><code>state-contract.md</code></header>
+          <div class="markdown-document-body"><h2 data-standards-copy="stateTitle">State contract</h2><p data-standards-copy="stateDescription">Define loading, empty, offline, stale, error, blocked, permission, success, recovery, and interaction states.</p><dl><dt data-standards-copy="truthRule">Truth rule</dt><dd data-standards-copy="stateDetail">Never show success until the authoritative adapter confirms it.</dd></dl></div>
         </section>
-        <section id="authority-contract" class="library-entry" data-status="ready" data-scope="shared">
-          <h2 data-standards-copy="authorityTitle">Authority &amp; host</h2>
-          <p data-standards-copy="authorityDescription">Keep the product UI shared while preserving server and native authority boundaries.</p>
-          <dl><dt data-standards-copy="renderer">Renderer</dt><dd data-standards-copy="authorityDetail">One shared HTML, CSS, and JavaScript artifact for browser and desktop host.</dd></dl>
+        <section id="authority-contract" class="library-entry markdown-document-preview" data-markdown-file="standards/authority-host.md" data-scope="shared">
+          <header class="markdown-document-bar"><span data-standards-copy="markdownPreview">Markdown preview</span><code>authority-host.md</code></header>
+          <div class="markdown-document-body"><h2 data-standards-copy="authorityTitle">Authority &amp; host</h2><p data-standards-copy="authorityDescription">Keep the design library local and static while documenting external and native authority as interface boundaries.</p><dl><dt data-standards-copy="renderer">Renderer</dt><dd data-standards-copy="authorityDetail">One offline HTML, CSS, and JavaScript artifact opened directly from local files.</dd></dl></div>
         </section>
-        <section id="validation-plan" class="library-entry" data-status="candidate" data-scope="objective">
-          <h2 data-standards-copy="validationTitle">Validation plan</h2>
-          <p data-standards-copy="validationDescription">Record routes, themes, host sizes, locales, accessibility checks, tests, builds, and same-artifact evidence.</p>
-          <dl><dt data-standards-copy="locales">Locales</dt><dd data-standards-copy="validationDetail">English, Singapore Simplified Chinese, Hong Kong Traditional Chinese, Korean, and Japanese.</dd></dl>
+        <section id="validation-plan" class="library-entry markdown-document-preview" data-markdown-file="standards/validation-plan.md" data-scope="objective">
+          <header class="markdown-document-bar"><span data-standards-copy="markdownPreview">Markdown preview</span><code>validation-plan.md</code></header>
+          <div class="markdown-document-body"><h2 data-standards-copy="validationTitle">Validation plan</h2><p data-standards-copy="validationDescription">Record routes, themes, host sizes, locales, accessibility checks, tests, builds, and same-artifact evidence.</p><dl><dt data-standards-copy="locales">Locales</dt><dd data-standards-copy="validationDetail">English, Singapore Simplified Chinese, Hong Kong Traditional Chinese, Korean, and Japanese.</dd></dl></div>
         </section>
       </div>
     </section>
   </main>
-  <script src="library.js?v={{SKILL_VERSION}}-workshop-drawer-11"></script>
+  <script src="library.js?v={{SKILL_VERSION}}-standards-no-status-15"></script>
 </body>
 </html>
