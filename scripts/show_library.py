@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 LIBRARY_FILES = ("guide.html", "style.html", "elements.html", "components.html", "pages.html")
-TEMPLATE_FILES = ("index.html", *LIBRARY_FILES, "license.html", "library.css", "library.js")
+TEMPLATE_FILES = ("index.html", *LIBRARY_FILES, "license.html", "library.css", "design-settings.js", "library.js")
 LEGAL_FILES = ("LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/IconPark-Apache-2.0.txt")
 ASSET_FILES = ("assets/onemind-beta-mark-light.svg", "assets/onemind-beta-mark-dark.svg")
 STANDARD_FILES = (

@@ -95,12 +95,30 @@ Use links to repository-relative implementation, test, and documentation paths. 
 
 ## Visual specimen and cascade contract
 
+The generated objective's `design-settings.js` is the machine-readable authority for global standards. Re-read it from disk before each consuming implementation change. Browser storage may preserve an unsaved preview but never overrides the project file for Codex work.
+
+Persist every in-browser adjustment and Undo result as an objective-scoped unsaved draft immediately, so refreshes and navigation do not silently restore an older value. Keep Save as the only operation that writes or downloads `design-settings.js`; Codex continues to consume the project file, not the browser draft.
+
+Foundation hash links select a panel but never act as native in-page scroll targets. On initial hash load, click navigation, and hash history changes, reset both the settings-main scroll container and document viewport to the top so the shared Reset/Undo/Save row is fully visible.
+
 Every entry must open a rendered neutral specimen through the shared `library.js` controller. Keep maturity in `data-status` and source documentation without rendering maturity pills in the visual library. A title, status metadata, and prose contract without a specimen is incomplete.
 
 - On the Components page, present every selected component through exactly three labelled content sections in order: Description, Adjustments, and Preview area. Description explains purpose and behavior; Adjustments records variants, states, dependencies, constraints, or evidence; Preview area contains the neutral rendered specimen.
 - On the Pages page, render every selected page module and page pattern as a borderless, full-size workspace that fills the catalog content pane at desktop and mobile widths. Keep the title, status, description, and contract inside that workspace without wrapping the page in a card or shrinking its specimen back to thumbnail scale.
 - Use the generic renderer when it communicates the structure faithfully; add explicit neutral specimen markup for distinctive contracts.
-- Use shared `library.css` semantic tokens for color, type, spacing, radius, elevation/shadow, layout grid, layer/z-index, focus, and motion.
+- Use shared `library.css` semantic tokens for color, type, radius, elevation/shadow, layout grid, layer/z-index, focus, and motion. Type authority includes a global family plus independent Title, Subtitle, Body, Content, and Annotation family/size/weight roles. The saved base grid governs alignment; element gaps govern internal content-to-container spacing; component gaps govern spacing between controls, components, panels, and page regions. Both gap values must be integer multiples of the base grid.
+- Apply saved style and button treatment to every dependent element, component, page module, page pattern, and consuming feature; do not limit a settings change to catalog previews.
+- Apply the same contract to the objective library shell itself, including navigation, rails, workspaces, catalog entries, controls, and action buttons. Grid controls must cascade through shell alignment, internal element spacing, and separation between panels and components.
+- Treat each separate navigation link, action button, form control, catalog entry, preview card, rail, panel, and page region as a component boundary: spacing between those boundaries uses `componentGap`. Spacing inside one boundary, such as icon-to-label distance or content-to-control edge padding, uses `elementGap`.
+- Keep configurable gaps visually measurable. A shadow or decorative effect on a child must not occupy the clear space represented by `componentGap`; elevate the containing floating rail or panel instead of shadowing every row inside it.
+- Keep sibling action controls in one horizontal component row at every supported content-panel width. The action row sits one `componentGap` from its containing panel edge and one `componentGap` from the next page region; an empty status message must not reserve space.
+- Button height is shared by action buttons and button-like navigation controls. Primary drawer links, secondary rail links, catalog disclosure controls, and preference actions must consume `buttonHeight`; they must not retain a separate fixed or Size-derived control height.
+- Do not provide a global Size foundation. Font role sizes own typography, `buttonHeight` owns control height, and the base grid plus element/component gaps own spatial scale. Older drafts or imported contracts containing a top-level `size` setting must be migrated away or rejected.
+- Treat `buttonHeight` as the exact border-box height, not only a minimum. Center single-line button content within that box and contain long labels with the library's existing ellipsis behavior instead of allowing padding or line-height to enlarge the control.
+- Button-like drawer and rail navigation uses exactly one `elementGap` on every inset edge. Do not multiply horizontal padding independently; when `elementGap` is 1px, both left and right padding must compute to 1px.
+- High-level drawer edges and content-region insets use exactly one `componentGap`, without viewport clamps or multipliers. Preference actions remain a component-spaced group but do not draw a separator line above Language.
+- Drawer and rail headings inherit their horizontal inset solely from the containing panel. Their own left/right margin and padding are zero, preventing a nested inset from doubling the configured `componentGap`.
+- Make every page respond to the width of its actual content panel after navigation rails are allocated, not only to the browser viewport. Style choices, standards documents, component specimens, page specimens, settings controls, and license content must reflow without horizontal escape.
 - Never freeze shared token values inside a component or page preview.
 - After changing an element or token, inspect every dependent component, page module, page pattern, and consuming feature. Update all affected contracts and previews in the same change.
 - Keep controls keyboard-operable with native buttons, `aria-expanded`, `aria-controls`, visible focus, and honest disabled state.

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
   <title>{{OBJECTIVE_NAME}} — Open-source licenses</title>
-  <link rel="stylesheet" href="library.css">
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-remove-size-39">
 </head>
 <body class="library-home library-legal-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="license">
   <header class="library-home-bar">
@@ -15,8 +15,8 @@
     </a>
     <nav class="library-home-menu" aria-label="Library sections">
       <ul>
-        <li><a href="guide.html"><span data-copy="navGuide">Standards</span></a></li>
         <li><a href="style.html"><span data-copy="navStyle">Style</span></a></li>
+        <li><a href="guide.html"><span data-copy="navGuide">Standards</span></a></li>
         <li><a href="elements.html"><span data-copy="navElements">Elements</span></a></li>
         <li><a href="components.html"><span data-copy="navComponents">Components</span></a></li>
         <li><a href="pages.html"><span data-copy="navPages">Pages</span></a></li>
@@ -68,6 +68,7 @@ SOFTWARE.</pre>
       <p data-copy="iconParkAdapted">Icons may be resized, recolored, or adapted to match semantic themes and interaction states.</p>
     </section>
   </main>
-  <script src="library.js"></script>
+  <script src="design-settings.js?v={{SKILL_VERSION}}"></script>
+  <script src="library.js?v={{SKILL_VERSION}}-remove-size-39"></script>
 </body>
 </html>

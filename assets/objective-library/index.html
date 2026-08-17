@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
   <title>{{OBJECTIVE_NAME}} — UI library</title>
-  <link rel="stylesheet" href="library.css">
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-remove-size-39">
 </head>
 <body class="library-home" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="overview">
   <header class="library-home-bar">
@@ -17,8 +17,8 @@
     </a>
     <nav class="library-home-menu" aria-label="Library sections">
       <ul>
-        <li><a href="guide.html"><span data-copy="navGuide">Standards</span></a></li>
         <li><a href="style.html"><span data-copy="navStyle">Style</span></a></li>
+        <li><a href="guide.html"><span data-copy="navGuide">Standards</span></a></li>
         <li><a href="elements.html"><span data-copy="navElements">Elements</span></a></li>
         <li><a href="components.html"><span data-copy="navComponents">Components</span></a></li>
         <li><a href="pages.html"><span data-copy="navPages">Pages</span></a></li>
@@ -39,9 +39,9 @@
         </div>
 
         <nav id="library-navigation" class="library-home-actions" aria-label="Start exploring the UI library">
-          <a class="library-home-primary-action" href="guide.html"><svg class="library-home-action-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"><path d="M27.4 8.8c5.1-3.1 10.7-4.2 14.6-4.6-.4 3.9-1.5 9.5-4.6 14.6L26.2 30 18 21.8 27.4 8.8Z" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m18 21.8-8.7-1.5L5 24.6l10.8 3.1M26.2 30l1.5 8.7L23.4 43l-3.1-10.8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31.5" cy="14.5" r="3" fill="currentColor"/><path d="m14.5 32.5-7 7M18.5 36.5l-4 4" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg><span data-copy="start">Start</span></a>
-          <a class="library-home-secondary-action library-home-grid-action" href="components.html"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="4" y="4" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="4" y="14" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="2"/></svg><span data-copy="navComponents">Components</span></a>
-          <a class="library-home-secondary-action library-home-pages-action" href="pages.html"><span class="library-action-brand-mark" aria-hidden="true"><img class="library-action-brand-mark-light" src="assets/onemind-beta-mark-light.svg" alt=""><img class="library-action-brand-mark-dark" src="assets/onemind-beta-mark-dark.svg" alt=""></span><span data-copy="navPages">Pages</span></a>
+          <a class="library-home-primary-action" href="style.html"><svg class="library-home-action-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"><path d="M27.4 8.8c5.1-3.1 10.7-4.2 14.6-4.6-.4 3.9-1.5 9.5-4.6 14.6L26.2 30 18 21.8 27.4 8.8Z" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m18 21.8-8.7-1.5L5 24.6l10.8 3.1M26.2 30l1.5 8.7L23.4 43l-3.1-10.8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31.5" cy="14.5" r="3" fill="currentColor"/><path d="m14.5 32.5-7 7M18.5 36.5l-4 4" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg><span data-copy="navStyle">Style</span></a>
+          <a class="library-home-secondary-action library-home-grid-action" href="https://github.com/RichardZhengQuan/OneMindUIDesignSkill" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-1.023-.014-1.845-2.782.604-3.369-1.342-3.369-1.342-.455-1.156-1.11-1.464-1.11-1.464-.91-.622.069-.609.069-.609 1.006.071 1.535 1.033 1.535 1.033.895 1.534 2.349 1.091 2.922.834.091-.647.35-1.091.636-1.342-2.221-.253-4.555-1.111-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.269.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.416-.012 2.744 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10Z"/></svg><span data-copy="github">GitHub</span></a>
+          <a class="library-home-secondary-action library-home-pages-action" href="https://onemind.team" target="_blank" rel="noopener noreferrer"><span class="library-action-brand-mark" aria-hidden="true"><img class="library-action-brand-mark-light" src="assets/onemind-beta-mark-light.svg" alt=""><img class="library-action-brand-mark-dark" src="assets/onemind-beta-mark-dark.svg" alt=""></span><span data-copy="oneMind">OneMind</span></a>
         </nav>
 
       </div>
@@ -56,6 +56,7 @@
       </footer>
     </section>
   </main>
-  <script src="library.js"></script>
+  <script src="design-settings.js?v={{SKILL_VERSION}}"></script>
+  <script src="library.js?v={{SKILL_VERSION}}-remove-size-39"></script>
 </body>
 </html>

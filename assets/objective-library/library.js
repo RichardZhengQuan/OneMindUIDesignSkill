@@ -26,7 +26,7 @@
       navGuide: "Standards", navStyle: "Style", navElements: "Elements", navComponents: "Components", navPages: "Pages",
       titleLead: "Design your system", titleTail: "as one system.",
       description: "A governed visual library for calm, precise interfaces across the shared web product. Start with intent, reuse proven modules, and keep every state truthful.",
-      start: "Start",
+      start: "Start", github: "GitHub", oneMind: "OneMind",
       footerIcons: "Icons by IconPark", licenseOverview: "License overview", localLicense: "Local license",
       librarySections: "Library sections", startExploring: "Start exploring the UI library",
       footerNavigation: "Footer navigation",
@@ -38,7 +38,7 @@
       navGuide: "标准", navStyle: "风格", navElements: "元素", navComponents: "组件", navPages: "页面",
       titleLead: "把你的系统设计成", titleTail: "一个完整系统。",
       description: "一套受治理的视觉库，为共享 Web 产品打造平静、精准的界面。从意图出发，复用经过验证的模块，并让每种状态保持真实。",
-      start: "开始",
+      start: "开始", github: "GitHub", oneMind: "OneMind",
       footerIcons: "图标来自 IconPark", licenseOverview: "许可证概览", localLicense: "本地许可证",
       librarySections: "视觉库栏目", startExploring: "开始浏览 UI 视觉库",
       footerNavigation: "页脚导航",
@@ -50,7 +50,7 @@
       navGuide: "標準", navStyle: "風格", navElements: "元素", navComponents: "元件", navPages: "頁面",
       titleLead: "將你的系統設計成", titleTail: "一個完整系統。",
       description: "一套受治理的視覺庫，為共享 Web 產品打造平靜、精準的介面。從意圖出發，重用已驗證的模組，並讓每種狀態保持真實。",
-      start: "開始",
+      start: "開始", github: "GitHub", oneMind: "OneMind",
       footerIcons: "圖標來自 IconPark", licenseOverview: "授權條款概覽", localLicense: "本地授權條款",
       librarySections: "視覺庫欄目", startExploring: "開始瀏覽 UI 視覺庫",
       footerNavigation: "頁尾導覽",
@@ -62,7 +62,7 @@
       navGuide: "標準", navStyle: "スタイル", navElements: "要素", navComponents: "コンポーネント", navPages: "ページ",
       titleLead: "あなたのシステムを", titleTail: "ひとつのシステムとして設計。",
       description: "共有Webプロダクトのための、穏やかで正確なインターフェースを支える管理されたビジュアルライブラリ。意図から始め、実証済みのモジュールを再利用し、すべての状態を正確に保ちます。",
-      start: "始める",
+      start: "始める", github: "GitHub", oneMind: "OneMind",
       footerIcons: "アイコン：IconPark", licenseOverview: "ライセンス概要", localLicense: "ローカルライセンス",
       librarySections: "ライブラリセクション", startExploring: "UIライブラリを見る",
       footerNavigation: "フッターナビゲーション",
@@ -74,7 +74,7 @@
       navGuide: "표준", navStyle: "스타일", navElements: "요소", navComponents: "컴포넌트", navPages: "페이지",
       titleLead: "당신의 시스템을", titleTail: "하나의 시스템으로 설계하세요.",
       description: "공유 웹 제품을 위한 차분하고 정밀한 인터페이스를 만드는 관리형 비주얼 라이브러리입니다. 의도에서 시작하고, 검증된 모듈을 재사용하며, 모든 상태를 정확하게 유지합니다.",
-      start: "시작",
+      start: "시작", github: "GitHub", oneMind: "OneMind",
       footerIcons: "아이콘: IconPark", licenseOverview: "라이선스 개요", localLicense: "로컬 라이선스",
       librarySections: "라이브러리 섹션", startExploring: "UI 라이브러리 둘러보기",
       footerNavigation: "푸터 탐색",
@@ -84,57 +84,70 @@
 
   const settingsCopy = {
     en: {
-      foundations: "Foundations", workspace: "Foundation workspace", title: "Design settings", description: "Tune the shared visual foundation.", reset: "Reset", undo: "Undo", save: "Save", saved: "Settings saved.", saveFailed: "Settings could not be saved.", sectionDescription: "Description", sectionAdjustments: "Adjustments", sectionPreview: "Preview area",
-      color: "Color", colorDescription: "Choose a preset, then tune semantic roles shared by every page.", colorPreset: "Color preset", neutral: "Neutral", ocean: "Ocean", forest: "Forest", violet: "Violet", semanticRoles: "Semantic roles", colorFormatHelp: "Use Hex or rgb(). Leave a field blank to inherit the active theme.", mainColor: "Main", textColor: "Text", secondaryTextColor: "Secondary text", mutedTextColor: "Muted text", lineColor: "Line", borderColor: "Border", backgroundColor: "Background", surfaceColor: "Surface", selectedColor: "Selected", colorInvalid: "Enter a valid Hex or rgb() color.",
-      grid: "Grid", gridDescription: "Set the column structure used by shared page layouts.", columns: "Columns", size: "Size", sizeDescription: "Control the base size that scales type and controls together.", baseSize: "Base size",
-      font: "Font", fontDescription: "Select the type character for every shared role.", fontFamily: "Font family", systemSans: "System Sans", humanistSans: "Humanist Sans", editorialSerif: "Editorial Serif", mono: "Monospace",
+      foundations: "Foundations", workspace: "Foundation workspace", title: "Design settings", description: "Tune the shared visual foundation.", reset: "Reset", undo: "Undo", save: "Save", chooseFile: "In the file picker, replace this objective's existing design-settings.js.", saved: "Settings contract saved. Codex will read design-settings.js before continuing.", downloaded: "Settings contract downloaded. Put it in this objective as design-settings.js before Codex continues.", saveCanceled: "Save canceled; the project standard was not changed.", saveFailed: "Settings could not be saved.", sectionDescription: "Description", sectionAdjustments: "Adjustments", sectionPreview: "Preview area",
+      colorNav: "Color", color: "Color style", colorDescription: "Choose a color style or create a custom palette for every shared page.", colorPreset: "Color styles", neutral: "Neutral", ocean: "Ocean", forest: "Forest", violet: "Violet", custom: "Custom", semanticRoles: "Semantic colors", colorFormatHelp: "Defaults are shown until you customize a role. Click a swatch to choose a color.", colorPicker: "Choose color", mainColor: "Main", textColor: "Text", secondaryTextColor: "Secondary text", mutedTextColor: "Muted text", lineColor: "Line", borderColor: "Border", backgroundColor: "Background", surfaceColor: "Surface", selectedColor: "Selected", colorInvalid: "Enter a valid Hex or rgb() color.",
+      grid: "Grid", gridDescription: "Set the base alignment grid, then define element and component gaps as whole multiples of it.", baseGrid: "Base alignment grid", elementGap: "Element gap", componentGap: "Component gap",
+      font: "Font", fontDescription: "Set the font, font size, and font weight for every shared text role.", fontFamily: "Default font", roleStyles: "Font role list", typeRole: "Role", fontFamilyShort: "Font", typeSize: "Font size", fontWeight: "Font weight", typeTitle: "Title", typeSubtitle: "Subtitle", typeBody: "Body", typeContent: "Content", typeAnnotation: "Annotation", globalFamily: "Default", regular: "Regular", medium: "Medium", semibold: "Semibold", bold: "Bold", systemSans: "System Sans", humanistSans: "Humanist Sans", editorialSerif: "Editorial Serif", mono: "Monospace",
       spacing: "Spacing", spacingDescription: "Adjust the base rhythm for gaps, padding, and density.", baseSpacing: "Base spacing", radius: "Radius", radiusDescription: "Shape surfaces from precise corners to softer containers.", cornerRadius: "Corner radius",
-      elevation: "Elevation", elevationDescription: "Use depth only to explain containment and overlap.", depthLevel: "Depth level", motion: "Motion", motionDescription: "Set transition character while preserving reduced-motion behavior.", motionStyle: "Motion style", reduced: "Reduced", standard: "Standard", expressive: "Expressive",
+      elevation: "Elevation", elevationDescription: "Use depth only to explain containment and overlap.", depthLevel: "Depth level", motion: "Motion", motionDescription: "Set transition character while preserving reduced-motion behavior.", motionStyle: "Motion style", reduced: "Reduced", standard: "Standard", expressive: "Expressive", button: "Button", buttonDescription: "Set the shared action treatment used by elements, components, and pages.", buttonAppearance: "Appearance", buttonSolid: "Solid", buttonOutline: "Outline", buttonSoft: "Soft", buttonHeight: "Height", buttonRadius: "Corner radius",
       livePreview: "Live preview", previewTitle: "Shared interface", ready: "Ready", previewCardTitle: "One calm foundation", previewCardDescription: "Color, type, geometry, and motion stay coherent across every shared surface.", primaryAction: "Primary action", secondaryAction: "Secondary", columnsUnit: "columns",
     },
     "zh-SG": {
-      foundations: "基础", workspace: "基础设置工作区", title: "设计设置", description: "调整共享视觉基础。", reset: "重置", undo: "撤销", save: "保存", saved: "设置已保存。", saveFailed: "无法保存设置。", sectionDescription: "说明", sectionAdjustments: "调整项", sectionPreview: "预览区域",
-      color: "颜色", colorDescription: "先选择预设，再调整所有页面共享的语义颜色。", colorPreset: "颜色预设", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫罗兰", semanticRoles: "语义角色", colorFormatHelp: "支持 Hex 或 rgb()。留空则继承当前主题。", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔线", borderColor: "边框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "选中状态", colorInvalid: "请输入有效的 Hex 或 rgb() 颜色。",
-      grid: "网格", gridDescription: "设置共享页面布局使用的列结构。", columns: "列数", size: "尺寸", sizeDescription: "控制同时缩放文字和控件的基础尺寸。", baseSize: "基础尺寸",
-      font: "字体", fontDescription: "选择所有共享角色的字体风格。", fontFamily: "字体系列", systemSans: "系统无衬线体", humanistSans: "人文无衬线体", editorialSerif: "编辑衬线体", mono: "等宽字体",
+      foundations: "基础", workspace: "基础设置工作区", title: "设计设置", description: "调整共享视觉基础。", reset: "重置", undo: "撤销", save: "保存", chooseFile: "请在文件选择器中替换当前目标已有的 design-settings.js。", saved: "设置契约已保存。Codex 会在继续前读取 design-settings.js。", downloaded: "设置契约已下载。继续前请将其放入当前目标并命名为 design-settings.js。", saveCanceled: "已取消保存；项目标准未更改。", saveFailed: "无法保存设置。", sectionDescription: "说明", sectionAdjustments: "调整项", sectionPreview: "预览区域",
+      colorNav: "颜色", color: "颜色风格", colorDescription: "选择颜色风格，或为所有共享页面创建自定义配色。", colorPreset: "颜色风格", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫罗兰", custom: "自定义", semanticRoles: "语义颜色", colorFormatHelp: "未自定义时显示默认颜色。点击色块可选择颜色。", colorPicker: "选择颜色", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔线", borderColor: "边框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "选中状态", colorInvalid: "请输入有效的 Hex 或 rgb() 颜色。",
+      grid: "网格", gridDescription: "设置基础对齐网格，再以它的整数倍定义元素间距和组件间距。", baseGrid: "基础对齐网格", elementGap: "元素间距", componentGap: "组件间距",
+      font: "字体", fontDescription: "为每个共享文字角色设置字体、字号和字重。", fontFamily: "默认字体", roleStyles: "字体角色列表", typeRole: "角色", fontFamilyShort: "字体", typeSize: "字体大小", fontWeight: "字体字重", typeTitle: "标题", typeSubtitle: "副标题", typeBody: "正文", typeContent: "内容", typeAnnotation: "附注", globalFamily: "默认", regular: "常规", medium: "中等", semibold: "半粗", bold: "粗体", systemSans: "系统无衬线体", humanistSans: "人文无衬线体", editorialSerif: "编辑衬线体", mono: "等宽字体",
       spacing: "间距", spacingDescription: "调整间隙、内边距和密度的基础节奏。", baseSpacing: "基础间距", radius: "圆角", radiusDescription: "从精确直角到柔和容器调整表面形状。", cornerRadius: "圆角半径",
-      elevation: "层级", elevationDescription: "仅用深度表达包含和重叠关系。", depthLevel: "深度级别", motion: "动效", motionDescription: "设置过渡风格，同时保留减少动态效果的行为。", motionStyle: "动效风格", reduced: "精简", standard: "标准", expressive: "灵动",
+      elevation: "层级", elevationDescription: "仅用深度表达包含和重叠关系。", depthLevel: "深度级别", motion: "动效", motionDescription: "设置过渡风格，同时保留减少动态效果的行为。", motionStyle: "动效风格", reduced: "精简", standard: "标准", expressive: "灵动", button: "按钮", buttonDescription: "设置元素、组件和页面共用的操作样式。", buttonAppearance: "外观", buttonSolid: "实心", buttonOutline: "描边", buttonSoft: "柔和", buttonHeight: "高度", buttonRadius: "圆角半径",
       livePreview: "实时预览", previewTitle: "共享界面", ready: "就绪", previewCardTitle: "一个平静的基础", previewCardDescription: "颜色、字体、几何和动效在每个共享表面上保持一致。", primaryAction: "主要操作", secondaryAction: "次要操作", columnsUnit: "列",
     },
     "zh-HK": {
-      foundations: "基礎", workspace: "基礎設定工作區", title: "設計設定", description: "調整共享視覺基礎。", reset: "重設", undo: "復原", save: "儲存", saved: "設定已儲存。", saveFailed: "無法儲存設定。", sectionDescription: "說明", sectionAdjustments: "調整項", sectionPreview: "預覽區域",
-      color: "顏色", colorDescription: "先選擇預設，再調整所有頁面共享的語義顏色。", colorPreset: "顏色預設", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫羅蘭", semanticRoles: "語義角色", colorFormatHelp: "支援 Hex 或 rgb()。留空則繼承目前主題。", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔線", borderColor: "邊框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "選取狀態", colorInvalid: "請輸入有效的 Hex 或 rgb() 顏色。",
-      grid: "網格", gridDescription: "設定共享頁面佈局使用的欄結構。", columns: "欄數", size: "尺寸", sizeDescription: "控制同時縮放文字和控制項的基礎尺寸。", baseSize: "基礎尺寸",
-      font: "字體", fontDescription: "選擇所有共享角色的字體風格。", fontFamily: "字體系列", systemSans: "系統無襯線體", humanistSans: "人文無襯線體", editorialSerif: "編輯襯線體", mono: "等寬字體",
+      foundations: "基礎", workspace: "基礎設定工作區", title: "設計設定", description: "調整共享視覺基礎。", reset: "重設", undo: "復原", save: "儲存", chooseFile: "請在檔案選擇器中取代目前目標已有的 design-settings.js。", saved: "設定契約已儲存。Codex 會在繼續前讀取 design-settings.js。", downloaded: "設定契約已下載。繼續前請將其放入目前目標並命名為 design-settings.js。", saveCanceled: "已取消儲存；專案標準未更改。", saveFailed: "無法儲存設定。", sectionDescription: "說明", sectionAdjustments: "調整項", sectionPreview: "預覽區域",
+      colorNav: "顏色", color: "顏色風格", colorDescription: "選擇顏色風格，或為所有共享頁面建立自訂配色。", colorPreset: "顏色風格", neutral: "中性", ocean: "海洋", forest: "森林", violet: "紫羅蘭", custom: "自訂", semanticRoles: "語義顏色", colorFormatHelp: "未自訂時顯示預設顏色。點擊色塊可選擇顏色。", colorPicker: "選擇顏色", mainColor: "主色", textColor: "文字", secondaryTextColor: "次要文字", mutedTextColor: "弱化文字", lineColor: "分隔線", borderColor: "邊框", backgroundColor: "背景", surfaceColor: "表面", selectedColor: "選取狀態", colorInvalid: "請輸入有效的 Hex 或 rgb() 顏色。",
+      grid: "網格", gridDescription: "設定基礎對齊網格，再以其整數倍定義元素間距及元件間距。", baseGrid: "基礎對齊網格", elementGap: "元素間距", componentGap: "元件間距",
+      font: "字體", fontDescription: "為每個共享文字角色設定字體、字級和字重。", fontFamily: "預設字體", roleStyles: "字體角色列表", typeRole: "角色", fontFamilyShort: "字體", typeSize: "字體大小", fontWeight: "字體字重", typeTitle: "標題", typeSubtitle: "副標題", typeBody: "正文", typeContent: "內容", typeAnnotation: "附註", globalFamily: "預設", regular: "一般", medium: "中等", semibold: "半粗", bold: "粗體", systemSans: "系統無襯線體", humanistSans: "人文無襯線體", editorialSerif: "編輯襯線體", mono: "等寬字體",
       spacing: "間距", spacingDescription: "調整間隙、內邊距及密度的基礎節奏。", baseSpacing: "基礎間距", radius: "圓角", radiusDescription: "從精確直角到柔和容器調整表面形狀。", cornerRadius: "圓角半徑",
-      elevation: "層級", elevationDescription: "只用深度表達包含及重疊關係。", depthLevel: "深度級別", motion: "動效", motionDescription: "設定過渡風格，同時保留減少動態效果的行為。", motionStyle: "動效風格", reduced: "精簡", standard: "標準", expressive: "靈動",
+      elevation: "層級", elevationDescription: "只用深度表達包含及重疊關係。", depthLevel: "深度級別", motion: "動效", motionDescription: "設定過渡風格，同時保留減少動態效果的行為。", motionStyle: "動效風格", reduced: "精簡", standard: "標準", expressive: "靈動", button: "按鈕", buttonDescription: "設定元素、元件及頁面共用的操作樣式。", buttonAppearance: "外觀", buttonSolid: "實心", buttonOutline: "描邊", buttonSoft: "柔和", buttonHeight: "高度", buttonRadius: "圓角半徑",
       livePreview: "即時預覽", previewTitle: "共享介面", ready: "就緒", previewCardTitle: "一個平靜的基礎", previewCardDescription: "顏色、字體、幾何及動效在每個共享表面上保持一致。", primaryAction: "主要操作", secondaryAction: "次要操作", columnsUnit: "欄",
     },
     ja: {
-      foundations: "基盤", workspace: "基盤ワークスペース", title: "デザイン設定", description: "共有ビジュアル基盤を調整します。", reset: "リセット", undo: "元に戻す", save: "保存", saved: "設定を保存しました。", saveFailed: "設定を保存できませんでした。", sectionDescription: "説明", sectionAdjustments: "調整項目", sectionPreview: "プレビュー領域",
-      color: "カラー", colorDescription: "プリセットを選び、全ページで共有するセマンティックカラーを調整します。", colorPreset: "カラープリセット", neutral: "ニュートラル", ocean: "オーシャン", forest: "フォレスト", violet: "バイオレット", semanticRoles: "セマンティックロール", colorFormatHelp: "Hex または rgb() に対応。空欄は現在のテーマを継承します。", mainColor: "メイン", textColor: "テキスト", secondaryTextColor: "セカンダリテキスト", mutedTextColor: "弱いテキスト", lineColor: "区切り線", borderColor: "ボーダー", backgroundColor: "背景", surfaceColor: "サーフェス", selectedColor: "選択状態", colorInvalid: "有効な Hex または rgb() カラーを入力してください。",
-      grid: "グリッド", gridDescription: "共有ページレイアウトの列構造を設定します。", columns: "列数", size: "サイズ", sizeDescription: "文字とコントロールを一緒に拡大縮小する基準サイズです。", baseSize: "基準サイズ",
-      font: "フォント", fontDescription: "すべての共有ロールの文字特性を選びます。", fontFamily: "フォントファミリー", systemSans: "システムサンセリフ", humanistSans: "ヒューマニストサンセリフ", editorialSerif: "エディトリアルセリフ", mono: "等幅フォント",
+      foundations: "基盤", workspace: "基盤ワークスペース", title: "デザイン設定", description: "共有ビジュアル基盤を調整します。", reset: "リセット", undo: "元に戻す", save: "保存", chooseFile: "ファイル選択で、この目標にある既存の design-settings.js を置き換えてください。", saved: "設定契約を保存しました。Codex は続行前に design-settings.js を読み込みます。", downloaded: "設定契約をダウンロードしました。続行前にこの目標へ design-settings.js として配置してください。", saveCanceled: "保存をキャンセルしました。プロジェクト標準は変更されていません。", saveFailed: "設定を保存できませんでした。", sectionDescription: "説明", sectionAdjustments: "調整項目", sectionPreview: "プレビュー領域",
+      colorNav: "カラー", color: "カラースタイル", colorDescription: "カラースタイルを選ぶか、全共有ページ用のカスタム配色を作成します。", colorPreset: "カラースタイル", neutral: "ニュートラル", ocean: "オーシャン", forest: "フォレスト", violet: "バイオレット", custom: "カスタム", semanticRoles: "セマンティックカラー", colorFormatHelp: "未設定の役割には既定色を表示します。色見本をクリックして選択できます。", colorPicker: "色を選択", mainColor: "メイン", textColor: "テキスト", secondaryTextColor: "セカンダリテキスト", mutedTextColor: "弱いテキスト", lineColor: "区切り線", borderColor: "ボーダー", backgroundColor: "背景", surfaceColor: "サーフェス", selectedColor: "選択状態", colorInvalid: "有効な Hex または rgb() カラーを入力してください。",
+      grid: "グリッド", gridDescription: "基本の整列グリッドを設定し、その整数倍で要素間隔とコンポーネント間隔を定義します。", baseGrid: "基本整列グリッド", elementGap: "要素間隔", componentGap: "コンポーネント間隔",
+      font: "フォント", fontDescription: "各共有テキストロールのフォント、フォントサイズ、フォントウェイトを設定します。", fontFamily: "既定フォント", roleStyles: "フォントロール一覧", typeRole: "ロール", fontFamilyShort: "フォント", typeSize: "フォントサイズ", fontWeight: "フォントウェイト", typeTitle: "タイトル", typeSubtitle: "サブタイトル", typeBody: "本文", typeContent: "コンテンツ", typeAnnotation: "注釈", globalFamily: "既定", regular: "レギュラー", medium: "ミディアム", semibold: "セミボールド", bold: "ボールド", systemSans: "システムサンセリフ", humanistSans: "ヒューマニストサンセリフ", editorialSerif: "エディトリアルセリフ", mono: "等幅フォント",
       spacing: "スペーシング", spacingDescription: "間隔、余白、密度の基本リズムを調整します。", baseSpacing: "基準間隔", radius: "角丸", radiusDescription: "正確な角から柔らかなコンテナまで形状を調整します。", cornerRadius: "角丸半径",
-      elevation: "エレベーション", elevationDescription: "奥行きは包含と重なりの説明にだけ使います。", depthLevel: "奥行きレベル", motion: "モーション", motionDescription: "視覚効果の軽減を保ちながら遷移の特性を設定します。", motionStyle: "モーションスタイル", reduced: "軽減", standard: "標準", expressive: "表現的",
+      elevation: "エレベーション", elevationDescription: "奥行きは包含と重なりの説明にだけ使います。", depthLevel: "奥行きレベル", motion: "モーション", motionDescription: "視覚効果の軽減を保ちながら遷移の特性を設定します。", motionStyle: "モーションスタイル", reduced: "軽減", standard: "標準", expressive: "表現的", button: "ボタン", buttonDescription: "要素、コンポーネント、ページで共有するアクション表現を設定します。", buttonAppearance: "外観", buttonSolid: "塗り", buttonOutline: "アウトライン", buttonSoft: "ソフト", buttonHeight: "高さ", buttonRadius: "角丸半径",
       livePreview: "ライブプレビュー", previewTitle: "共有インターフェース", ready: "準備完了", previewCardTitle: "ひとつの穏やかな基盤", previewCardDescription: "カラー、文字、形状、動きがすべての共有サーフェスで一貫します。", primaryAction: "主要アクション", secondaryAction: "セカンダリ", columnsUnit: "列",
     },
     ko: {
-      foundations: "기초", workspace: "기초 설정 작업 공간", title: "디자인 설정", description: "공유 시각 기반을 조정하세요.", reset: "재설정", undo: "실행 취소", save: "저장", saved: "설정을 저장했습니다.", saveFailed: "설정을 저장하지 못했습니다.", sectionDescription: "설명", sectionAdjustments: "조정 항목", sectionPreview: "미리보기 영역",
-      color: "색상", colorDescription: "프리셋을 선택한 뒤 모든 페이지가 공유할 의미 기반 색상을 조정하세요.", colorPreset: "색상 프리셋", neutral: "중립", ocean: "오션", forest: "포레스트", violet: "바이올렛", semanticRoles: "의미 역할", colorFormatHelp: "Hex 또는 rgb()를 지원합니다. 비워 두면 현재 테마를 따릅니다.", mainColor: "메인", textColor: "텍스트", secondaryTextColor: "보조 텍스트", mutedTextColor: "약한 텍스트", lineColor: "구분선", borderColor: "테두리", backgroundColor: "배경", surfaceColor: "표면", selectedColor: "선택 상태", colorInvalid: "유효한 Hex 또는 rgb() 색상을 입력하세요.",
-      grid: "그리드", gridDescription: "공유 페이지 레이아웃의 열 구조를 설정하세요.", columns: "열 수", size: "크기", sizeDescription: "글꼴과 컨트롤을 함께 조절하는 기본 크기를 설정하세요.", baseSize: "기본 크기",
-      font: "글꼴", fontDescription: "모든 공유 역할에 적용할 글꼴 특성을 선택하세요.", fontFamily: "글꼴 모음", systemSans: "시스템 산세리프", humanistSans: "휴머니스트 산세리프", editorialSerif: "에디토리얼 세리프", mono: "고정폭 글꼴",
+      foundations: "기초", workspace: "기초 설정 작업 공간", title: "디자인 설정", description: "공유 시각 기반을 조정하세요.", reset: "재설정", undo: "실행 취소", save: "저장", chooseFile: "파일 선택기에서 이 목표의 기존 design-settings.js를 교체하세요.", saved: "설정 계약을 저장했습니다. Codex는 계속하기 전에 design-settings.js를 읽습니다.", downloaded: "설정 계약을 다운로드했습니다. 계속하기 전에 이 목표에 design-settings.js로 넣으세요.", saveCanceled: "저장을 취소했습니다. 프로젝트 표준은 변경되지 않았습니다.", saveFailed: "설정을 저장하지 못했습니다.", sectionDescription: "설명", sectionAdjustments: "조정 항목", sectionPreview: "미리보기 영역",
+      colorNav: "색상", color: "색상 스타일", colorDescription: "색상 스타일을 선택하거나 모든 공유 페이지를 위한 사용자 지정 팔레트를 만드세요.", colorPreset: "색상 스타일", neutral: "중립", ocean: "오션", forest: "포레스트", violet: "바이올렛", custom: "사용자 지정", semanticRoles: "의미 색상", colorFormatHelp: "사용자 지정하지 않은 역할에는 기본 색상이 표시됩니다. 색상 견본을 클릭해 선택하세요.", colorPicker: "색상 선택", mainColor: "메인", textColor: "텍스트", secondaryTextColor: "보조 텍스트", mutedTextColor: "약한 텍스트", lineColor: "구분선", borderColor: "테두리", backgroundColor: "배경", surfaceColor: "표면", selectedColor: "선택 상태", colorInvalid: "유효한 Hex 또는 rgb() 색상을 입력하세요.",
+      grid: "그리드", gridDescription: "기본 정렬 그리드를 설정한 뒤 그 정수배로 요소 간격과 컴포넌트 간격을 정의하세요.", baseGrid: "기본 정렬 그리드", elementGap: "요소 간격", componentGap: "컴포넌트 간격",
+      font: "글꼴", fontDescription: "각 공유 텍스트 역할의 글꼴, 글꼴 크기, 글꼴 굵기를 설정하세요.", fontFamily: "기본 글꼴", roleStyles: "글꼴 역할 목록", typeRole: "역할", fontFamilyShort: "글꼴", typeSize: "글꼴 크기", fontWeight: "글꼴 굵기", typeTitle: "제목", typeSubtitle: "부제목", typeBody: "본문", typeContent: "콘텐츠", typeAnnotation: "주석", globalFamily: "기본", regular: "일반", medium: "중간", semibold: "세미볼드", bold: "볼드", systemSans: "시스템 산세리프", humanistSans: "휴머니스트 산세리프", editorialSerif: "에디토리얼 세리프", mono: "고정폭 글꼴",
       spacing: "간격", spacingDescription: "여백, 패딩 및 밀도의 기본 리듬을 조절하세요.", baseSpacing: "기본 간격", radius: "모서리", radiusDescription: "정교한 각부터 부드러운 컨테이너까지 형태를 조절하세요.", cornerRadius: "모서리 반경",
-      elevation: "입체감", elevationDescription: "깊이는 포함 및 겹침 관계를 설명할 때만 사용하세요.", depthLevel: "깊이 단계", motion: "모션", motionDescription: "모션 감소 동작을 유지하면서 전환 특성을 설정하세요.", motionStyle: "모션 스타일", reduced: "감소", standard: "표준", expressive: "표현형",
+      elevation: "입체감", elevationDescription: "깊이는 포함 및 겹침 관계를 설명할 때만 사용하세요.", depthLevel: "깊이 단계", motion: "모션", motionDescription: "모션 감소 동작을 유지하면서 전환 특성을 설정하세요.", motionStyle: "모션 스타일", reduced: "감소", standard: "표준", expressive: "표현형", button: "버튼", buttonDescription: "요소, 컴포넌트 및 페이지가 공유할 작업 표현을 설정합니다.", buttonAppearance: "모양", buttonSolid: "채움", buttonOutline: "윤곽선", buttonSoft: "부드러움", buttonHeight: "높이", buttonRadius: "모서리 반경",
       livePreview: "실시간 미리보기", previewTitle: "공유 인터페이스", ready: "준비됨", previewCardTitle: "하나의 차분한 기반", previewCardDescription: "색상, 글꼴, 형태 및 모션이 모든 공유 화면에서 일관되게 유지됩니다.", primaryAction: "주요 작업", secondaryAction: "보조 작업", columnsUnit: "열",
     },
   };
 
-  const settingsStorageKey = "one-mind-ui.settings.v1";
+  const objectiveSlug = document.body?.dataset.objective || window.OneMindDesignSettings?.objective || "baseline";
+  const settingsStorageKey = `one-mind-ui.settings.v2.${objectiveSlug}`;
   const settingsColorDefaults = { main: "", text: "", secondary: "", muted: "", line: "", border: "", background: "", surface: "", selected: "" };
-  const settingsDefaults = { color: "neutral", colors: settingsColorDefaults, grid: 12, size: 16, font: "system", spacing: 8, radius: 8, elevation: 1, motion: "standard" };
-  const settingsAccents = { neutral: "var(--one-mind-text-primary)", ocean: "#0969da", forest: "#087a42", violet: "#7656d6" };
-  const settingsAccentContrast = { neutral: "var(--one-mind-page-background)", ocean: "#ffffff", forest: "#ffffff", violet: "#ffffff" };
+  const settingsTypeRoleDefaults = {
+    title: { family: "inherit", size: 32, weight: 700 },
+    subtitle: { family: "inherit", size: 22, weight: 600 },
+    body: { family: "inherit", size: 16, weight: 400 },
+    content: { family: "inherit", size: 15, weight: 400 },
+    annotation: { family: "inherit", size: 12, weight: 500 },
+  };
+  const settingsDefaults = { style: "floating", color: "neutral", colors: settingsColorDefaults, baseGrid: 4, elementGap: 8, componentGap: 16, font: "system", typeRoles: settingsTypeRoleDefaults, radius: 12, elevation: 2, motion: "standard", buttonAppearance: "solid", buttonHeight: 40, buttonRadius: 10 };
+  const stylePresets = {
+    floating: { style: "floating", radius: 12, elevation: 2, buttonRadius: 10 },
+    lines: { style: "lines", radius: 8, elevation: 1, buttonRadius: 8 },
+  };
+  const legacyStyleNames = { calm: "lines", focused: "floating" };
+  const settingsAccents = { neutral: "var(--one-mind-text-primary)", ocean: "#0969da", forest: "#087a42", violet: "#7656d6", custom: "var(--one-mind-text-primary)" };
+  const settingsAccentContrast = { neutral: "var(--one-mind-page-background)", ocean: "#ffffff", forest: "#ffffff", violet: "#ffffff", custom: "var(--one-mind-page-background)" };
   const settingsFonts = {
     system: 'Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif',
     humanist: 'Avenir Next, Avenir, "Segoe UI", sans-serif',
@@ -154,6 +167,12 @@
     surface: "--one-mind-surface",
     selected: "--one-mind-surface-subtle",
   };
+  const settingsColorCopyKeys = {
+    main: "mainColor", text: "textColor", secondary: "secondaryTextColor", muted: "mutedTextColor", line: "lineColor",
+    border: "borderColor", background: "backgroundColor", surface: "surfaceColor", selected: "selectedColor",
+  };
+  const settingsTypeRoleCopyKeys = { title: "typeTitle", subtitle: "typeSubtitle", body: "typeBody", content: "typeContent", annotation: "typeAnnotation" };
+  const settingsTypePropertyCopyKeys = { family: "fontFamilyShort", size: "typeSize", weight: "fontWeight" };
 
   function isSupportedColor(value) {
     if (value === "") return true;
@@ -177,36 +196,168 @@
     return whiteContrast >= darkContrast ? "#ffffff" : "#111111";
   }
 
+  function colorToHex(value, fallback = "#000000") {
+    if (!value || !document.body) return fallback;
+    const probe = document.createElement("span");
+    probe.style.color = value;
+    if (!probe.style.color) return fallback;
+    probe.hidden = true;
+    document.body.append(probe);
+    const channels = getComputedStyle(probe).color.match(/[\d.]+/g)?.slice(0, 3).map(Number);
+    probe.remove();
+    if (!channels || channels.length !== 3) return fallback;
+    return `#${channels.map((channel) => Math.round(channel).toString(16).padStart(2, "0")).join("")}`;
+  }
+
+  function resolvedSemanticColor(role) {
+    const token = settingsColorTokens[role];
+    if (!token) return "#000000";
+    const value = getComputedStyle(document.documentElement).getPropertyValue(token).trim();
+    return colorToHex(value);
+  }
+
+  function resolvedSemanticColors() {
+    return Object.fromEntries(Object.keys(settingsColorTokens).map((role) => [role, resolvedSemanticColor(role)]));
+  }
+
   function clampSetting(value, min, max, fallback) {
     const number = Number(value);
     return Number.isFinite(number) ? Math.min(max, Math.max(min, number)) : fallback;
   }
 
+  function quantizeGap(value, baseGrid, minMultiple, maxMultiple, fallbackMultiple) {
+    const multiple = Math.round(Number(value) / baseGrid);
+    const safeMultiple = Number.isFinite(multiple) ? Math.min(maxMultiple, Math.max(minMultiple, multiple)) : fallbackMultiple;
+    return safeMultiple * baseGrid;
+  }
+
+  function alignToBaseGrid(value, baseGrid) {
+    return Math.max(baseGrid, Math.round(value / baseGrid) * baseGrid);
+  }
+
   function normalizeSettings(candidate) {
-    const state = { ...settingsDefaults, ...(candidate && typeof candidate === "object" ? candidate : {}) };
-    const candidateColors = candidate && typeof candidate.colors === "object" ? candidate.colors : {};
+    const candidateSettings = candidate && typeof candidate === "object" ? candidate : {};
+    const state = { ...settingsDefaults, ...candidateSettings };
+    const candidateColors = candidateSettings.colors && typeof candidateSettings.colors === "object" ? candidateSettings.colors : {};
     state.colors = { ...settingsColorDefaults, ...candidateColors };
     Object.keys(state.colors).forEach((role) => {
       const value = typeof state.colors[role] === "string" ? state.colors[role].trim() : "";
       state.colors[role] = isSupportedColor(value) ? value : "";
     });
+    state.style = legacyStyleNames[state.style] || state.style;
+    if (!Object.hasOwn(stylePresets, state.style)) state.style = settingsDefaults.style;
     if (!Object.hasOwn(settingsAccents, state.color)) state.color = settingsDefaults.color;
     if (!Object.hasOwn(settingsFonts, state.font)) state.font = settingsDefaults.font;
+    const candidateTypeRoles = candidateSettings.typeRoles && typeof candidateSettings.typeRoles === "object" ? candidateSettings.typeRoles : {};
+    state.typeRoles = Object.fromEntries(Object.entries(settingsTypeRoleDefaults).map(([role, defaults]) => {
+      const candidateRole = candidateTypeRoles[role] && typeof candidateTypeRoles[role] === "object" ? candidateTypeRoles[role] : {};
+      const family = candidateRole.family === "inherit" || Object.hasOwn(settingsFonts, candidateRole.family) ? candidateRole.family : defaults.family;
+      const size = Math.round(clampSetting(candidateRole.size, 10, 64, defaults.size));
+      const weight = [400, 500, 600, 700].includes(Number(candidateRole.weight)) ? Number(candidateRole.weight) : defaults.weight;
+      return [role, { family, size, weight }];
+    }));
     if (!Object.hasOwn(settingsDurations, state.motion)) state.motion = settingsDefaults.motion;
-    state.grid = clampSetting(state.grid, 4, 12, settingsDefaults.grid);
-    state.size = clampSetting(state.size, 14, 20, settingsDefaults.size);
-    state.spacing = clampSetting(state.spacing, 4, 12, settingsDefaults.spacing);
+    if (!["solid", "outline", "soft"].includes(state.buttonAppearance)) state.buttonAppearance = settingsDefaults.buttonAppearance;
+    state.baseGrid = Math.round(clampSetting(state.baseGrid, 1, 12, settingsDefaults.baseGrid));
+    const legacyElementGap = Number.isFinite(Number(candidateSettings.spacing)) ? Number(candidateSettings.spacing) : settingsDefaults.elementGap;
+    const elementGap = Object.hasOwn(candidateSettings, "elementGap") ? candidateSettings.elementGap : legacyElementGap;
+    const componentGap = Object.hasOwn(candidateSettings, "componentGap") ? candidateSettings.componentGap : legacyElementGap * 2;
+    state.elementGap = quantizeGap(elementGap, state.baseGrid, 1, 8, 2);
+    state.componentGap = quantizeGap(componentGap, state.baseGrid, 1, 12, 4);
+    delete state.grid;
+    delete state.spacing;
+    delete state.size;
     state.radius = clampSetting(state.radius, 0, 16, settingsDefaults.radius);
     state.elevation = clampSetting(state.elevation, 0, 3, settingsDefaults.elevation);
+    state.buttonHeight = clampSetting(state.buttonHeight, 36, 52, settingsDefaults.buttonHeight);
+    state.buttonRadius = clampSetting(state.buttonRadius, 0, 26, settingsDefaults.buttonRadius);
     return state;
   }
 
-  function loadSettings() {
-    try {
-      return normalizeSettings(JSON.parse(readPreference(settingsStorageKey) || "null"));
-    } catch (_) {
-      return { ...settingsDefaults };
+  function projectSettingsContract() {
+    const contract = window.OneMindDesignSettings;
+    if (!contract || contract.objective !== objectiveSlug || typeof contract.settings !== "object") {
+      return { objective: objectiveSlug, updatedAt: "", settings: settingsDefaults };
     }
+    return contract;
+  }
+
+  function applyStylePreset(state, presetName) {
+    const preset = stylePresets[presetName];
+    if (!preset) return normalizeSettings(state);
+    return normalizeSettings({ ...state, ...preset, colors: { ...state.colors } });
+  }
+
+  function loadSettings() {
+    const projectContract = projectSettingsContract();
+    try {
+      const browserDraft = JSON.parse(readPreference(settingsStorageKey) || "null");
+      const projectTime = Date.parse(projectContract.updatedAt || "") || 0;
+      const browserTime = Date.parse(browserDraft?.updatedAt || "") || 0;
+      if (browserDraft?.objective === objectiveSlug && browserTime > projectTime) {
+        return normalizeSettings(browserDraft.settings);
+      }
+    } catch (_) {
+      // The project-owned contract remains authoritative when browser state is invalid.
+    }
+    return normalizeSettings(projectContract.settings);
+  }
+
+  function serializeSettingsContract(state, updatedAt) {
+    const contract = {
+      schemaVersion: 1,
+      skillVersion: "0.4",
+      objective: objectiveSlug,
+      updatedAt,
+      settings: normalizeSettings(state),
+    };
+    return `/* OneMind UI Design v0.4 objective authority. Saved by the local library UI. */\nwindow.OneMindDesignSettings = Object.freeze(${JSON.stringify(contract, null, 2)});\n`;
+  }
+
+  function persistSettingsDraft(state) {
+    const browserDraft = {
+      objective: objectiveSlug,
+      updatedAt: new Date().toISOString(),
+      settings: normalizeSettings(state),
+    };
+    return writePreference(settingsStorageKey, JSON.stringify(browserDraft));
+  }
+
+  function downloadSettingsContract(content) {
+    const blob = new Blob([content], { type: "text/javascript" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "design-settings.js";
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+  }
+
+  async function saveSettingsContract(state) {
+    const updatedAt = new Date().toISOString();
+    const normalized = normalizeSettings(state);
+    const browserDraft = { objective: objectiveSlug, updatedAt, settings: normalized };
+    if (!writePreference(settingsStorageKey, JSON.stringify(browserDraft))) return { status: "failed" };
+    const content = serializeSettingsContract(normalized, updatedAt);
+    if (typeof window.showSaveFilePicker === "function") {
+      try {
+        const handle = await window.showSaveFilePicker({
+          suggestedName: "design-settings.js",
+          types: [{ description: "OneMind design settings", accept: { "text/javascript": [".js"] } }],
+        });
+        const writable = await handle.createWritable();
+        await writable.write(content);
+        await writable.close();
+        return { status: "saved", updatedAt };
+      } catch (error) {
+        if (error?.name === "AbortError") return { status: "canceled" };
+        return { status: "failed" };
+      }
+    }
+    downloadSettingsContract(content);
+    return { status: "downloaded", updatedAt };
   }
 
   function applySettings(state) {
@@ -228,33 +379,39 @@
     const accentContrast = normalized.colors.main ? readableColor(normalized.colors.main, "#ffffff") : settingsAccentContrast[normalized.color];
     root.style.setProperty("--settings-accent", accent);
     root.style.setProperty("--settings-accent-contrast", accentContrast);
-    root.style.setProperty("--settings-grid-columns", normalized.grid);
-    root.style.setProperty("--settings-card-min", `${510 - (normalized.grid * 20)}px`);
-    root.style.setProperty("--settings-content-width", `${560 + (normalized.grid * 24)}px`);
-    root.style.setProperty("--settings-page-max", `${240 + (normalized.grid * 100)}px`);
-    root.style.setProperty("--settings-legal-max", `${Math.min(960, 240 + (normalized.grid * 100))}px`);
-    root.style.setProperty("--settings-base-size", `${normalized.size}px`);
-    root.style.setProperty("--settings-scale", normalized.size / 16);
-    root.style.setProperty("--settings-type-step", `${normalized.size - 16}px`);
-    root.style.setProperty("--settings-control-height", `${40 * (normalized.size / 16)}px`);
     root.style.setProperty("--settings-font-family", settingsFonts[normalized.font]);
-    root.style.setProperty("--settings-space", `${normalized.spacing}px`);
+    Object.entries(normalized.typeRoles).forEach(([role, typeStyle]) => {
+      const family = typeStyle.family === "inherit" ? settingsFonts[normalized.font] : settingsFonts[typeStyle.family];
+      root.style.setProperty(`--type-${role}-family`, family);
+      root.style.setProperty(`--type-${role}-size`, `${typeStyle.size}px`);
+      root.style.setProperty(`--type-${role}-weight`, typeStyle.weight);
+    });
+    root.style.setProperty("--settings-base-grid", `${normalized.baseGrid}px`);
+    root.style.setProperty("--settings-element-gap", `${normalized.elementGap}px`);
+    root.style.setProperty("--settings-component-gap", `${normalized.componentGap}px`);
+    root.style.setProperty("--settings-primary-rail-width", `${alignToBaseGrid(184, normalized.baseGrid)}px`);
+    root.style.setProperty("--settings-secondary-rail-width", `${alignToBaseGrid(244, normalized.baseGrid)}px`);
+    root.style.setProperty("--settings-space", `${normalized.elementGap}px`);
     root.style.setProperty("--settings-radius", `${normalized.radius}px`);
     root.style.setProperty("--settings-shadow", settingsShadows[normalized.elevation]);
     root.style.setProperty("--settings-motion-duration", settingsDurations[normalized.motion]);
+    root.style.setProperty("--settings-button-height", `${normalized.buttonHeight}px`);
+    root.style.setProperty("--settings-button-radius", `${normalized.buttonRadius}px`);
     root.style.setProperty("--one-mind-font-sans", settingsFonts[normalized.font]);
     root.style.setProperty("--library-accent", accent);
     root.style.setProperty("--library-radius-small", `${normalized.radius / 2}px`);
     root.style.setProperty("--library-radius-medium", `${normalized.radius}px`);
-    root.style.setProperty("--library-space-1", `${normalized.spacing / 2}px`);
-    root.style.setProperty("--library-space-2", `${normalized.spacing}px`);
-    root.style.setProperty("--library-space-3", `${normalized.spacing * 1.5}px`);
-    root.style.setProperty("--library-space-4", `${normalized.spacing * 2}px`);
-    root.style.setProperty("--library-space-6", `${normalized.spacing * 3}px`);
-    root.style.setProperty("--library-space-8", `${normalized.spacing * 4}px`);
+    root.style.setProperty("--library-space-1", `${normalized.baseGrid}px`);
+    root.style.setProperty("--library-space-2", `${normalized.elementGap}px`);
+    root.style.setProperty("--library-space-3", `${normalized.componentGap}px`);
+    root.style.setProperty("--library-space-4", `${normalized.componentGap + normalized.baseGrid}px`);
+    root.style.setProperty("--library-space-6", `${normalized.componentGap + normalized.elementGap}px`);
+    root.style.setProperty("--library-space-8", `${normalized.componentGap * 2}px`);
     root.dataset.settingsColor = normalized.color;
+    root.dataset.settingsStyle = normalized.style;
     root.dataset.settingsFont = normalized.font;
     root.dataset.settingsMotion = normalized.motion;
+    root.dataset.settingsButton = normalized.buttonAppearance;
     return normalized;
   }
 
@@ -314,7 +471,7 @@
   const styleCopy = {
     en: {
       sections: "Style sections", drawerKicker: "Visual language", drawerTitle: "Style", drawerNoteTitle: "Style contract", drawerNote: "Set shared visual rules here before adjusting elements and components.",
-      kicker: "One language, every surface", title: "Style system", description: "Define the shared visual language that turns standards into consistent elements, components, and pages.",
+      kicker: "Starting point", title: "Choose a style", description: "Pick the visual character that best fits this objective. You can fine-tune individual foundations under Elements.", choiceLegend: "Style choices", linesTitle: "Lines", linesDescription: "Keep the current line-led system with aligned edges and quiet dividers.", floatingTitle: "Floating", floatingDescription: "Turn side drawers, navigation, and content views into detached floating panels.", note: "This selection changes the shared foundation across the library.",
       principlesTitle: "Style principles", principlesDescription: "Keep every surface calm, precise, trustworthy, and fast to scan.", baseline: "Baseline", principlesDetail: "Restrained neutrals, clear hierarchy, generous breathing room, subtle depth, and purposeful accent color.",
       colorTitle: "Color", colorDescription: "Use semantic roles so light and dark surfaces preserve the same meaning.", usage: "Usage", colorDetail: "Neutrals carry identity; blue supports links, focus, selection, and information without becoming every primary action.",
       typographyTitle: "Typography", typographyDescription: "Use the system sans stack with a compact, readable hierarchy.", typographyDetail: "One clear page title, logical headings, readable line lengths, and tabular numerals for changing values.",
@@ -324,7 +481,7 @@
     },
     "zh-SG": {
       sections: "风格章节", drawerKicker: "视觉语言", drawerTitle: "风格", drawerNoteTitle: "风格契约", drawerNote: "先在这里设定共享视觉规则，再调整元素和组件。",
-      kicker: "一种语言，贯穿所有界面", title: "风格系统", description: "定义共享视觉语言，让标准转化为一致的元素、组件和页面。",
+      kicker: "起点", title: "选择风格", description: "选择最适合此目标的视觉风格。你可以在“元素”中微调各项基础设置。", choiceLegend: "风格选择", linesTitle: "线框", linesDescription: "保留当前以线条为主的系统，使用对齐边缘与克制分隔线。", floatingTitle: "悬浮", floatingDescription: "让侧边栏、导航和内容视图成为彼此分离的悬浮面板。", note: "此选择会更改整个视觉库的共享基础。",
       principlesTitle: "风格原则", principlesDescription: "让每个界面保持平静、精准、可信且便于快速浏览。", baseline: "基线", principlesDetail: "克制的中性色、清晰层级、充足留白、微妙深度和有目的的强调色。",
       colorTitle: "颜色", colorDescription: "使用语义角色，让浅色与深色界面表达相同含义。", usage: "用法", colorDetail: "中性色承载识别；蓝色用于链接、焦点、选择和信息，而不是所有主要操作。",
       typographyTitle: "字体排版", typographyDescription: "使用系统无衬线字体和紧凑、易读的层级。", typographyDetail: "一个清晰的页面标题、合理的标题层级、可读行宽，以及用于变化数值的等宽数字。",
@@ -334,7 +491,7 @@
     },
     "zh-HK": {
       sections: "風格章節", drawerKicker: "視覺語言", drawerTitle: "風格", drawerNoteTitle: "風格契約", drawerNote: "先在此設定共享視覺規則，再調整元素及元件。",
-      kicker: "一種語言，貫穿所有介面", title: "風格系統", description: "定義共享視覺語言，讓標準轉化為一致的元素、元件及頁面。",
+      kicker: "起點", title: "選擇風格", description: "選擇最適合此目標的視覺風格。你可在「元素」中微調各項基礎設定。", choiceLegend: "風格選擇", linesTitle: "線框", linesDescription: "保留目前以線條為主的系統，使用對齊邊緣及克制分隔線。", floatingTitle: "懸浮", floatingDescription: "讓側邊欄、導覽及內容檢視成為彼此分離的懸浮面板。", note: "此選擇會更改整個視覺庫的共享基礎。",
       principlesTitle: "風格原則", principlesDescription: "讓每個介面保持平靜、精準、可信並便於快速瀏覽。", baseline: "基線", principlesDetail: "克制的中性色、清晰層級、充足留白、細緻深度及有目的的強調色。",
       colorTitle: "顏色", colorDescription: "使用語意角色，讓淺色及深色介面保留相同含義。", usage: "用法", colorDetail: "中性色承載識別；藍色用於連結、焦點、選取及資訊，而不是所有主要操作。",
       typographyTitle: "字體排版", typographyDescription: "使用系統無襯線字體和緊湊、易讀的層級。", typographyDetail: "一個清晰的頁面標題、合理的標題層級、可讀行寬，以及用於變動數值的等寬數字。",
@@ -344,7 +501,7 @@
     },
     ja: {
       sections: "スタイルセクション", drawerKicker: "視覚言語", drawerTitle: "スタイル", drawerNoteTitle: "スタイル契約", drawerNote: "要素やコンポーネントを調整する前に、共有する視覚ルールを定めます。",
-      kicker: "ひとつの言語を、すべての画面へ", title: "スタイルシステム", description: "標準を一貫した要素、コンポーネント、ページへ変換する共有視覚言語を定義します。",
+      kicker: "出発点", title: "スタイルを選択", description: "この目的に合うビジュアルの特徴を選びます。個別の基盤設定は「要素」で微調整できます。", choiceLegend: "スタイルの選択肢", linesTitle: "ライン", linesDescription: "揃った端と静かな区切り線を使う、現在のライン中心のシステムを保ちます。", floatingTitle: "フローティング", floatingDescription: "サイドドロワー、ナビゲーション、内容ビューを独立した浮遊パネルにします。", note: "この選択はライブラリ全体の共有基盤を変更します。",
       principlesTitle: "スタイル原則", principlesDescription: "すべての画面を穏やかで正確、信頼でき、素早く読み取れる状態に保ちます。", baseline: "基準", principlesDetail: "控えめなニュートラル、明確な階層、十分な余白、繊細な奥行き、目的のあるアクセント色。",
       colorTitle: "カラー", colorDescription: "セマンティックな役割により、ライトとダークで同じ意味を保ちます。", usage: "用途", colorDetail: "ニュートラルを基調とし、青はリンク、フォーカス、選択、情報に使い、すべての主要操作には使いません。",
       typographyTitle: "タイポグラフィ", typographyDescription: "システムサンセリフと、簡潔で読みやすい階層を使います。", typographyDetail: "明確なページタイトル、論理的な見出し、読みやすい行長、変化する数値には等幅数字を使います。",
@@ -354,7 +511,7 @@
     },
     ko: {
       sections: "스타일 섹션", drawerKicker: "시각 언어", drawerTitle: "스타일", drawerNoteTitle: "스타일 계약", drawerNote: "요소와 컴포넌트를 조정하기 전에 공유 시각 규칙을 설정하세요.",
-      kicker: "하나의 언어, 모든 화면", title: "스타일 시스템", description: "표준을 일관된 요소, 컴포넌트, 페이지로 바꾸는 공유 시각 언어를 정의합니다.",
+      kicker: "시작점", title: "스타일 선택", description: "이 목표에 가장 잘 맞는 시각적 성격을 선택하세요. 개별 기반 설정은 요소에서 세밀하게 조정할 수 있습니다.", choiceLegend: "스타일 선택지", linesTitle: "라인", linesDescription: "정렬된 가장자리와 절제된 구분선을 사용하는 현재 라인 중심 시스템을 유지합니다.", floatingTitle: "플로팅", floatingDescription: "사이드 드로어, 탐색, 콘텐츠 보기를 분리된 플로팅 패널로 만듭니다.", note: "이 선택은 라이브러리 전체의 공유 기반을 변경합니다.",
       principlesTitle: "스타일 원칙", principlesDescription: "모든 화면을 차분하고 정밀하며 신뢰할 수 있고 빠르게 읽을 수 있게 유지합니다.", baseline: "기준", principlesDetail: "절제된 중립색, 명확한 계층, 넉넉한 여백, 은은한 깊이, 목적 있는 강조색.",
       colorTitle: "색상", colorDescription: "의미 기반 역할을 사용해 라이트와 다크 화면에서 같은 의미를 유지합니다.", usage: "사용", colorDetail: "중립색을 기본으로 하고 파란색은 링크, 포커스, 선택, 정보에 사용하되 모든 주요 작업에 쓰지 않습니다.",
       typographyTitle: "타이포그래피", typographyDescription: "시스템 산세리프와 간결하고 읽기 쉬운 계층을 사용합니다.", typographyDetail: "명확한 페이지 제목 하나, 논리적인 제목 구조, 읽기 쉬운 줄 길이, 변하는 값에는 고정폭 숫자를 사용합니다.",
@@ -736,7 +893,7 @@
       <div class="library-settings-preview-heading">
         <div><p data-settings-copy="livePreview">Live preview</p><h4 data-settings-copy="previewTitle">Shared interface</h4></div>
       </div>
-      <div class="library-settings-grid-preview">${"<span></span>".repeat(12)}</div>
+      <div class="library-settings-grid-preview" aria-hidden="true">${"<span></span>".repeat(3)}</div>
       <div class="library-settings-preview-card">
         <span class="library-settings-preview-icon">Aa</span>
         <h4 data-settings-copy="previewCardTitle">One calm foundation</h4>
@@ -792,7 +949,7 @@
     if (!bar) {
       bar = document.createElement("header");
       bar.className = "library-settings-action-bar";
-      bar.innerHTML = '<div class="library-settings-actions"><button class="library-settings-reset" id="settings-reset" type="button" data-settings-copy="reset">Reset</button><button class="library-settings-undo" disabled id="settings-undo" type="button" data-settings-copy="undo">Undo</button><button class="library-settings-save" disabled id="settings-save" type="button" data-settings-copy="save">Save</button></div><p aria-live="polite" class="visually-hidden" id="settings-save-status"></p>';
+      bar.innerHTML = '<div class="library-settings-actions"><button class="library-settings-reset" id="settings-reset" type="button" data-settings-copy="reset">Reset</button><button class="library-settings-undo" disabled id="settings-undo" type="button" data-settings-copy="undo">Undo</button><button class="library-settings-save" disabled id="settings-save" type="button" data-settings-copy="save">Save</button></div><p aria-live="polite" class="library-settings-save-status" id="settings-save-status"></p>';
       content.prepend(bar);
     } else if (!bar.querySelector("#settings-undo")) {
       const undo = document.createElement("button");
@@ -818,16 +975,18 @@
     if (!bar) return;
     let state = loadSettings();
     const history = [];
-    let savedSnapshot = JSON.stringify(normalizeSettings(state));
+    let savedSnapshot = JSON.stringify(normalizeSettings(projectSettingsContract().settings));
     const controls = {
       reset: bar.querySelector("#settings-reset"),
       undo: bar.querySelector("#settings-undo"),
       save: bar.querySelector("#settings-save"),
       status: bar.querySelector("#settings-save-status"),
     };
+    const styleChoices = Array.from(root.querySelectorAll('input[name="style-preset"]'));
 
     function render() {
       state = applySettings(state);
+      styleChoices.forEach((control) => { control.checked = control.value === state.style; });
       controls.undo.disabled = history.length === 0;
       controls.save.disabled = JSON.stringify(state) === savedSnapshot;
     }
@@ -837,24 +996,36 @@
       if (JSON.stringify(normalized) === JSON.stringify(state)) return;
       history.push(normalizeSettings(state));
       state = normalized;
+      persistSettingsDraft(state);
       controls.status.textContent = "";
       render();
     }
 
     controls.reset.addEventListener("click", () => update(settingsDefaults));
+    styleChoices.forEach((control) => control.addEventListener("change", () => {
+      update(applyStylePreset(state, control.value));
+    }));
     controls.undo.addEventListener("click", () => {
       const previous = history.pop();
       if (!previous) return;
       state = previous;
+      persistSettingsDraft(state);
       controls.status.textContent = "";
       render();
     });
-    controls.save.addEventListener("click", () => {
+    controls.save.addEventListener("click", async () => {
       const locale = readPreference("one-mind-beta.locale") || "en";
       const copy = settingsCopy[locale] || settingsCopy.en;
-      if (writePreference(settingsStorageKey, JSON.stringify(state))) {
+      controls.save.disabled = true;
+      controls.status.textContent = copy.chooseFile;
+      const result = await saveSettingsContract(state);
+      if (result.status === "saved") {
         savedSnapshot = JSON.stringify(state);
         controls.status.textContent = copy.saved;
+      } else if (result.status === "downloaded") {
+        controls.status.textContent = copy.downloaded;
+      } else if (result.status === "canceled") {
+        controls.status.textContent = copy.saveCanceled;
       } else {
         controls.status.textContent = copy.saveFailed;
       }
@@ -872,6 +1043,7 @@
     const root = document.querySelector(".library-settings-page");
     if (!root) return;
     let state = loadSettings();
+    const settingsMain = root.querySelector(".library-settings-main");
     const railLinks = Array.from(root.querySelectorAll(".library-settings-rail nav a"));
     const settingsGroups = Array.from(root.querySelectorAll(".library-settings-group"));
     settingsGroups.forEach(structureSettingsGroup);
@@ -886,29 +1058,57 @@
       settingsGroups.forEach((group) => { group.hidden = `#${group.id}` !== currentHash; });
     }
 
-    railLinks.forEach((link) => link.addEventListener("click", () => {
+    function resetSettingsViewport() {
+      if (settingsMain) {
+        settingsMain.scrollTop = 0;
+        settingsMain.scrollLeft = 0;
+      }
+      if (document.scrollingElement) {
+        document.scrollingElement.scrollTop = 0;
+        document.scrollingElement.scrollLeft = 0;
+      }
+    }
+
+    function scheduleSettingsViewportReset() {
+      requestAnimationFrame(() => requestAnimationFrame(resetSettingsViewport));
+    }
+
+    railLinks.forEach((link) => link.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (location.hash !== link.hash) window.history.pushState(null, "", link.hash);
       showSettingsGroup(link.hash);
+      scheduleSettingsViewportReset();
     }));
-    window.addEventListener("hashchange", () => showSettingsGroup(location.hash));
+    window.addEventListener("hashchange", () => {
+      showSettingsGroup(location.hash);
+      scheduleSettingsViewportReset();
+    });
     showSettingsGroup(location.hash);
+    scheduleSettingsViewportReset();
+    window.addEventListener("load", scheduleSettingsViewportReset, { once: true });
 
     const controls = {
       color: Array.from(document.querySelectorAll('input[name="color"]')),
       colorRoles: Array.from(document.querySelectorAll("[data-color-role]")),
-      grid: document.querySelector("#settings-grid"),
-      size: document.querySelector("#settings-size"),
+      colorPickers: Array.from(document.querySelectorAll("[data-color-picker]")),
+      baseGrid: document.querySelector("#settings-base-grid"),
+      elementGap: document.querySelector("#settings-element-gap"),
+      componentGap: document.querySelector("#settings-component-gap"),
       font: document.querySelector("#settings-font"),
-      spacing: document.querySelector("#settings-spacing"),
+      typeRoles: Array.from(document.querySelectorAll("[data-type-role][data-type-property]")),
       radius: document.querySelector("#settings-radius"),
       elevation: document.querySelector("#settings-elevation"),
       motion: document.querySelector("#settings-motion"),
+      buttonAppearance: document.querySelector("#settings-button-appearance"),
+      buttonHeight: document.querySelector("#settings-button-height"),
+      buttonRadius: document.querySelector("#settings-button-radius"),
       reset: document.querySelector("#settings-reset"),
       undo: document.querySelector("#settings-undo"),
       save: document.querySelector("#settings-save"),
       status: document.querySelector("#settings-save-status"),
     };
     const history = [];
-    let savedSnapshot = JSON.stringify(normalizeSettings(state));
+    let savedSnapshot = JSON.stringify(normalizeSettings(projectSettingsContract().settings));
 
     function currentCopy() {
       const locale = readPreference("one-mind-beta.locale") || "en";
@@ -918,21 +1118,40 @@
     function render() {
       state = applySettings(state);
       controls.color.forEach((control) => { control.checked = control.value === state.color; });
+      const copy = currentCopy();
       controls.colorRoles.forEach((input) => {
         const role = input.dataset.colorRole;
-        if (document.activeElement !== input) input.value = state.colors[role];
-        const swatch = document.querySelector(`[data-color-swatch="${role}"]`);
-        if (swatch) swatch.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue(settingsColorTokens[role]).trim();
+        const resolved = resolvedSemanticColor(role);
+        if (document.activeElement !== input) input.value = state.colors[role] || resolved;
+        const picker = controls.colorPickers.find((control) => control.dataset.colorPicker === role);
+        if (picker) {
+          picker.value = colorToHex(state.colors[role] || resolved);
+          picker.setAttribute("aria-label", `${copy.colorPicker}: ${copy[settingsColorCopyKeys[role]]}`);
+        }
       });
-      ["grid", "size", "spacing", "radius", "elevation"].forEach((key) => { controls[key].value = state[key]; });
+      controls.baseGrid.value = state.baseGrid;
+      controls.elementGap.value = state.elementGap / state.baseGrid;
+      controls.componentGap.value = state.componentGap / state.baseGrid;
+      ["radius", "elevation"].forEach((key) => { controls[key].value = state[key]; });
       controls.font.value = state.font;
+      controls.typeRoles.forEach((control) => {
+        const role = control.dataset.typeRole;
+        const property = control.dataset.typeProperty;
+        control.value = state.typeRoles[role][property];
+        control.setAttribute("aria-label", `${copy[settingsTypeRoleCopyKeys[role]]}: ${copy[settingsTypePropertyCopyKeys[property]]}`);
+      });
       controls.motion.value = state.motion;
+      controls.buttonAppearance.value = state.buttonAppearance;
+      controls.buttonHeight.value = state.buttonHeight;
+      controls.buttonRadius.value = state.buttonRadius;
 
-      document.querySelector("#settings-grid-output").value = String(state.grid);
-      document.querySelector("#settings-size-output").value = `${state.size} px`;
-      document.querySelector("#settings-spacing-output").value = `${state.spacing} px`;
+      document.querySelector("#settings-base-grid-output").value = `${state.baseGrid} px`;
+      document.querySelector("#settings-element-gap-output").value = `${state.elementGap / state.baseGrid}× · ${state.elementGap} px`;
+      document.querySelector("#settings-component-gap-output").value = `${state.componentGap / state.baseGrid}× · ${state.componentGap} px`;
       document.querySelector("#settings-radius-output").value = `${state.radius} px`;
       document.querySelector("#settings-elevation-output").value = String(state.elevation);
+      document.querySelector("#settings-button-height-output").value = `${state.buttonHeight} px`;
+      document.querySelector("#settings-button-radius-output").value = `${state.buttonRadius} px`;
       controls.undo.disabled = history.length === 0;
       controls.save.disabled = JSON.stringify(state) === savedSnapshot;
     }
@@ -949,10 +1168,21 @@
       if (JSON.stringify(normalized) === JSON.stringify(state)) return;
       history.push(normalizeSettings(state));
       state = normalized;
+      persistSettingsDraft(state);
       renderDraft();
     }
 
-    controls.color.forEach((control) => control.addEventListener("change", () => update((next) => { next.color = control.value; })));
+    controls.color.forEach((control) => control.addEventListener("change", () => {
+      const defaults = resolvedSemanticColors();
+      update((next) => {
+        next.color = control.value;
+        next.colors = control.value === "custom" ? defaults : { ...settingsColorDefaults };
+      });
+    }));
+    controls.colorPickers.forEach((picker) => picker.addEventListener("change", () => update((next) => {
+      next.color = "custom";
+      next.colors[picker.dataset.colorPicker] = picker.value;
+    })));
     controls.colorRoles.forEach((input) => {
       const error = document.querySelector("#settings-color-error");
       input.setAttribute("aria-describedby", "settings-color-help settings-color-error");
@@ -962,43 +1192,69 @@
         input.setAttribute("aria-invalid", String(!valid));
         if (error) error.hidden = valid;
         if (valid) {
-          update((next) => { next.colors[input.dataset.colorRole] = value; });
+          update((next) => {
+            next.color = "custom";
+            next.colors[input.dataset.colorRole] = value;
+          });
         }
         return valid;
       };
       input.addEventListener("input", validate);
       input.addEventListener("blur", () => {
-        if (!validate()) input.value = state.colors[input.dataset.colorRole];
+        const valid = isSupportedColor(input.value.trim());
+        if (!valid) input.value = state.colors[input.dataset.colorRole] || resolvedSemanticColor(input.dataset.colorRole);
         input.removeAttribute("aria-invalid");
         if (error) error.hidden = true;
+        render();
       });
       input.addEventListener("keydown", (event) => {
         if (event.key === "Enter") input.blur();
         if (event.key === "Escape") {
-          input.value = state.colors[input.dataset.colorRole];
+          input.value = state.colors[input.dataset.colorRole] || resolvedSemanticColor(input.dataset.colorRole);
           input.blur();
         }
       });
     });
-    ["grid", "size", "spacing", "radius", "elevation"].forEach((key) => controls[key].addEventListener("input", () => update((next) => { next[key] = Number(controls[key].value); })));
+    controls.baseGrid.addEventListener("input", () => update((next) => {
+      next.baseGrid = Number(controls.baseGrid.value);
+      next.elementGap = next.baseGrid * Number(controls.elementGap.value);
+      next.componentGap = next.baseGrid * Number(controls.componentGap.value);
+    }));
+    controls.elementGap.addEventListener("input", () => update((next) => { next.elementGap = next.baseGrid * Number(controls.elementGap.value); }));
+    controls.componentGap.addEventListener("input", () => update((next) => { next.componentGap = next.baseGrid * Number(controls.componentGap.value); }));
+    ["radius", "elevation", "buttonHeight", "buttonRadius"].forEach((key) => controls[key].addEventListener("input", () => update((next) => { next[key] = Number(controls[key].value); })));
     controls.font.addEventListener("change", () => update((next) => { next.font = controls.font.value; }));
+    controls.typeRoles.forEach((control) => control.addEventListener(control.type === "number" ? "input" : "change", () => update((next) => {
+      const role = control.dataset.typeRole;
+      const property = control.dataset.typeProperty;
+      next.typeRoles[role][property] = control.type === "number" ? Number(control.value) : control.value;
+    })));
     controls.motion.addEventListener("change", () => update((next) => { next.motion = controls.motion.value; }));
+    controls.buttonAppearance.addEventListener("change", () => update((next) => { next.buttonAppearance = controls.buttonAppearance.value; }));
     controls.reset.addEventListener("click", () => update((next) => Object.assign(next, normalizeSettings(settingsDefaults))));
     controls.undo.addEventListener("click", () => {
       const previous = history.pop();
       if (!previous) return;
       state = previous;
+      persistSettingsDraft(state);
       renderDraft();
     });
-    controls.save.addEventListener("click", () => {
+    controls.save.addEventListener("click", async () => {
       const copy = currentCopy();
-      if (writePreference(settingsStorageKey, JSON.stringify(state))) {
+      controls.save.disabled = true;
+      controls.status.textContent = copy.chooseFile;
+      const result = await saveSettingsContract(state);
+      if (result.status === "saved") {
         savedSnapshot = JSON.stringify(state);
         controls.status.textContent = copy.saved;
-        render();
+      } else if (result.status === "downloaded") {
+        controls.status.textContent = copy.downloaded;
+      } else if (result.status === "canceled") {
+        controls.status.textContent = copy.saveCanceled;
       } else {
         controls.status.textContent = copy.saveFailed;
       }
+      render();
     });
     document.addEventListener("library-settings-locale", () => { controls.status.textContent = ""; render(); });
     document.addEventListener("library-settings-theme", render);
