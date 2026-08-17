@@ -17,7 +17,7 @@ Use only checked-out project files, files bundled with this skill, and temporary
 
 - Build the library from static HTML, CSS, JavaScript, SVG, Markdown, and local legal files. Local scripts may copy, resolve, or validate those files.
 - Never start or require a localhost server, preview server, development server, API server, proxy, or container.
-- Never contact a remote service from the skill workflow. Do not use remote APIs, CDNs, analytics, hosted fonts, external scripts, remote images, or network-fetched content.
+- Never contact a remote service from the skill workflow. Do not use remote APIs, CDNs, analytics, hosted fonts, external scripts, remote images, or network-fetched content. The explicit GitHub and OneMind homepage actions may navigate externally only when the user chooses them; they must never load resources into the offline library.
 - Resolve every library entry to a normal filesystem path and optional `file://` URI. If a browser cannot open local files, return the clickable local path; do not start a server as a fallback.
 - Represent authority-dependent product behavior as static interface contracts and truthful UI states only. Do not sign in, submit mutations, or connect to Matrix or another backend while operating this design skill.
 
@@ -88,9 +88,30 @@ python3 <skill-dir>/scripts/init_objective_library.py \
   --objective "Feature name"
 ```
 
-This creates `docs/design/<objective-slug>/index.html`, `guide.html`, `style.html`, `elements.html`, `components.html`, `pages.html`, `library.css`, and `library.js` without overwriting existing files. A first-time install receives the full visual OneMind BETA baseline, not an empty catalog. The files remain editable for objective-specific additions.
+This creates `docs/design/<objective-slug>/index.html`, `guide.html`, `style.html`, `elements.html`, `components.html`, `pages.html`, `library.css`, `design-settings.js`, and `library.js` without overwriting existing files. A first-time install receives the full visual OneMind BETA baseline, not an empty catalog. The files remain editable for objective-specific additions.
 
 If the repository already defines an equivalent governed design-library location, use it instead and preserve the five artifact roles.
+
+## Treat saved standards as live project authority
+
+`docs/design/<objective-slug>/design-settings.js` is the durable, objective-scoped machine-readable standard. Browser `localStorage` is preview state only and is never authority for Codex work.
+
+- Before every build, change, review, or continuation for an objective, re-read `design-settings.js` from disk, then re-read the affected standards, elements, components, and page contracts. Do not rely on an earlier conversation summary or a previously loaded copy.
+- Map every supported setting to the consuming product's semantic tokens and canonical components. Style, semantic colors, the base alignment grid, element gaps, component gaps, the global font family, semantic Title/Subtitle/Body/Content/Annotation type roles, radius, elevation, motion, and button treatment apply to every affected environment and dependent surface in the objective. Element and component gaps must remain integer multiples of the saved base grid. Do not create a global Size foundation: Font roles own type size, Button owns control height, and Grid owns spatial scale.
+- Render the objective library itself from those same saved tokens. Its home, drawers, contextual navigation, content workspaces, controls, component catalog, page catalog, and previews must visibly update together; the settings page is not allowed to demonstrate a different system from the rest of the library.
+- When the user says they changed or saved the library, re-read the file before editing product code. Report the contract's `updatedAt` value as evidence that the newest version was consumed.
+- The HTML Save action must write or export a complete `design-settings.js` contract. When the browser supports local file saving, the user replaces the objective's existing `design-settings.js` in the file picker. When it only downloads the contract, stop and ask the user to place that file at the objective path before continuing; never pretend browser-only state changed the project.
+- Import a downloaded fallback only after the user identifies the exported file:
+
+```bash
+python3 <skill-dir>/scripts/import_design_settings.py \
+  --project-root <project-root> \
+  --objective <objective-slug> \
+  --settings-file <downloaded-design-settings.js>
+```
+
+- Keep draft browser storage scoped by objective. Never share one settings key across objective libraries.
+- If the contract is missing, invalid, for another objective, or older than the user's reported save, treat the library as unresolved and do not build from defaults silently.
 
 ## Show the library
 
@@ -125,7 +146,7 @@ The generated baseline or hub must work offline. Its relative links must open po
 
 ## Resolve the design guide
 
-Open `guide.html`, then `style.html`, before designing.
+Open `guide.html`, then `style.html`, and read `design-settings.js` from disk before designing.
 
 - If the direction is set, verify it covers product intent, audience, content hierarchy, layout, color, typography, density, interaction behavior, required states, accessibility, localization, and validation.
 - If it is not set, ask one compact question covering the missing style, color, layout, and product details. Record the answer and any explicit assumptions in `guide.html` before implementation.

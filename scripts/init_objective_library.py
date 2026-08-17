@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 SKILL_VERSION = "0.4"
-TEMPLATE_NAMES = ("index.html", "guide.html", "style.html", "elements.html", "components.html", "pages.html", "license.html", "library.css", "library.js")
+TEMPLATE_NAMES = ("index.html", "guide.html", "style.html", "elements.html", "components.html", "pages.html", "license.html", "library.css", "design-settings.js", "library.js")
 STANDARD_NAMES = (
     "standards/design-brief.md",
     "standards/visual-direction.md",

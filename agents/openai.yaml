@@ -1,4 +1,4 @@
 interface:
   display_name: "OneMind UI Design"
   short_description: "Build local static OneMind BETA UI modules"
-  default_prompt: "Use $onemind-ui-design to build fully local, offline, clickable neutral UI specimens and propagate their shared tokens into this OneMind BETA page without starting or contacting a server."
+  default_prompt: "Use $onemind-ui-design to create or open this objective's local design library, re-read its newest design-settings.js contract, and build the project from its neutral components and shared standards without starting or contacting a server."

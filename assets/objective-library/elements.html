@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
   <title>{{OBJECTIVE_NAME}} — Design settings</title>
-  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-full-bleed-15">
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-remove-size-39">
 </head>
 <body class="library-home library-settings-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="elements">
   <header class="library-home-bar">
@@ -19,8 +19,8 @@
     <aside class="library-primary-drawer" aria-label="Library navigation" data-standards-aria="library">
       <p class="library-primary-drawer-title" data-standards-copy="libraryTitle">Library</p>
       <nav>
-        <a href="guide.html"><span data-copy="navGuide">Standards</span></a>
         <a href="style.html"><span data-copy="navStyle">Style</span></a>
+        <a href="guide.html"><span data-copy="navGuide">Standards</span></a>
         <a href="elements.html" aria-current="page"><span data-copy="navElements">Elements</span></a>
         <a href="components.html"><span data-copy="navComponents">Components</span></a>
         <a href="pages.html"><span data-copy="navPages">Pages</span></a>
@@ -29,14 +29,13 @@
     <aside class="library-settings-rail" aria-label="Design foundations" data-settings-aria="foundations">
       <p class="library-settings-rail-title" data-settings-copy="foundations">Foundations</p>
       <nav>
-        <a href="#semantic-color-system" aria-current="true" data-settings-copy="color">Color</a>
+        <a href="#semantic-color-system" aria-current="true" data-settings-copy="colorNav">Color</a>
         <a href="#layout-grid-system" data-settings-copy="grid">Grid</a>
-        <a href="#size-system" data-settings-copy="size">Size</a>
         <a href="#type-role-system" data-settings-copy="font">Font</a>
-        <a href="#spacing-density-system" data-settings-copy="spacing">Spacing</a>
         <a href="#radius-system" data-settings-copy="radius">Radius</a>
         <a href="#elevation-shadow-system" data-settings-copy="elevation">Elevation</a>
         <a href="#motion-state-treatment" data-settings-copy="motion">Motion</a>
+        <a href="#button-system" data-settings-copy="button">Button</a>
       </nav>
     </aside>
 
@@ -45,60 +44,73 @@
         <h1 class="visually-hidden" id="settings-title" data-settings-copy="title">Design settings</h1>
         <div class="library-settings-actions">
           <button class="library-settings-reset" id="settings-reset" type="button" data-settings-copy="reset">Reset</button>
+          <button class="library-settings-undo" disabled id="settings-undo" type="button" data-settings-copy="undo">Undo</button>
           <button class="library-settings-save" disabled id="settings-save" type="button" data-settings-copy="save">Save</button>
         </div>
-        <p aria-live="polite" class="visually-hidden" id="settings-save-status"></p>
+        <p aria-live="polite" class="library-settings-save-status" id="settings-save-status"></p>
       </header>
 
       <div class="library-settings-workspace">
         <div class="library-settings-groups">
           <section class="library-settings-group" id="semantic-color-system" aria-labelledby="color-title">
-            <div><h2 id="color-title" data-settings-copy="color">Color</h2><p data-settings-copy="colorDescription">Choose a preset, then tune semantic roles shared by every page.</p></div>
+            <div><h2 id="color-title" data-settings-copy="color">Color style</h2><p data-settings-copy="colorDescription">Choose a color style or create a custom palette for every shared page.</p></div>
             <fieldset class="library-color-presets" id="settings-color">
               <legend class="visually-hidden" data-settings-copy="colorPreset">Color preset</legend>
               <label><input type="radio" name="color" value="neutral"><span class="settings-swatch settings-swatch-neutral" aria-hidden="true"></span><span data-settings-copy="neutral">Neutral</span></label>
               <label><input type="radio" name="color" value="ocean"><span class="settings-swatch settings-swatch-ocean" aria-hidden="true"></span><span data-settings-copy="ocean">Ocean</span></label>
               <label><input type="radio" name="color" value="forest"><span class="settings-swatch settings-swatch-forest" aria-hidden="true"></span><span data-settings-copy="forest">Forest</span></label>
               <label><input type="radio" name="color" value="violet"><span class="settings-swatch settings-swatch-violet" aria-hidden="true"></span><span data-settings-copy="violet">Violet</span></label>
+              <label><input type="radio" name="color" value="custom"><span class="settings-swatch settings-swatch-custom" aria-hidden="true"></span><span data-settings-copy="custom">Custom</span></label>
             </fieldset>
             <div class="library-semantic-colors" aria-labelledby="semantic-colors-title">
-              <div class="library-semantic-colors-heading"><h3 id="semantic-colors-title" data-settings-copy="semanticRoles">Semantic roles</h3><p data-settings-copy="colorFormatHelp" id="settings-color-help">Use Hex or rgb(). Leave a field blank to inherit the active theme.</p></div>
+              <div class="library-semantic-colors-heading"><h3 id="semantic-colors-title" data-settings-copy="semanticRoles">Semantic colors</h3><p data-settings-copy="colorFormatHelp" id="settings-color-help">Defaults are shown until you customize a role. Click a swatch to choose a color.</p></div>
               <div class="library-semantic-color-grid">
-                <label><span data-settings-copy="mainColor">Main</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="main"></span><input data-color-role="main" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="textColor">Text</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="text"></span><input data-color-role="text" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="secondaryTextColor">Secondary text</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="secondary"></span><input data-color-role="secondary" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="mutedTextColor">Muted text</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="muted"></span><input data-color-role="muted" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="lineColor">Line</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="line"></span><input data-color-role="line" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="borderColor">Border</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="border"></span><input data-color-role="border" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="backgroundColor">Background</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="background"></span><input data-color-role="background" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="surfaceColor">Surface</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="surface"></span><input data-color-role="surface" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
-                <label><span data-settings-copy="selectedColor">Selected</span><span class="library-color-input"><span aria-hidden="true" data-color-swatch="selected"></span><input data-color-role="selected" inputmode="text" placeholder="#111111 or rgb(17, 17, 17)" spellcheck="false" type="text"></span></label>
+                <div class="library-semantic-color-row"><label data-settings-copy="mainColor" for="settings-color-main">Main</label><span class="library-color-input"><input aria-label="Choose Main color" class="library-color-picker" data-color-picker="main" type="color" value="#111111"><input data-color-role="main" id="settings-color-main" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="textColor" for="settings-color-text">Text</label><span class="library-color-input"><input aria-label="Choose Text color" class="library-color-picker" data-color-picker="text" type="color" value="#111111"><input data-color-role="text" id="settings-color-text" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="secondaryTextColor" for="settings-color-secondary">Secondary text</label><span class="library-color-input"><input aria-label="Choose Secondary text color" class="library-color-picker" data-color-picker="secondary" type="color" value="#111111"><input data-color-role="secondary" id="settings-color-secondary" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="mutedTextColor" for="settings-color-muted">Muted text</label><span class="library-color-input"><input aria-label="Choose Muted text color" class="library-color-picker" data-color-picker="muted" type="color" value="#111111"><input data-color-role="muted" id="settings-color-muted" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="lineColor" for="settings-color-line">Line</label><span class="library-color-input"><input aria-label="Choose Line color" class="library-color-picker" data-color-picker="line" type="color" value="#111111"><input data-color-role="line" id="settings-color-line" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="borderColor" for="settings-color-border">Border</label><span class="library-color-input"><input aria-label="Choose Border color" class="library-color-picker" data-color-picker="border" type="color" value="#111111"><input data-color-role="border" id="settings-color-border" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="backgroundColor" for="settings-color-background">Background</label><span class="library-color-input"><input aria-label="Choose Background color" class="library-color-picker" data-color-picker="background" type="color" value="#111111"><input data-color-role="background" id="settings-color-background" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="surfaceColor" for="settings-color-surface">Surface</label><span class="library-color-input"><input aria-label="Choose Surface color" class="library-color-picker" data-color-picker="surface" type="color" value="#111111"><input data-color-role="surface" id="settings-color-surface" inputmode="text" spellcheck="false" type="text"></span></div>
+                <div class="library-semantic-color-row"><label data-settings-copy="selectedColor" for="settings-color-selected">Selected</label><span class="library-color-input"><input aria-label="Choose Selected color" class="library-color-picker" data-color-picker="selected" type="color" value="#111111"><input data-color-role="selected" id="settings-color-selected" inputmode="text" spellcheck="false" type="text"></span></div>
               </div>
               <p class="library-color-error" data-settings-copy="colorInvalid" hidden id="settings-color-error" role="alert">Enter a valid Hex or rgb() color.</p>
             </div>
           </section>
 
           <section class="library-settings-group" id="layout-grid-system" aria-labelledby="grid-title">
-            <div><h2 id="grid-title" data-settings-copy="grid">Grid</h2><p data-settings-copy="gridDescription">Set the column structure used by shared page layouts.</p></div>
-            <label class="library-setting-control" for="settings-grid"><span data-settings-copy="columns">Columns</span><output for="settings-grid" id="settings-grid-output">12</output></label>
-            <input id="settings-grid" type="range" min="4" max="12" step="1" value="12">
-          </section>
-
-          <section class="library-settings-group" id="size-system" aria-labelledby="size-title">
-            <div><h2 id="size-title" data-settings-copy="size">Size</h2><p data-settings-copy="sizeDescription">Control the base size that scales type and controls together.</p></div>
-            <label class="library-setting-control" for="settings-size"><span data-settings-copy="baseSize">Base size</span><output for="settings-size" id="settings-size-output">16 px</output></label>
-            <input id="settings-size" type="range" min="14" max="20" step="1" value="16">
+            <div><h2 id="grid-title" data-settings-copy="grid">Grid</h2><p data-settings-copy="gridDescription">Set the base alignment grid, then define element and component gaps as whole multiples of it.</p></div>
+            <div class="library-grid-controls">
+              <div class="library-grid-control">
+                <label class="library-setting-control" for="settings-base-grid"><span data-settings-copy="baseGrid">Base alignment grid</span><output for="settings-base-grid" id="settings-base-grid-output">4 px</output></label>
+                <input id="settings-base-grid" type="range" min="1" max="12" step="1" value="4">
+              </div>
+              <div class="library-grid-control">
+                <label class="library-setting-control" for="settings-element-gap"><span data-settings-copy="elementGap">Element gap</span><output for="settings-element-gap" id="settings-element-gap-output">2× · 8 px</output></label>
+                <input id="settings-element-gap" type="range" min="1" max="8" step="1" value="2">
+              </div>
+              <div class="library-grid-control">
+                <label class="library-setting-control" for="settings-component-gap"><span data-settings-copy="componentGap">Component gap</span><output for="settings-component-gap" id="settings-component-gap-output">4× · 16 px</output></label>
+                <input id="settings-component-gap" type="range" min="1" max="12" step="1" value="4">
+              </div>
+            </div>
           </section>
 
           <section class="library-settings-group" id="type-role-system" aria-labelledby="font-title">
-            <div><h2 id="font-title" data-settings-copy="font">Font</h2><p data-settings-copy="fontDescription">Select the type character for every shared role.</p></div>
-            <label class="library-setting-select" for="settings-font"><span data-settings-copy="fontFamily">Font family</span><select id="settings-font"><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select></label>
-          </section>
-
-          <section class="library-settings-group" id="spacing-density-system" aria-labelledby="spacing-title">
-            <div><h2 id="spacing-title" data-settings-copy="spacing">Spacing</h2><p data-settings-copy="spacingDescription">Adjust the base rhythm for gaps, padding, and density.</p></div>
-            <label class="library-setting-control" for="settings-spacing"><span data-settings-copy="baseSpacing">Base spacing</span><output for="settings-spacing" id="settings-spacing-output">8 px</output></label>
-            <input id="settings-spacing" type="range" min="4" max="12" step="2" value="8">
+            <div><h2 id="font-title" data-settings-copy="font">Font</h2><p data-settings-copy="fontDescription">Set the font, font size, and font weight for every shared text role.</p></div>
+            <div class="library-font-controls">
+              <label class="library-setting-select" for="settings-font"><span data-settings-copy="fontFamily">Global font family</span><select id="settings-font"><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select></label>
+              <section class="library-type-role-styles" aria-labelledby="type-role-styles-title">
+                <h3 data-settings-copy="roleStyles" id="type-role-styles-title">Font role list</h3>
+                <div aria-hidden="true" class="library-type-role-head"><span data-settings-copy="typeRole">Role</span><span data-settings-copy="fontFamilyShort">Font</span><span data-settings-copy="typeSize">Font size</span><span data-settings-copy="fontWeight">Font weight</span></div>
+                <div class="library-type-role-row" data-type-role-row="title"><strong data-settings-copy="typeTitle">Title</strong><select data-type-property="family" data-type-role="title"><option value="inherit" data-settings-copy="globalFamily">Global</option><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select><input data-type-property="size" data-type-role="title" inputmode="numeric" max="64" min="10" step="1" type="number"><select data-type-property="weight" data-type-role="title"><option value="400" data-settings-copy="regular">Regular</option><option value="500" data-settings-copy="medium">Medium</option><option value="600" data-settings-copy="semibold">Semibold</option><option value="700" data-settings-copy="bold">Bold</option></select></div>
+                <div class="library-type-role-row" data-type-role-row="subtitle"><strong data-settings-copy="typeSubtitle">Subtitle</strong><select data-type-property="family" data-type-role="subtitle"><option value="inherit" data-settings-copy="globalFamily">Global</option><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select><input data-type-property="size" data-type-role="subtitle" inputmode="numeric" max="64" min="10" step="1" type="number"><select data-type-property="weight" data-type-role="subtitle"><option value="400" data-settings-copy="regular">Regular</option><option value="500" data-settings-copy="medium">Medium</option><option value="600" data-settings-copy="semibold">Semibold</option><option value="700" data-settings-copy="bold">Bold</option></select></div>
+                <div class="library-type-role-row" data-type-role-row="body"><strong data-settings-copy="typeBody">Body</strong><select data-type-property="family" data-type-role="body"><option value="inherit" data-settings-copy="globalFamily">Global</option><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select><input data-type-property="size" data-type-role="body" inputmode="numeric" max="64" min="10" step="1" type="number"><select data-type-property="weight" data-type-role="body"><option value="400" data-settings-copy="regular">Regular</option><option value="500" data-settings-copy="medium">Medium</option><option value="600" data-settings-copy="semibold">Semibold</option><option value="700" data-settings-copy="bold">Bold</option></select></div>
+                <div class="library-type-role-row" data-type-role-row="content"><strong data-settings-copy="typeContent">Content</strong><select data-type-property="family" data-type-role="content"><option value="inherit" data-settings-copy="globalFamily">Global</option><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select><input data-type-property="size" data-type-role="content" inputmode="numeric" max="64" min="10" step="1" type="number"><select data-type-property="weight" data-type-role="content"><option value="400" data-settings-copy="regular">Regular</option><option value="500" data-settings-copy="medium">Medium</option><option value="600" data-settings-copy="semibold">Semibold</option><option value="700" data-settings-copy="bold">Bold</option></select></div>
+                <div class="library-type-role-row" data-type-role-row="annotation"><strong data-settings-copy="typeAnnotation">Annotation</strong><select data-type-property="family" data-type-role="annotation"><option value="inherit" data-settings-copy="globalFamily">Global</option><option value="system" data-settings-copy="systemSans">System Sans</option><option value="humanist" data-settings-copy="humanistSans">Humanist Sans</option><option value="serif" data-settings-copy="editorialSerif">Editorial Serif</option><option value="mono" data-settings-copy="mono">Monospace</option></select><input data-type-property="size" data-type-role="annotation" inputmode="numeric" max="64" min="10" step="1" type="number"><select data-type-property="weight" data-type-role="annotation"><option value="400" data-settings-copy="regular">Regular</option><option value="500" data-settings-copy="medium">Medium</option><option value="600" data-settings-copy="semibold">Semibold</option><option value="700" data-settings-copy="bold">Bold</option></select></div>
+              </section>
+            </div>
           </section>
 
           <section class="library-settings-group" id="radius-system" aria-labelledby="radius-title">
@@ -117,11 +129,21 @@
             <div><h2 id="motion-title" data-settings-copy="motion">Motion</h2><p data-settings-copy="motionDescription">Set transition character while preserving reduced-motion behavior.</p></div>
             <label class="library-setting-select" for="settings-motion"><span data-settings-copy="motionStyle">Motion style</span><select id="settings-motion"><option value="reduced" data-settings-copy="reduced">Reduced</option><option value="standard" data-settings-copy="standard">Standard</option><option value="expressive" data-settings-copy="expressive">Expressive</option></select></label>
           </section>
+
+          <section class="library-settings-group" id="button-system" aria-labelledby="button-title">
+            <div><h2 id="button-title" data-settings-copy="button">Button</h2><p data-settings-copy="buttonDescription">Set the shared action treatment used by elements, components, and pages.</p></div>
+            <label class="library-setting-select" for="settings-button-appearance"><span data-settings-copy="buttonAppearance">Appearance</span><select id="settings-button-appearance"><option value="solid" data-settings-copy="buttonSolid">Solid</option><option value="outline" data-settings-copy="buttonOutline">Outline</option><option value="soft" data-settings-copy="buttonSoft">Soft</option></select></label>
+            <label class="library-setting-control" for="settings-button-height"><span data-settings-copy="buttonHeight">Height</span><output for="settings-button-height" id="settings-button-height-output">40 px</output></label>
+            <input id="settings-button-height" type="range" min="36" max="52" step="2" value="40">
+            <label class="library-setting-control" for="settings-button-radius"><span data-settings-copy="buttonRadius">Corner radius</span><output for="settings-button-radius" id="settings-button-radius-output">10 px</output></label>
+            <input id="settings-button-radius" type="range" min="0" max="26" step="2" value="10">
+          </section>
         </div>
 
       </div>
     </section>
   </main>
-  <script src="library.js?v={{SKILL_VERSION}}-full-bleed-15"></script>
+  <script src="design-settings.js?v={{SKILL_VERSION}}"></script>
+  <script src="library.js?v={{SKILL_VERSION}}-remove-size-39"></script>
 </body>
 </html>
