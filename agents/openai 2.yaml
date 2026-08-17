@@ -1,0 +1,4 @@
+interface:
+  display_name: "OneMind UI Design"
+  short_description: "Build visual OneMind BETA UI modules"
+  default_prompt: "Use $onemind-ui-design to build clickable neutral UI specimens and propagate their shared tokens into this OneMind BETA page."

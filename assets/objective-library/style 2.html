@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="onemind-ui-design-version" content="{{SKILL_VERSION}}">
+  <title>{{OBJECTIVE_NAME}} — Style system</title>
+  <link rel="stylesheet" href="library.css?v={{SKILL_VERSION}}-shared-actions-16">
+</head>
+<body class="library-home library-standards-page library-style-page" data-objective="{{OBJECTIVE_SLUG}}" data-created="{{CREATED_DATE}}" data-library-page="style">
+  <header class="library-home-bar">
+    <a class="library-brand" href="index.html" aria-label="OneMind UI Design home">
+      <span class="library-brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="library-brand-name">OneMind UI Design</span>
+    </a>
+  </header>
+
+  <main class="library-standards-main" id="style-library" data-library-level="style">
+    <aside class="library-primary-drawer" aria-label="Library navigation" data-standards-aria="library">
+      <p class="library-primary-drawer-title" data-standards-copy="libraryTitle">Library</p>
+      <nav>
+        <a href="guide.html"><span data-copy="navGuide">Standards</span></a>
+        <a href="style.html" aria-current="page"><span data-copy="navStyle">Style</span></a>
+        <a href="elements.html"><span data-copy="navElements">Elements</span></a>
+        <a href="components.html"><span data-copy="navComponents">Components</span></a>
+        <a href="pages.html"><span data-copy="navPages">Pages</span></a>
+      </nav>
+    </aside>
+    <aside class="library-standards-drawer" aria-label="Style sections" data-style-aria="sections">
+      <div class="library-standards-drawer-heading">
+        <p data-style-copy="drawerKicker">Visual language</p>
+        <h2 data-style-copy="drawerTitle">Style</h2>
+      </div>
+      <nav>
+        <a href="#style-principles" aria-current="true" data-style-copy="principlesTitle">Style principles</a>
+        <a href="#color-language" data-style-copy="colorTitle">Color</a>
+        <a href="#typography-language" data-style-copy="typographyTitle">Typography</a>
+        <a href="#spacing-layout" data-style-copy="spacingTitle">Spacing &amp; layout</a>
+        <a href="#shape-depth" data-style-copy="shapeTitle">Shape &amp; depth</a>
+        <a href="#motion-language" data-style-copy="motionTitle">Motion</a>
+      </nav>
+      <div class="library-standards-drawer-note">
+        <strong data-style-copy="drawerNoteTitle">Style contract</strong>
+        <p data-style-copy="drawerNote">Set shared visual rules here before adjusting elements and components.</p>
+      </div>
+    </aside>
+
+    <section class="library-standards-content" aria-labelledby="style-title">
+      <header class="library-standards-heading">
+        <p data-style-copy="kicker">One language, every surface</p>
+        <h1 id="style-title" data-style-copy="title">Style system</h1>
+        <p data-style-copy="description">Define the shared visual language that turns standards into consistent elements, components, and pages.</p>
+      </header>
+
+      <div class="library-standards-list">
+        <section id="style-principles" class="library-entry" data-status="ready" data-scope="shared">
+          <div class="markdown-document-body">
+            <h2 data-style-copy="principlesTitle">Style principles</h2>
+            <p data-style-copy="principlesDescription">Keep every surface calm, precise, trustworthy, and fast to scan.</p>
+            <dl><dt data-style-copy="baseline">Baseline</dt><dd data-style-copy="principlesDetail">Restrained neutrals, clear hierarchy, generous breathing room, subtle depth, and purposeful accent color.</dd></dl>
+          </div>
+        </section>
+        <section id="color-language" class="library-entry" data-status="ready" data-scope="shared">
+          <div class="markdown-document-body">
+            <h2 data-style-copy="colorTitle">Color</h2>
+            <p data-style-copy="colorDescription">Use semantic roles so light and dark surfaces preserve the same meaning.</p>
+            <dl><dt data-style-copy="usage">Usage</dt><dd data-style-copy="colorDetail">Neutrals carry identity; blue supports links, focus, selection, and information without becoming every primary action.</dd></dl>
+          </div>
+        </section>
+        <section id="typography-language" class="library-entry" data-status="ready" data-scope="shared">
+          <div class="markdown-document-body">
+            <h2 data-style-copy="typographyTitle">Typography</h2>
+            <p data-style-copy="typographyDescription">Use the system sans stack with a compact, readable hierarchy.</p>
+            <dl><dt data-style-copy="usage">Usage</dt><dd data-style-copy="typographyDetail">One clear page title, logical headings, readable line lengths, and tabular numerals for changing values.</dd></dl>
+          </div>
+        </section>
+        <section id="spacing-layout" class="library-entry" data-status="ready" data-scope="shared">
+          <div class="markdown-document-body">
+            <h2 data-style-copy="spacingTitle">Spacing &amp; layout</h2>
+            <p data-style-copy="spacingDescription">Build rhythm from shared spacing and grid tokens rather than page-specific offsets.</p>
+            <dl><dt data-style-copy="usage">Usage</dt><dd data-style-copy="spacingDetail">Align rails, titles, content, and actions to a stable grid while allowing localized text to wrap without clipping.</dd></dl>
+          </div>
+        </section>
+        <section id="shape-depth" class="library-entry" data-status="ready" data-scope="shared">
+          <div class="markdown-document-body">
+            <h2 data-style-copy="shapeTitle">Shape &amp; depth</h2>
+            <p data-style-copy="shapeDescription">Use precise corners and restrained elevation to explain containment and overlap.</p>
+            <dl><dt data-style-copy="usage">Usage</dt><dd data-style-copy="shapeDetail">Reserve stronger shadows and higher layers for temporary surfaces such as dialogs, menus, and feedback.</dd></dl>
+          </div>
+        </section>
+        <section id="motion-language" class="library-entry" data-status="ready" data-scope="shared">
+          <div class="markdown-document-body">
+            <h2 data-style-copy="motionTitle">Motion</h2>
+            <p data-style-copy="motionDescription">Use short, quiet transitions to clarify state changes without delaying work.</p>
+            <dl><dt data-style-copy="accessibility">Accessibility</dt><dd data-style-copy="motionDetail">Respect reduced motion and never rely on movement alone to communicate meaning.</dd></dl>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="library.js?v={{SKILL_VERSION}}-shared-actions-16"></script>
+</body>
+</html>
